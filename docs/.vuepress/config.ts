@@ -4,6 +4,7 @@ import type { DefaultThemeOptions } from "vuepress";
 export default defineUserConfig<DefaultThemeOptions>({
   title: "君子慎独",
   description: "老子婆娑",
+  base:'/ngm.github.io/',
   head: [
     [
       "link",

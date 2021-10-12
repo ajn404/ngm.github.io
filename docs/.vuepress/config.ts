@@ -4,7 +4,7 @@ import type { DefaultThemeOptions } from "vuepress";
 export default defineUserConfig<DefaultThemeOptions>({
   title: "君子慎独",
   description: "老子婆娑",
-  base:'/ngm.github.io/',
+  base: "/ngm.github.io/",
   head: [
     [
       "link",
@@ -23,14 +23,20 @@ export default defineUserConfig<DefaultThemeOptions>({
         children: [{ text: "初识", link: "/vuepress_config" }],
       },
       {
-          text:'vue3',
-          children:[{
-              text:'继续看看vue',
-              link:'/vue_still_learn'
-          }]
-      }
+        text: "vue3",
+        children: [
+          {
+            text: "继续看看vue",
+            link: "/vue_still_learn",
+          },
+          {
+            text: "webpack摸爬滚打",
+            link: "/vue_still_learn/webpack.md",
+          },
+        ],
+      },
     ],
-    sidebar: 'auto',
+    sidebar: "auto",
   },
   plugins: [
     "@vuepress/plugin-toc",

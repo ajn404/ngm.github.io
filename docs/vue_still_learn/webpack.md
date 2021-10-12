@@ -55,5 +55,100 @@ document.body.appendChild(component())
 ## 创建bundle
 project
 ``` diff
+  |- package.json
++ |- /dist
++   |- index.html
+- |- index.html
+  |- /src
+    |- index.js
+```
+执行 `npx webpack` 
+``` shell
+npx webpack       
+asset main.js 69.5 KiB [emitted] [minimized] (name: main) 1 related asset
+runtime modules 1010 bytes 5 modules
+cacheable modules 532 KiB
+  ./src/index.js 225 bytes [built] [code generated]
+  ./node_modules/lodash/lodash.js 531 KiB [built] [code generated]
 
+WARNING in configuration
+The 'mode' option has not been set, webpack will fallback to 'production' for this value.
+Set 'mode' option to 'development' or 'production' to enable defaults for each environment.
+You can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/
+```
+
+## [关于模块方法](https://www.webpackjs.com/api/module-methods/)
+
+## 使用配置文件webpack.config.js
+``` js
+const path = require('path');
+
+module.exports = {
+    entry:'./src/index.js',
+    output:{
+        filename: 'bundle.js',
+        path: path.resolve(__dirname,'dist')
+    }
+}
+//我们可以通过配置方式指定loader规则，插件，解析选项
+```
+ 执行`npx webpack  --config webpack.config.js`
+# [接下来是管理资源章节](https://www.webpackjs.com/guides/asset-management/)
+## 加载css
+``` shell
+npm install --save-dev style-loader css-loader
+```
+webpack.config.js
+``` js
+const path = require('path');
+
+module.exports = {
+    entry:'./src/index.js',
+    output:{
+        filename: 'bundle.js',
+        path: path.resolve(__dirname,'dist')
+    },
+    module:{
+        rules:[
+            {
+                test: /\.css$/,
+                use:[
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
+    }
+}
+```
+style.css
+``` css
+.hello{
+    color: red;
+}
+```
+src/index.js
+~~~ js
+import _ from 'lodash'
+import './style.css'
+
+function component(){
+    var element = document.createElement('div');
+    
+    element.innerHTML = _.join(['Hello','webpack'],'');
+    element.classList.add('hello');
+
+    return element
+}
+
+document.body.appendChild(component())
+~~~
+
+ 执行`npx webpack  --config webpack.config.js`
+ 浏览器打开index.html发现头部多了一个style:golf:
+
+``` html
+<style>.hello{
+    color: red;
+}</style>
 ```

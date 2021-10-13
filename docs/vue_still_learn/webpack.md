@@ -152,3 +152,4 @@ document.body.appendChild(component())
     color: red;
 }</style>
 ```
+<strong>之后的webpack配置学习，遇到什么，就在下面总结什么</strong>

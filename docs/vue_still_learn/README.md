@@ -1,5 +1,12 @@
 ### 目录
 [[toc]]
+### 概括
+每天学一点,和vue无关，和vue有关
+### node-sass
+``` shell
+cnpm i
+```
+不然会报错
 ### vue过滤器
 ``` js
   filters: {
@@ -59,3 +66,74 @@ this.$refs.ruleForm.validateField('content')
 ```
 结果
 ![img](/ngm.github.io/images/img_vue_still_learn.png)
+# 手写promise 
+## 实现resolve和reject
+```js 
+  class MyPromise {
+        constructor(executor) {
+          this.initValue();
+          // 初始化this
+          this.initValue();
+          this.initBind();
+          executor(this.resolve, this.reject);
+        }
+
+        initBind() {
+          this.resolve = this.resolve.bind(this);
+          this.reject = this.resolve.bind(this);
+        }
+
+        initValue() {
+          this.PromiseResult = null;
+          this.PromiseState = "pending";
+        }
+
+        resolve(value) {
+          this.PromiseState = "fullfilled";
+          this.PromiseState = value;
+        }
+
+        reject(reason) {
+          this.PromiseState = "rejected";
+          this.PromiseResult = reason;
+        }
+      }
+```
+## 状态不可变
+
+**一旦状态从pending变成了fulfilled或者rejected，那么此Promise实例的状态就锁死了**
+
+```js
+  class MyPromise {
+        constructor(executor) {
+          this.initValue();
+          // 初始化this
+          this.initValue();
+          this.initBind();
+          executor(this.resolve, this.reject);
+        }
+
+        initBind() {
+          this.resolve = this.resolve.bind(this);
+          this.reject = this.resolve.bind(this);
+        }
+
+        initValue() {
+          this.PromiseResult = null;
+          this.PromiseState = "pending";
+        }
+
+        resolve(value) {
+            if(this.PromiseState !== 'pending') return
+          this.PromiseState = "fullfilled";
+          this.PromiseState = value;
+        }
+
+        reject(reason) {
+			if(this.PromiseState !== 'pending') return
+          this.PromiseState = "rejected";
+          this.PromiseResult = reason;
+        }
+      }
+```
+

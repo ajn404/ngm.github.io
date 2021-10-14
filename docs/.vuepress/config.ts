@@ -15,7 +15,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     ],
   ],
   themeConfig: {
-    logo: "/images/sword.png",
+    logo: "/images/logo.png",
     navbar: [
       { text: "首页", link: "/" },
       {

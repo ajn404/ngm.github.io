@@ -1,66 +1,25 @@
-### 目录
-[[toc]]
-### 开始写博客
-##### 描述：vuepress2.x+ts学习历程
-![🤺](/ngm.github.io/images/sword.png)
+# 总目录
 
-### 安装插件
-
-- @vuepress/plugin-toc@next
-- @vuepress/plugin-back-to-top@next
-- @vuepress/plugin-nprogress@next
-
-
-### 插入logo
-![😀](/ngm.github.io/images/logo.png)
-<br>
-<strong>配置文件</strong><i>2021/10/13</i>
-``` ts
-import { defineUserConfig } from "@vuepress/cli";
-import type { DefaultThemeOptions } from "vuepress";
-
-export default defineUserConfig<DefaultThemeOptions>({
-  title: "君子慎独",
-  description: "老子婆娑",
-  base: "/ngm.github.io/",
-  head: [
-    [
-      "link",
-      {
-        rel: "icon",
-        href: "/images/sword.png",
-      },
-    ],
-  ],
-  themeConfig: {
-    logo: "/images/logo.png",
-    navbar: [
-      { text: "首页", link: "/" },
-      {
-        text: "博客配置",
-        children: [{ text: "初识", link: "/vuepress_config" }],
-      },
-      {
-        text: "vue3",
-        children: [
-          {
-            text: "继续看看vue",
-            link: "/vue_still_learn",
-          },
-          {
-            text: "webpack摸爬滚打",
-            link: "/vue_still_learn/webpack.md",
-          },
-        ],
-      },
-    ],
-    sidebar: "auto",
-  },
-  plugins: [
-    "@vuepress/plugin-toc",
-    "@vuepress/plugin-back-to-top",
-    "@vuepress/plugin-nprogress",
-  ],
-});
+```diff
++ README.md						首页
++ vue_still_learn
++	README.md 					继续学习vue		
++   webpack.md					webpack学习
++	/js_skill					
++		README.md				js技巧	
++ vuepress_config
++ README.md						博客配置
++ plugins.md					vuepress插件
 ```
+
+# 总览
+
+|                    链接                     |       描述        |
+| :-----------------------------------------: | :---------------: |
+|                  [首页](/)                  |      目录页       |
+|        [博客配置](/vuepress_config)         | vuepress配置记录  |
+|  [博客配置插件](/vuepress_config/plugins)   |   博客配置插件    |
+|     [js技巧](/vue_still_learn/js_skill)     |      js技巧       |
+|       [继续学习vue](/vue_still_learn)       | 保持学习(vue相关) |
+| [webpack摸爬滚打](/vue_still_learn/webpack) |  简单积累webpack  |
 

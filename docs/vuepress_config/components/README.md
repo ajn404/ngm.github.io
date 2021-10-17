@@ -48,3 +48,5 @@ markdown内适用语法
 
 [register-components](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html#%E5%AE%89%E8%A3%85)
 
+# 安装了插件，部署的时候遇到点问题，这就令人头疼了
+

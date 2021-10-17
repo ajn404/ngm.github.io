@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\n-graymoon\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @vue-cli
+  C:\Program Files\nodejs\node.exe C:\Users\n-graymoon\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
   C:\Users\n-graymoon\Documents\工作第一年\ngm.github.io\node_modules\.bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Users\n-graymoon\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\n-graymoon\AppData\Local\Programs\Python\Python39\;C:\Users\n-graymoon\AppData\Local\Microsoft\WindowsApps;C:\Users\n-graymoon\AppData\Local\Programs\VSCodium\bin;C:\Users\n-graymoon\.dotnet\tools;C:\Users\n-graymoon\AppData\Roaming\npm;C:\Users\n-graymoon\AppData\Local\Programs\We码开发者工具\bin;C:\Us;rs\n-graymoon\AppData\Local\gitkraken\bin;C:\Program Files\Docker Toolbox;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.2\bin;;C:\Users\n-graymoon\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2021.1\bin;;D:\software\IntelliJ IDEA 2020.1\bin;;D:\software\IntelliJ IDEA 2020.1\bin;C:\flutter\bin;
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/@vue-cli: Request "https://registry.npm.taobao.org/@vue-cli" returned a 405
-      at Request.params.callback [as _callback] (C:\Users\n-graymoon\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66997:18)
-      at Request.self.callback (C:\Users\n-graymoon\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (C:\Users\n-graymoon\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (C:\Users\n-graymoon\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (internal/streams/readable.js:1327:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\n-graymoon\Documents\工作第一年\ngm.github.io\node_modules\vuepress\node_modules\esbuild\esbuild.exe'
 
 npm manifest: 
   {

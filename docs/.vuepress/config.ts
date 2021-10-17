@@ -15,6 +15,13 @@ export default defineUserConfig<DefaultThemeOptions>({
                 href: "/images/sword.png",
             },
         ],
+        [
+            "meta",
+            {
+                name:'baidu-site-verification',
+                content:'code-Uv8ovRPETm'
+            }
+        ]
     ],
     themeConfig: {
         logo: "/images/logo.png",

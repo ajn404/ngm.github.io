@@ -1,5 +1,6 @@
-import { defineUserConfig } from "@vuepress/cli";
+import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
+const { path } = require('@vuepress/utils')
 
 export default defineUserConfig<DefaultThemeOptions>({
   title: "君子慎独",
@@ -20,7 +21,7 @@ export default defineUserConfig<DefaultThemeOptions>({
       { text: "首页", link: "/" },
       {
         text: "博客配置",
-        children: [{ text: "初识", link: "/vuepress_config" },{ text: "插件", link: "/vuepress_config/plugins" }],
+        children: [{ text: "初识", link: "/vuepress_config" },{ text: "插件", link: "/vuepress_config/plugins" },{ text: "组件", link: "/vuepress_config/components" }],
       },
       {
         text: "vue3",
@@ -44,5 +45,13 @@ export default defineUserConfig<DefaultThemeOptions>({
     "@vuepress/plugin-toc",
     "@vuepress/plugin-back-to-top",
     "@vuepress/plugin-nprogress",
+    [
+      '@vuepress/register-components',
+      {
+        components: {
+          MyDemo: path.resolve(__dirname, './components/my-demo.vue'),
+        },
+      },
+    ],
   ],
 });

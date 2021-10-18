@@ -46,6 +46,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                         link: "/vue_still_learn/js_skill/string",
                     },
                     {
+                      text: "ji技能之object",
+                      link: "/vue_still_learn/js_skill/object",
+                  },
+                    {
                         text: "webpack摸爬滚打",
                         link: "/vue_still_learn/webpack",
                     },

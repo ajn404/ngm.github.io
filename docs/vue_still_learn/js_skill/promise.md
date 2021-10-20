@@ -1,4 +1,3 @@
-
 # Promise
 
 ```js
@@ -39,7 +38,6 @@ console.log("p3", p3);
 
 结果
 ![img](/ngm.github.io/images/img_vue_still_learn.png)
-
 
 # 手写 promise
 
@@ -161,3 +159,50 @@ const text3 = new MyPromise((resolve, reject) => {
 });
 console.log(text3);
 ```
+
+## 4.实现 then
+
+关于 then
+
+```js
+const p1 = new Promise((resolve, resize) => {
+  resolve("成功");
+}).then(
+  (res) => console.log(res),
+  (error) => console.log(error)
+);
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("失败");
+  });
+}).then(
+  (res) => console.log(res),
+  (error) => console.log(error)
+);
+
+// 链式调用
+const p3 = new Promise((resolve, reject) => {
+  resolve(100);
+})
+  .then(
+    (res) => 2 * res,
+    (err) => console.log(err)
+  )
+  .then(
+    (res) => console.log(res),
+    (err) => console.log(err)
+  );
+```
+
+::: tip 实现
+实现then：then,定时器情况，链式调用和微任务
+:::
+
+1. ##### then
+
+   ```js
+   
+   ```
+
+2. ##### 

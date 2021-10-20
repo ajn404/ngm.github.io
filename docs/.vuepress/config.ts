@@ -53,6 +53,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                         text: "webpack摸爬滚打",
                         link: "/vue_still_learn/webpack",
                     },
+                    {
+                        text: "webpack摸爬滚打",
+                        link: "/vue_still_learn/js_skill/promise",
+                    },
                 ],
             },
             {text: '读书笔记', link: '/reading/'}
@@ -69,6 +73,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             {
                 components: {
                     MyDemo: path.resolve(__dirname, './components/my-demo.vue'),
+                    Home: path.resolve(__dirname,'./components/home.vue')
                 },
             },
         ],

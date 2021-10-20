@@ -5,7 +5,7 @@ const {path} = require('@vuepress/utils')
 
 export default defineUserConfig<DefaultThemeOptions>({
     title: "君子慎独",
-    description: "老子婆娑",
+    description: "一个前端开发工程师的自我修养",
     base: "/ngm.github.io/",
     head: [
         [

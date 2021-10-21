@@ -1,7 +1,7 @@
 import {defineUserConfig} from "vuepress";
 import type {DefaultThemeOptions} from "vuepress";
-
-const {path} = require('@vuepress/utils')
+const {path} = require('@vuepress/utils');
+import {components} from "./components";
 
 export default defineUserConfig<DefaultThemeOptions>({
     title: "君子慎独",
@@ -71,10 +71,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         [
             '@vuepress/register-components',
             {
-                components: {
-                    MyDemo: path.resolve(__dirname, './components/my-demo.vue'),
-                    Home: path.resolve(__dirname,'./components/home.vue')
-                },
+                components: components,
             },
         ],
     ],

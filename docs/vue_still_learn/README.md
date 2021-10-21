@@ -58,7 +58,13 @@ npm install
   </CodeGroupItem>
 </CodeGroup>
 
+::: tip 在vue中实现p5有点恶心心
+1.使用toDataURL把canvas转换成base64图片地址
+2.或者用refs把canvas "appendChild"到vue组件中
+3.组件中导入p5,其中p5的方法都要加'p5.'，否则会报错
+:::
 
 <ClientOnly>
 <vue-still-learn></vue-still-learn>
 </ClientOnly>
+

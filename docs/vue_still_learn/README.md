@@ -67,25 +67,10 @@ npm install
 <ClientOnly>
 <vue-still-learn></vue-still-learn>
 </ClientOnly>
-vue的组件如下
+vue的组件代码如下
 
-```js
-<template>
-    <div class="vue-still-learn" ref="box">
-
-    </div>
-</template>
-
-<script>
-    import P5 from "../../resource/p5";
-
-    export default {
-        name: "vue-still-learn",
-        data(){
-          return {
-          }
-        },
-        mounted() {
+```
+mounted() {
             this.$nextTick(()=>{
                 let judgeCanvasExist = document.getElementById("defaultCanvas0")
                 if(judgeCanvasExist===null) {
@@ -93,7 +78,7 @@ vue的组件如下
                 }
             })
         },
-        methods: {
+methods: {
             main(_p5) {
                 let p5 = _p5;
                 let bubbles = [];
@@ -146,11 +131,11 @@ vue的组件如下
                         this.r = r;
                         this.brightness = 0;
                     }
-
+    
                     changeColor(bright) {
                         this.brightness = bright;
                     }
-
+    
                     contains(px, py) {
                         let d = p5.dist(px, py, this.x, this.y);
                         if (d < this.r) {
@@ -159,12 +144,12 @@ vue的组件如下
                             return false;
                         }
                     }
-
+    
                     move() {
                         this.x = this.x + p5.random(-2, 2);
                         this.y = this.y + p5.random(-2, 2);
                     }
-
+    
                     show() {
                         p5.stroke(255);
                         p5.strokeWeight(4);
@@ -172,19 +157,10 @@ vue的组件如下
                         p5.ellipse(this.x, this.y, this.r * 2);
                     }
                 }
-
+    
             }
         }
-    }
-</script>
 
-<style scoped>
-    .vue-still-learn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
+
 
 ```
-

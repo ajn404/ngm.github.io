@@ -202,7 +202,81 @@ const p3 = new Promise((resolve, reject) => {
 1. ##### then
 
    ```js
+     // then
+         class MyPromise {
+           constructor(executor){
+               this.initValue();
+               this.initBind();
+               try{
+                 executor(this.resolve,this.reject)
+               } catch(e){
+                 this.reject(e)
+               }
+           }
+   
+           initValue(){
+             this.promiseState = "pending";
+             this.promiseResult = null;
+           }
+   
+           initBind() {
+             this.resolve = this.resolve.bind(this);
+             this.reject = this.reject.bind(this);
+           }
+   
+           resolve(val){
+             if(this.promiseState!=="pending") return;
+             this.promiseState= "fulfilled";
+             this.promiseResult = val;
+           }
+   
+           reject(val){
+             if(this.promiseState!=="pending") return;
+   
+             this.promiseState = "rejected";
+             this.promiseResult = val;
+           }
+   
+           then(onFulfilled,onRejected){
+               onFulfilled = typeof onFulfilled==='function' ? onFulfilled:val=>val;
+               onRejected = typeof onRejected==='function' ? onRejected : reason=>{throw reason};
+   
+               if(this.promiseState === 'fulfilled'){
+                 // 如果当前为成功状态，执行第一个回调
+                 onFulfilled(this.promiseState);
+               
+               }else if(this.promiseState ==='rejected'){
+                 onRejected(this.promiseResult)
+               }
+           }
+   
+         }
+   
+         const t5 = new MyPromise((resolve,reject)=>{
+           resolve("hh")
+         }).then((res)=>{console.log(res)},(err)=>{console.error(err);})
+   
+         console.log(t5)
+   ```
+
+   奇怪的是输出的第二行是undefined,难道Promise实例调用then之后会变成undefined么？哦，我懂了，如果我这样
+
+   ```
+   if(this.promiseState === 'fulfilled'){
+                 // 如果当前为成功状态，执行第一个回调
+                 onFulfilled(this.promiseState);
+                 return "hh"
+               }
+   ```
+
+   第二行便会打印"hh",:sake:nice
+
+2. 定时器
+
+   ```js
    
    ```
 
-2. ##### 
+   
+
+3. 

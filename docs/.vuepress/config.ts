@@ -1,7 +1,7 @@
 import {defineUserConfig} from "vuepress";
 import type {DefaultThemeOptions} from "vuepress";
 const {path} = require('@vuepress/utils');
-import {components} from "./components";
+import {components} from "./config/components";
 
 export default defineUserConfig<DefaultThemeOptions>({
     title: "君子慎独",

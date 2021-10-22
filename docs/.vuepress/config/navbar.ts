@@ -35,8 +35,8 @@ const front_end = {
             link: "/vue_still_learn/js_skill/string",
         },
         {
-            text: "ji技能之any",
-            link: "/vue_still_learn/js_skill/any",
+            text: "ji技能之object",
+            link: "/vue_still_learn/js_skill/object",
         },
         {
             text: "webpack摸爬滚打",

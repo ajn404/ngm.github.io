@@ -75,3 +75,8 @@
     }
     import './cssTransitionAndAnimation.scss'
 </script>
+<style lang="scss" scoped>
+    .css-box{
+        margin-top: 20px;
+    }
+</style>

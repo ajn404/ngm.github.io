@@ -619,17 +619,16 @@ body {
   display: flex;
   gap: 60px;
   flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: auto;
+  //overflow-x: hidden;
+  //overflow-y: auto;
 
   @media (min-width: $mq-small) {
-    overflow: hidden;
+    //overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: clamp(2vw, 300px, 5vw);
-    height: 100vh;
     padding: 0 5vw;
   }
 

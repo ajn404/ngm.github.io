@@ -11,31 +11,18 @@
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
     import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
-    import UE from  '../resource/ueditor.all.js'
-    import  '../resource/ueditor.config'
 
     export default {
+        data(){
+            return{
+
+            }
+        },
         mounted() {
             //自动打字
             this.initType();
             //github提交日历
             this.initCalender();
-            // this.$nextTick(()=>{
-            //
-            //     let node = document.createElement('script')
-            //     node.setAttribute("id","container")
-            //     node.setAttribute("name","content")
-            //     node.setAttribute("text","text/plain")
-            //     node.setAttribute("style","height: 500px")
-            //     this.$refs.box.appendChild(node)
-            //
-            //     let ue = UE.getEditor('container',{
-            //         autoHeightEnabled: true,
-            //         autoFloatEnabled: true
-            //     })
-            //     return ue
-            // })
-
         },
         methods: {
             initType() {
@@ -87,10 +74,17 @@
         font-weight: bold;
         text-align: center;
     }
+    .element{
+        min-height: 40px;
+        max-height: 40px;
+        line-height: 40px;
+    }
+
     .calendar{
         margin-top: 2em;
         border-radius: 10px;
         padding: 10px;
+
     }
 
 </style>

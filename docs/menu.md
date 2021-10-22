@@ -16,13 +16,6 @@
 + plugins.md					vuepress插件
 ```
 
-# 总览
-
-|                    链接                     |       描述        |
-| :-----------------------------------------: | :---------------: |
-|                  [首页](/)                  |      目录页       |
-|        [博客配置](/vuepress_config)         | vuepress配置记录  |
-|  [博客配置插件](/vuepress_config/plugins)   |   博客配置插件    |
-|     [js技巧](/vue_still_learn/js_skill)     |      js技巧       |
-|       [继续学习vue](/vue_still_learn)       | 保持学习(vue相关) |
-| [webpack摸爬滚打](/vue_still_learn/webpack) |  简单积累webpack  |
+<ClientOnly>
+<element-demo></element-demo>
+</ClientOnly>

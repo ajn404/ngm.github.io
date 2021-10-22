@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="box" ref="box">
         <span class="element"></span>
         <div class="calendar">
             准备好了吗？
@@ -11,10 +11,31 @@
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
     import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
+    import UE from  '../resource/ueditor.all.js'
+    import  '../resource/ueditor.config'
+
     export default {
         mounted() {
+            //自动打字
             this.initType();
-            GitHubCalendar(".calendar", "ajn404", { responsive: true });
+            //github提交日历
+            this.initCalender();
+            // this.$nextTick(()=>{
+            //
+            //     let node = document.createElement('script')
+            //     node.setAttribute("id","container")
+            //     node.setAttribute("name","content")
+            //     node.setAttribute("text","text/plain")
+            //     node.setAttribute("style","height: 500px")
+            //     this.$refs.box.appendChild(node)
+            //
+            //     let ue = UE.getEditor('container',{
+            //         autoHeightEnabled: true,
+            //         autoFloatEnabled: true
+            //     })
+            //     return ue
+            // })
+
         },
         methods: {
             initType() {
@@ -45,9 +66,13 @@
                     backSpeed: 10,//回退速度
                 });
                 return homeTypedFont
+            },
+            initCalender(){
+                GitHubCalendar(".calendar", "ajn404", { responsive: true });
             }
         },
         components:{
+            //轨道环绕
             cssTransitionAndAnimation
         }
     }

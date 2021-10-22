@@ -2,13 +2,15 @@
     <div class="box">
         <span class="element"></span>
         <div class="calendar">
-            正在加载中
+            准备好了吗？
         </div>
+        <css-transition-and-animation></css-transition-and-animation>
     </div>
 </template>
 <script>
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
+    import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
     export default {
         mounted() {
             this.initType();
@@ -44,6 +46,9 @@
                 });
                 return homeTypedFont
             }
+        },
+        components:{
+            cssTransitionAndAnimation
         }
     }
     import 'github-calendar/dist/github-calendar-responsive.css'

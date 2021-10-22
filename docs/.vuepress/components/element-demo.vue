@@ -4,6 +4,7 @@
         <div class="table" style="display: flex;justify-content: center">
             <el-table
                     :data="tableDataLeft"
+                    :stripe="false"
                     style="width:50%"
             >
                 <el-table-column label="黑话" prop="value"></el-table-column>
@@ -11,26 +12,29 @@
             </el-table>
             <el-table
                     :data="tableDataRight"
+                    :stripe="false"
                     style="width:50%;margin-left: 50px"
             >
                 <el-table-column label="黑话" prop="value"></el-table-column>
                 <el-table-column label="解释" prop="res"></el-table-column>
             </el-table>
         </div>
-        <el-calendar v-model="value" class="calendar"></el-calendar>
+        <el-calendar class="calendar" v-model="value"></el-calendar>
         <el-tabs
-                type="card"
-                closable
-                v-model="tabsVal"
                 @tab-remove="removeTab"
+                class="tabs"
+                closable
+                type="card"
+                v-model="tabsVal"
         >
             <el-tab-pane
-                    v-for="item in tabs"
                     :key="item.name"
                     :label="item.title"
                     :name="item.name"
-            >{{item.content}}</el-tab-pane>
-            <el-button type="primary" @click="addTab()">添加</el-button>
+                    v-for="item in tabs"
+            >{{item.content}}
+            </el-tab-pane>
+            <el-button @click="addTab()" type="primary">添加</el-button>
 
         </el-tabs>
     </div>
@@ -38,6 +42,7 @@
 <script lang="ts">
     import {defineComponent, ref} from 'vue'
     import {allegoricalList} from "./data/allegorical";
+
     export default defineComponent({
         setup() {
             const value = ref(new Date());
@@ -56,20 +61,20 @@
                 tableDataLeft: tableDataLeft,
                 tableDataRight: tableDataRight,
                 //
-                tabsVal:'',
-                tabs:[
+                tabsVal: '',
+                tabs: [
                     {
-                        title:'1',
-                        name:'1',
-                        content:'1'
+                        title: '1',
+                        name: '1',
+                        content: '1'
                     },
                     {
-                        title:'2',
-                        name:'2',
-                        content:'2'
+                        title: '2',
+                        name: '2',
+                        content: '2'
                     }
                 ],
-                tabIndex:2
+                tabIndex: 2
             }
         },
         methods: {
@@ -102,19 +107,31 @@
     })
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
     .element-demo {
         margin-top: 20px;
     }
-    .calendar{
+
+    .calendar {
+        margin-top: 20px;
         width: 100%;
-        ::v-deep(table){
+
+        ::v-deep(table) {
             display: table;
         }
-        ::v-deep(.el-button-group){
+
+        ::v-deep(.el-button-group) {
             display: flex;
             gap: 10px;
         }
+    }
+
+    ::v-deep(tr:nth-child(2n)) {
+        background-color: var(--el-table-tr-background-color);
+    }
+
+    .tabs {
+        margin-top: 20px;
     }
 
 </style>

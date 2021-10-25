@@ -15,7 +15,6 @@
     export default {
         data(){
             return{
-
             }
         },
         mounted() {
@@ -78,6 +77,7 @@
         min-height: 40px;
         max-height: 40px;
         line-height: 40px;
+        overflow: hidden;
     }
 
     .calendar{

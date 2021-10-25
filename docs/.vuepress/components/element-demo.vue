@@ -21,30 +21,37 @@
         </div>
         <el-calendar class="calendar" v-model="value"></el-calendar>
         <el-tabs
-                @tab-remove="removeTab"
                 class="tabs"
-                closable
+                @edit="handleTabsEdit"
+                editable
                 type="card"
-                v-model="tabsVal"
+                v-model="editableTabsValue"
         >
             <el-tab-pane
                     :key="item.name"
                     :label="item.title"
                     :name="item.name"
-                    v-for="item in tabs"
-            >{{item.content}}
+                    v-for="item in editableTabs"
+            >
+                <p>{{item.content}}</p>
+                <el-input
+                        placeholder="输入域已绑定该tab页的内容"
+                        type="textarea"
+                        v-model="item.content"
+                        autosize
+                >
+                </el-input>
             </el-tab-pane>
-            <el-button @click="addTab()" type="primary">添加</el-button>
-
         </el-tabs>
+
+
     </div>
 </template>
 <script lang="ts">
     import {defineComponent, ref} from 'vue'
     import {allegoricalList} from "./data/allegorical";
-
     export default defineComponent({
-        setup() {
+        data() {
             const value = ref(new Date());
             let tableDataLeft = [], tableDataRight = [];
             allegoricalList.map((value, index, array) => {
@@ -61,47 +68,49 @@
                 tableDataLeft: tableDataLeft,
                 tableDataRight: tableDataRight,
                 //
-                tabsVal: '',
-                tabs: [
+                editableTabsValue: '2',
+                editableTabs: [
                     {
-                        title: '1',
+                        title: 'Tab 1',
                         name: '1',
-                        content: '1'
+                        content: '这里是tab1',
                     },
                     {
-                        title: '2',
+                        title: 'Tab 2',
                         name: '2',
-                        content: '2'
-                    }
+                        content: '这里是tab2',
+                    },
                 ],
-                tabIndex: 2
+                tabIndex: 2,
             }
         },
         methods: {
-            removeTab(targetName) {
-                const tabs = this.tabs;
-                let activeName = this.tabsVal
-                if (activeName === targetName) {
-                    tabs.forEach((tab, index) => {
-                        if (tab.name === targetName) {
-                            const nextTab = tabs[index + 1] || tabs[index - 1]
-                            if (nextTab) {
-                                activeName = nextTab.name
-                            }
-                        }
+            handleTabsEdit(targetName, action) {
+                if (action === 'add') {
+                    const newTabName = `${++this.tabIndex}`
+                    this.editableTabs.push({
+                        title: `Tab ${newTabName}`,
+                        name: newTabName,
+                        content: `这里是tab${newTabName}`,
                     })
+                    this.editableTabsValue = newTabName
                 }
-                this.tabsVal = activeName
-                this.tabs = tabs.filter((tab) => tab.name !== targetName)
-            },
-            addTab() {
-                const newTabName = `${++this.tabIndex}`
-                this.tabs.push({
-                    title: 'New Tab',
-                    name: newTabName,
-                    content: 'New Tab content',
-                })
-                this.tabsVal = newTabName
+                if (action === 'remove') {
+                    const tabs = this.editableTabs
+                    let activeName = this.editableTabsValue
+                    if (activeName === targetName) {
+                        tabs.forEach((tab, index) => {
+                            if (tab.name === targetName) {
+                                const nextTab = tabs[index + 1] || tabs[index - 1]
+                                if (nextTab) {
+                                    activeName = nextTab.name
+                                }
+                            }
+                        })
+                    }
+                    this.editableTabsValue = activeName
+                    this.editableTabs = tabs.filter((tab) => tab.name !== targetName)
+                }
             },
         }
     })
@@ -110,6 +119,7 @@
 <style lang="scss" scoped>
     .element-demo {
         margin-top: 20px;
+        background: #fff;
     }
 
     .calendar {

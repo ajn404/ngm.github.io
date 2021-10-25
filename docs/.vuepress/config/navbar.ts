@@ -3,8 +3,8 @@ const home: any = {
     link: "/"
 }
 const menu: any = {
-    text :"目录",
-    link: "/menu"
+    text :"element-plus",
+    link: "/ep"
 }
 
 const config: any = {
@@ -23,6 +23,7 @@ const config: any = {
         }
     ],
 };
+
 const front_end = {
     text: "前端js相关",
     children: [
@@ -48,6 +49,7 @@ const front_end = {
         },
     ],
 };
+
 const note: any = {
     text: '读书笔记',
     link: '/reading/'

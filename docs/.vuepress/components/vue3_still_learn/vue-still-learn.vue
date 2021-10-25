@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    //vue中使用P5的方式
     import P5 from "../../resource/p5";
 
     export default {

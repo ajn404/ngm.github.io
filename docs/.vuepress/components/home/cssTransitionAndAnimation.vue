@@ -73,6 +73,7 @@
     export default {
         "name": "cssTransitionAndAnimation"
     }
+    //在这里导入与全局导入的区别是什么
     import './cssTransitionAndAnimation.scss'
 </script>
 <style lang="scss" scoped>

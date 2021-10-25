@@ -243,7 +243,7 @@ const p3 = new Promise((resolve, reject) => {
    
                if(this.promiseState === 'fulfilled'){
                  // 如果当前为成功状态，执行第一个回调
-                 onFulfilled(this.promiseState);
+                 onFulfilled(this.promiseResult);
                
                }else if(this.promiseState ==='rejected'){
                  onRejected(this.promiseResult)
@@ -274,8 +274,68 @@ const p3 = new Promise((resolve, reject) => {
 2. 定时器
 
    ```js
+   class MyPromise {
+           constructor(executor) {
+             this.initValue();
+             this.initBind();
+             try {
+               executor(this.resolve, this.reject);
+             } catch (e) {
+               this.reject(e);
+             }
+           }
+           initValue() {
+             this.promiseState = "pending";
+             this.promiseResault = null;
+           }
+   
+           initBind() {
+             this.reject=this.reject.bind(this);
+             this.resolve = this.resolve.bind(this);
+           }
+   
+           resolve(val) {
+             if (this.promiseState !== "pending") return;
+   
+             this.promiseState = "fulfilled";
+             this.promiseResault = val;
+           }
+   
+           reject(val) {
+             if (this.promiseState !== "pending") return;
+             this.promiseResault = val;
+             this.promiseState = "rejected";
+           }
+   
+           then(onFulfilled, onRejected) {
+             onFulfilled =
+               typeof onFulfilled === "function" ? onFulfilled : (val) => val;
+             onRejected =
+               typeof onRejected === "function" ? onRejected : (val) => val;
+   
+             if (this.promiseState === "fulfilled") {
+               onFulfilled(this.promiseState);
+             }else if(this.promiseState === 'rejected'){
+               onRejected(this.promiseResault)
+             }
+           }
+         }
+   
+         const p5 = new MyPromise((resolve,reject)=>{
+           setTimeout(()=>{
+             reject('失败')
+           },1000)
+           // reject('失败')
+         }).then(
+           res => console.log(res),
+           err=>console.log(err)
+           )
    
    ```
+
+   使用上一节代码，定时器情况下，then里得不到任何参数
+
+   实现方法为，保证'1s'后执行then里面的回调
 
    
 

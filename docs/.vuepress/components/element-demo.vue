@@ -119,7 +119,6 @@
 <style lang="scss" scoped>
     .element-demo {
         margin-top: 20px;
-        background: #fff;
     }
 
     .calendar {

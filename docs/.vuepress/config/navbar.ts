@@ -55,10 +55,16 @@ const note: any = {
     link: '/reading/'
 }
 
+const game: any = {
+    text: '游戏',
+    link: '/game/pixi-demo'
+}
+
 export const navbarConfig = [
     home,
     menu,
     config,
     front_end,
-    note
+    note,
+    game
 ]

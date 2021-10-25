@@ -60,6 +60,17 @@ const game: any = {
     link: '/game/pixi-demo'
 }
 
+const others:any={
+    text:'其他',
+    children:[
+        {
+            text:'关于vim',
+            link:'/something_help_dev/vim'
+        }
+    ]
+}
+
+
 export const navbarConfig = [
     home,
     menu,

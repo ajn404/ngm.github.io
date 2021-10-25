@@ -1,6 +1,6 @@
 <template>
 <div>
-    first game demo
+    pixi中的helloWorld,进控制台看看
 </div>
 </template>
 

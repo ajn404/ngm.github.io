@@ -49,7 +49,7 @@
 </template>
 <script lang="ts">
     import {defineComponent, ref} from 'vue'
-    import {allegoricalList} from "./data/allegorical";
+    import {allegoricalList} from "./common/data/allegorical";
     export default defineComponent({
         data() {
             const value = ref(new Date());

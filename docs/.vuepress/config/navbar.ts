@@ -66,6 +66,10 @@ const others:any={
         {
             text:'关于vim',
             link:'/something_help_dev/vim'
+        },
+        {
+            text: '样式之flex布局',
+            link: '/style_learn/flex'
         }
     ]
 }
@@ -77,5 +81,6 @@ export const navbarConfig = [
     config,
     front_end,
     note,
-    game
+    game,
+    others
 ]

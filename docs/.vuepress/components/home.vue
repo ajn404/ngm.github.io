@@ -5,6 +5,7 @@
             准备好了吗？
         </div>
         <css-transition-and-animation></css-transition-and-animation>
+        <div class="box-box">你还要 盯着我 看多久</div>
     </div>
 </template>
 <script>
@@ -66,25 +67,5 @@
 
 </script>
 <style scoped>
-    .box {
-        width: 100%;
-        min-height: 100vh;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: center;
-    }
-    .element{
-        min-height: 40px;
-        max-height: 40px;
-        line-height: 40px;
-        overflow: hidden;
-    }
-
-    .calendar{
-        margin-top: 2em;
-        border-radius: 10px;
-        padding: 10px;
-
-    }
-
+    @import "./common/styles/home.scss";
 </style>

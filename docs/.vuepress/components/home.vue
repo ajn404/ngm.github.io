@@ -6,6 +6,8 @@
         </div>
         <css-transition-and-animation></css-transition-and-animation>
         <div class="box-box">你还要盯着我看多久</div>
+        <md-editor v-model="text" class="editor" />
+        <div class="editor-content">{{text}}</div>
     </div>
 </template>
 <script>
@@ -13,9 +15,13 @@
     import GitHubCalendar from 'github-calendar'
     import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
 
+    import MdEditor from 'md-editor-v3';
+
+
     export default {
         data(){
             return{
+                text:'hello editor'
             }
         },
         mounted() {
@@ -60,11 +66,12 @@
         },
         components:{
             //轨道环绕
-            cssTransitionAndAnimation
+            cssTransitionAndAnimation,
+            MdEditor
         }
     }
     import 'github-calendar/dist/github-calendar-responsive.css'
-
+    import 'md-editor-v3/lib/style.css';
 </script>
 <style scoped>
     @import "./common/styles/home.scss";

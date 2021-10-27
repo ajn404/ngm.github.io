@@ -7,7 +7,6 @@
         <css-transition-and-animation></css-transition-and-animation>
         <div class="box-box">你还要盯着我看多久</div>
         <md-editor v-model="text" class="editor" />
-        <div class="editor-content">{{text}}</div>
     </div>
 </template>
 <script>

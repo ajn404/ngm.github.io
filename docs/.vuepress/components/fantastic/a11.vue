@@ -3,7 +3,6 @@
       <section id="chip-section">
 
   <video
-          src="https://www.apple.com/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/arcade-loop/large.mp4"
           muted
           playsinline
           autoplay="autoplay"

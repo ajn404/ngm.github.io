@@ -2,17 +2,17 @@
     <div class="box" ref="box">
         <span class="element"></span>
         <div class="calendar">
-            准备好了吗？
+           ajn404
         </div>
-        <css-transition-and-animation></css-transition-and-animation>
-        <div class="box-box">你还要盯着我看多久</div>
+        <!-- <css-transition-and-animation></css-transition-and-animation> -->
+        <div class="box-box">{{text}}</div>
         <md-editor v-model="text" class="editor" />
     </div>
 </template>
 <script>
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
-    import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
+    // import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
     import MdEditor from 'md-editor-v3';
     export default {
         data(){
@@ -62,7 +62,7 @@
         },
         components:{
             //轨道环绕
-            cssTransitionAndAnimation,
+            // cssTransitionAndAnimation,
             MdEditor
         }
     }

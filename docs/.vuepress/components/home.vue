@@ -31,7 +31,6 @@
     import 'github-calendar/dist/github-calendar-responsive.css'
     import 'md-editor-v3/lib/style.css';
     import 'swiper/css'
-
     export default {
         data() {
             return {

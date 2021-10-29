@@ -25,6 +25,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     ],
     themeConfig: {
         logo: "/images/logo.png",
+        logoDark:"",
         navbar: navbarConfig,
         sidebar: "auto",
     },

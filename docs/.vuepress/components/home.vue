@@ -13,10 +13,7 @@
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
     import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
-
     import MdEditor from 'md-editor-v3';
-
-
     export default {
         data(){
             return{

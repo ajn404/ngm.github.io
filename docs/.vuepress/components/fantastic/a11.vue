@@ -6,10 +6,16 @@
           src="https://www.apple.com/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/arcade-loop/large.mp4"
           muted
           playsinline
-          autoplay
+          autoplay="autoplay"
+          preload="auto"
           x5-playsinline="true"
           webkit-playsinline="true"
-          loop></video>
+          loop>
+    <source src="https://www.apple.com/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/arcade-loop/large.mp4"
+    type="video/mp4"
+    >
+
+  </video>
   <h1>
     iPhone 11 Pro called.<br>
     It wants its chip back.

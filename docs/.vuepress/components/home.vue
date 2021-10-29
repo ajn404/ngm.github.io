@@ -1,54 +1,81 @@
 <template>
     <div class="box" ref="box">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./common/data/picture.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./common/data/picture.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./common/data/picture.jpg" alt="">
+                </div>
+            </div>
+        </div>
         <span class="element"></span>
         <div class="calendar">
-           ajn404
+            ajn404
         </div>
         <!-- <css-transition-and-animation></css-transition-and-animation> -->
         <div class="box-box">{{text}}</div>
-        <md-editor v-model="text" class="editor" />
+        <md-editor class="editor" v-model="text"/>
     </div>
 </template>
 <script>
+    import Swiper from 'swiper'
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
     // import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
     import MdEditor from 'md-editor-v3';
+    import 'github-calendar/dist/github-calendar-responsive.css'
+    import 'md-editor-v3/lib/style.css';
+    import 'swiper/css'
+
     export default {
-        data(){
-            return{
-                text:'hello editor'
+        data() {
+            return {
+                text: 'hello editor'
             }
         },
         mounted() {
+            //轮播
+            this.initSwiper()
             //自动打字
             this.initType();
             //github提交日历
             this.initCalender();
         },
         methods: {
+            initSwiper() {
+                new Swiper('.swiper-container', {
+                    autoplay: true,
+                    effect: 'fade',//渐变切换
+                })
+            },
+
             initType() {
-                let typedString = ["大梦一场的","董二千先生",
-                    "推开窗户"," 举起望远镜",
-                    "推开窗户"," 举起望远镜",
-                    "眼底映出 ","一阵浓烟",
-                    "前已无通路 ","后不见归途",
-                    "敌视现实"," 虚构远方",
-                    "东张西望 ","一无所长",
-                    "四体不勤"," 五谷不分",
-                    "文不能测字"," 武不能防身",
-                    "喜欢养狗 ","不爱洗头",
-                    "不事劳作 ","一无所获",
-                    "厌恶争执"," 不善言说",
-                    "终于沦为","沉默的帮凶",
-                    "借酒消愁 ","不太能喝",
-                    "蛊惑他人 ","麻醉内心",
-                    "浇上汽油 ","舒展眉头",
-                    "纵火的青年 ","迫近的时间",
-                    "大梦一场的","董二千先生",
-                    "推开窗户 ","举起望远镜",
-                    "眼底映出 ","一阵浓烟",
-                    "前已无通路 ","后不见归途"]
+                let typedString = ["大梦一场的", "董二千先生",
+                    "推开窗户", " 举起望远镜",
+                    "推开窗户", " 举起望远镜",
+                    "眼底映出 ", "一阵浓烟",
+                    "前已无通路 ", "后不见归途",
+                    "敌视现实", " 虚构远方",
+                    "东张西望 ", "一无所长",
+                    "四体不勤", " 五谷不分",
+                    "文不能测字", " 武不能防身",
+                    "喜欢养狗 ", "不爱洗头",
+                    "不事劳作 ", "一无所获",
+                    "厌恶争执", " 不善言说",
+                    "终于沦为", "沉默的帮凶",
+                    "借酒消愁 ", "不太能喝",
+                    "蛊惑他人 ", "麻醉内心",
+                    "浇上汽油 ", "舒展眉头",
+                    "纵火的青年 ", "迫近的时间",
+                    "大梦一场的", "董二千先生",
+                    "推开窗户 ", "举起望远镜",
+                    "眼底映出 ", "一阵浓烟",
+                    "前已无通路 ", "后不见归途"]
                 let homeTypedFont = new Typed('.element', {
                     strings: typedString,
                     typeSpeed: 500, //打字速度
@@ -56,19 +83,16 @@
                 });
                 return homeTypedFont
             },
-            initCalender(){
-                GitHubCalendar(".calendar", "ajn404", { responsive: true });
+            initCalender() {
+                GitHubCalendar(".calendar", "ajn404", {responsive: true});
             }
         },
-        components:{
+        components: {
             //轨道环绕
             // cssTransitionAndAnimation,
             MdEditor
         }
-    }
-    import 'github-calendar/dist/github-calendar-responsive.css'
-    import 'md-editor-v3/lib/style.css';
-</script>
+    }</script>
 <style scoped>
     @import "./common/styles/home.scss";
 </style>

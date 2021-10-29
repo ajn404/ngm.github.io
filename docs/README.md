@@ -1,6 +1,7 @@
 ---
 pageClass: css-transition-and-animation-box
-home: true
+sidebar: false
+sidebarDepth: 0
 ---
 <ClientOnly>
 <Home></Home>

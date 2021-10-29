@@ -72,7 +72,7 @@ const others:any={
             link: '/style_learn/flex'
         },
         {
-            text:'hh',
+            text:'a11动画--steven',
             link:'/fantastic/a11'
         }
     ]

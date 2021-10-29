@@ -1,7 +1,15 @@
 <template>
   <div class="a11">
       <section id="chip-section">
-  <video src="https://www.apple.com/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/arcade-loop/large.mp4" muted playsinline autoplay loop></video>
+
+  <video
+          src="https://www.apple.com/105/media/us/iphone-se/2020/90024c0f-285a-4bf5-af04-2c38de97b06e/anim/arcade-loop/large.mp4"
+          muted
+          playsinline
+          autoplay
+          x5-playsinline="true"
+          webkit-playsinline="true"
+          loop></video>
   <h1>
     iPhone 11 Pro called.<br>
     It wants its chip back.

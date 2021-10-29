@@ -70,6 +70,10 @@ const others:any={
         {
             text: '样式之flex布局',
             link: '/style_learn/flex'
+        },
+        {
+            text:'hh',
+            link:'/fantastic/a11'
         }
     ]
 }

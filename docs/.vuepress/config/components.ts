@@ -6,5 +6,6 @@ export const components={
     VueStillLearn : path.resolve(__dirname,'../components/vue3_still_learn/vue-still-learn'),
     ElementDemo : path.resolve(__dirname,'../components/element-demo'),
     PixiDemo: path.resolve(__dirname,'../components/game/pixi-demo'),
-    ResponsiveImages:path.resolve(__dirname,'../components/responsiveImages/index')
+    ResponsiveImages:path.resolve(__dirname,'../components/responsiveImages/index'),
+    AEleven:path.resolve(__dirname,'../components/fantastic/a11'),
 };

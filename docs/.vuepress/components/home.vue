@@ -1,18 +1,13 @@
 <template>
     <div class="box" ref="box">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./common/data/picture.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./common/data/picture.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="./common/data/picture.jpg" alt="">
-                </div>
-            </div>
-        </div>
+        <Swiper
+                class="swiper-container"
+                :autoplay="1000"
+        >
+            <SwiperSlide v-for="(i,index) in swiperSlideNums">
+                <el-image :src="'https://picsum.photos/1080/480/?random='+(index)" fit="cover" style="max-width: 100vw"></el-image>
+            </SwiperSlide>
+        </Swiper>
         <span class="element"></span>
         <div class="calendar">
             ajn404
@@ -23,36 +18,34 @@
     </div>
 </template>
 <script>
-    import Swiper from 'swiper'
+    // import {Swiper,SwiperSlide} from 'swiper/vue'
+    import {Swiper, SwiperSlide} from "swiper/vue"
     import * as Typed from 'typed.js'
     import GitHubCalendar from 'github-calendar'
     // import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
     import MdEditor from 'md-editor-v3';
     import 'github-calendar/dist/github-calendar-responsive.css'
     import 'md-editor-v3/lib/style.css';
+
     import 'swiper/css'
+    import 'swiper/css/bundle'
+
+    import './common/styles/index.scss'
+
     export default {
         data() {
             return {
-                text: 'hello editor'
+                text: 'hello editor',
+                swiperSlideNums: new Array(5),
             }
         },
         mounted() {
-            //轮播
-            this.initSwiper()
             //自动打字
             this.initType();
             //github提交日历
             this.initCalender();
         },
         methods: {
-            initSwiper() {
-                new Swiper('.swiper-container', {
-                    autoplay: true,
-                    effect: 'fade',//渐变切换
-                })
-            },
-
             initType() {
                 let typedString = ["大梦一场的", "董二千先生",
                     "推开窗户", " 举起望远镜",
@@ -87,11 +80,12 @@
             }
         },
         components: {
-            //轨道环绕
             // cssTransitionAndAnimation,
-            MdEditor
+            MdEditor,
+            Swiper,
+            SwiperSlide
         }
     }</script>
-<style scoped>
+<style lang="scss" scoped>
     @import "./common/styles/home.scss";
 </style>

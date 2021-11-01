@@ -1,6 +1,5 @@
 <template>
     <div class="element-demo">
-        在博客中使用element-plus搞事情
         <div class="table" style="display: flex;justify-content: center">
             <el-table
                     :data="tableDataLeft"

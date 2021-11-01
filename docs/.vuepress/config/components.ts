@@ -7,6 +7,7 @@ export const components={
     ElementDemo : path.resolve(__dirname,'../components/element-demo'),
     PixiDemo: path.resolve(__dirname,'../components/game/pixi-demo'),
     ResponsiveImages:path.resolve(__dirname,'../components/responsiveImages/index'),
+    WaterfallsFlow:path.resolve(__dirname,'../components/common/components/waterfallsFlow'),
     AEleven:path.resolve(__dirname,'../components/fantastic/a11'),
-    WaterfallsFlow:path.resolve(__dirname,'../components/common/components/waterfallsFlow')
+    Charts:path.resolve(__dirname,'../components/fantastic/charts')
 };

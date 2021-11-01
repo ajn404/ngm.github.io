@@ -84,6 +84,10 @@ const others:any={
         {
             text:'动画--steven',
             link:'/fantastic/a11'
+        },
+        {
+            text:'图标',
+            link:'/something_help_dev/charts'
         }
     ]
 }

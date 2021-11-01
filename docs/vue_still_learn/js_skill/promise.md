@@ -330,13 +330,7 @@ const p3 = new Promise((resolve, reject) => {
            res => console.log(res),
            err=>console.log(err)
            )
-   
    ```
-
    使用上一节代码，定时器情况下，then里得不到任何参数
-
    实现方法为，保证'1s'后执行then里面的回调
-
-   
-
 3. 

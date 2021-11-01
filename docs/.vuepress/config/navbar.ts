@@ -6,21 +6,21 @@ const menu: any = {
     text :"element-plus",
     children:[
         {
-            text: 'el-image',
+            text: '图片',
             link: '/fantastic/waterfallsFlow'
         },
         {
-            text :"其他",
+            text :"表单元素",
             link: "/ep",
         }
     ]
 }
 
 const config: any = {
-    text: "博客配置",
+    text: "配置",
     children: [
         {
-            text: "初识",
+            text: "概述",
             link: "/vuepress_config/"
         },
         {
@@ -28,13 +28,14 @@ const config: any = {
             link: "/vuepress_config/plugins"
         },
         {
-            text: "组件", link: "/vuepress_config/components/"
+            text: "组件",
+            link: "/vuepress_config/components/"
         }
     ],
 };
 
 const front_end = {
-    text: "前端js相关",
+    text: "前端",
     children: [
         {
             text: "vue",
@@ -65,7 +66,7 @@ const note: any = {
 }
 
 const game: any = {
-    text: '游戏',
+    text: 'h5游戏',
     link: '/game/pixi-demo'
 }
 
@@ -81,7 +82,7 @@ const others:any={
             link: '/style_learn/flex'
         },
         {
-            text:'a11动画--steven',
+            text:'动画--steven',
             link:'/fantastic/a11'
         }
     ]

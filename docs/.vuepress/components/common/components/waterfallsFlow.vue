@@ -1,7 +1,8 @@
 <template>
 <el-container>
 <el-main class="image-box ">
-    <el-image v-for="item in picList" :src="item.download_url" :key="item.id" :preview-src-list="previewList" ></el-image>
+    懒加载
+    <el-image v-for="item in picList" :src="item.download_url" :key="item.id" :preview-src-list="previewList" lazy ></el-image>
 </el-main>
 </el-container>
 </template>

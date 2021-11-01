@@ -15,6 +15,7 @@
         <!-- <css-transition-and-animation></css-transition-and-animation> -->
         <div class="box-box">{{text}}</div>
         <md-editor class="editor" v-model="text"/>
+<!--        <nested-lines></nested-lines>-->
     </div>
 </template>
 <script>
@@ -31,6 +32,7 @@
     import 'swiper/css/bundle'
 
     import './common/styles/index.scss'
+    import nestedLines from "./vue3_still_learn/nestedLines";
 
     export default {
         data() {
@@ -83,7 +85,8 @@
             // cssTransitionAndAnimation,
             MdEditor,
             Swiper,
-            SwiperSlide
+            SwiperSlide,
+            nestedLines
         }
     }</script>
 <style lang="scss" scoped>

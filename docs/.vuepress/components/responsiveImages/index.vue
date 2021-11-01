@@ -3,7 +3,7 @@
         <div class="flex-box">
 
             <div v-for="item in fakeData.slice(0,21)" class="fake-images" :key="item.itemCity">
-                <el-image :src="item.itemUrl"  class="image-item">
+                <el-image src="https://picsum.photos/1920/1080"  class="image-item">
                     <template #error>
                         <div class="image-slot">
                             <i class="el-icon-picture-outline"></i>

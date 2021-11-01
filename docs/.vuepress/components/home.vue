@@ -2,7 +2,7 @@
     <div class="box" ref="box">
         <Swiper
                 class="swiper-container"
-                :autoplay="1000"
+                :autoplay="true"
         >
             <SwiperSlide v-for="(i,index) in swiperSlideNums">
                 <el-image :src="'https://picsum.photos/1080/480/?random='+(index)" fit="cover" style="max-width: 100vw"></el-image>

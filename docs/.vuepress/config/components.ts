@@ -8,4 +8,5 @@ export const components={
     PixiDemo: path.resolve(__dirname,'../components/game/pixi-demo'),
     ResponsiveImages:path.resolve(__dirname,'../components/responsiveImages/index'),
     AEleven:path.resolve(__dirname,'../components/fantastic/a11'),
+    WaterfallsFlow:path.resolve(__dirname,'../components/common/components/waterfallsFlow')
 };

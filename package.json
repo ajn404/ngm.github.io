@@ -21,6 +21,7 @@
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.26",
     "@vuepress/plugin-nprogress": "^2.0.0-beta.26",
     "@vuepress/plugin-toc": "^2.0.0-beta.26",
+    "axios": "0.24.0",
     "element-plus": "^1.1.0-beta.24",
     "github-calendar": "^2.2.7",
     "pixi.js": "^6.1.3",

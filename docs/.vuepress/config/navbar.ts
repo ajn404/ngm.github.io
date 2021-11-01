@@ -4,7 +4,16 @@ const home: any = {
 }
 const menu: any = {
     text :"element-plus",
-    link: "/ep"
+    children:[
+        {
+            text: 'el-image',
+            link: '/fantastic/waterfallsFlow'
+        },
+        {
+            text :"其他",
+            link: "/ep",
+        }
+    ]
 }
 
 const config: any = {

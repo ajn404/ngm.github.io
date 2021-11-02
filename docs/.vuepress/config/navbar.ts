@@ -3,21 +3,21 @@ const home: any = {
     link: "/"
 }
 const menu: any = {
-    text :"element-plus",
+    text :"主流框架学习",
     children:[
         {
-            text: '图片',
+            text: 'element-plus图片',
             link: '/fantastic/waterfallsFlow'
         },
         {
-            text :"表单元素",
+            text :"element-plus表单元素",
             link: "/ep",
         }
     ]
 }
 
 const config: any = {
-    text: "配置",
+    text: "博客",
     children: [
         {
             text: "概述",
@@ -35,7 +35,7 @@ const config: any = {
 };
 
 const front_end = {
-    text: "前端",
+    text: "前端(琐碎)",
     children: [
         {
             text: "vue",
@@ -61,17 +61,17 @@ const front_end = {
 };
 
 const note: any = {
-    text: '读书笔记',
+    text: '读书',
     link: '/reading/'
 }
 
 const game: any = {
-    text: 'h5游戏',
+    text: '兴趣',
     link: '/game/pixi-demo'
 }
 
 const others:any={
-    text:'其他',
+    text:'探索',
     children:[
         {
             text:'关于vim',
@@ -86,8 +86,12 @@ const others:any={
             link:'/fantastic/a11'
         },
         {
-            text:'图标',
+            text:'图表',
             link:'/something_help_dev/charts'
+        },
+        {
+            link: '/fantastic/coding_chanlenges/p5_001',
+            text: '星空(假)'
         }
     ]
 }
@@ -95,10 +99,10 @@ const others:any={
 
 export const navbarConfig = [
     home,
-    menu,
     config,
     front_end,
     note,
     game,
-    others
+    others,
+    menu,
 ]

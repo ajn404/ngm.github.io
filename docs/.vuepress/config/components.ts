@@ -10,5 +10,6 @@ export const components = {
     ResponsiveImages: path.resolve(__dirname, '../components/responsiveImages/index'),
     WaterfallsFlow: path.resolve(__dirname, '../components/common/components/waterfallsFlow'),
     AEleven: path.resolve(__dirname, '../components/fantastic/a11'),
-    Charts: path.resolve(__dirname, '../components/fantastic/charts')
+    Charts: path.resolve(__dirname, '../components/fantastic/charts'),
+    starField: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/startField')
 };

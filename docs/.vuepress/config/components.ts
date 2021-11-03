@@ -11,5 +11,6 @@ export const components = {
     WaterfallsFlow: path.resolve(__dirname, '../components/common/components/waterfallsFlow'),
     AEleven: path.resolve(__dirname, '../components/fantastic/a11'),
     Charts: path.resolve(__dirname, '../components/fantastic/charts'),
-    starField: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/startField')
+    starField: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/startField'),
+    lSystem: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/LSystem')
 };

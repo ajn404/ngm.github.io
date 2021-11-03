@@ -91,7 +91,11 @@ const others:any={
         },
         {
             link: '/fantastic/coding_chanlenges/p5_001',
-            text: '星空(假)'
+            text: '星空(coding train)'
+        },
+        {
+            link: '/fantastic/coding_chanlenges/p5_002',
+            text: 'L-system'
         }
     ]
 }

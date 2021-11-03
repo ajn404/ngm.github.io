@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="star-field">
         <span style="font-size: 1px">嘟嘟 <br> 一辆coding train 迎面缓缓驶来</span>
-
+        <div id="star"></div>
     </div>
 </template>
 <script>
@@ -16,7 +16,7 @@
         created() {
             let judgeCanvasExist = document.getElementById("defaultCanvas0")
             if (judgeCanvasExist === null) {
-                new P5(this.main);
+                new P5(this.main,"star");
             }
         },
         mounted() {
@@ -95,3 +95,10 @@
         }
     }
 </script>
+<style scoped>
+#star{
+    max-width: 100%;
+    max-height: 80%;
+    overflow: hidden;
+}
+</style>

@@ -80,8 +80,8 @@
                 function turtle() {
                     p5.background(51);
                     p5.resetMatrix();
-                    p5.translate(p5.width / 2, p5.height);
-                    p5.stroke(255, 100);
+                    p5.translate(p5.width / 3, p5.height);
+                    p5.stroke(255, 50);
                     for (var i = 0; i < sentence.length; i++) {
                         var current = sentence.charAt(i);
 
@@ -101,7 +101,7 @@
                 }
 
                 p5.setup = ()=> {
-                    p5.createCanvas(400, 400);
+                    p5.createCanvas(p5.windowWidth-30, p5.windowHeight-100);
                     angle = p5.radians(25);
                     p5.background(51);
                     p5.createP(axiom);
@@ -115,7 +115,7 @@
     }
 </script>
 <style scoped>
-    #star{
+    #box{
         max-width: 100%;
         max-height: 80%;
         overflow: hidden;

@@ -51,7 +51,7 @@ export default {
       let angle;
       let axiom = "F";
       let sentence = axiom;
-      let len = 100;
+      let len = 200;
 
       let rules = [];
       rules[0] = {

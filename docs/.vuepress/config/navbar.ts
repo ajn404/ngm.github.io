@@ -66,7 +66,7 @@ const note: any = {
 }
 
 const game: any = {
-    text: '兴趣',
+    text: '日历数据接口测试',
     link: '/game/pixi-demo'
 }
 

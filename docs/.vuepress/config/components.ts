@@ -2,6 +2,7 @@ const {path} = require('@vuepress/utils')
 
 export const components = {
     MyDemo: path.resolve(__dirname, '../components/draft/my-demo'),
+    workcal: path.resolve(__dirname, '../components/draft/workcal'),
     Home: path.resolve(__dirname, '../components/home'),
     VueStillLearn: path.resolve(__dirname, '../components/vue3_still_learn/vue-still-learn'),
     NestedLines: path.resolve(__dirname, '../components/vue3_still_learn/nestedLines'),

@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-//请求图片列表
 const serviceForPisc = axios.create({
         baseURL: 'https://91.usst.edu.cn',
         timeout: 50000,
+        withCredentials: true
     }
 )
 

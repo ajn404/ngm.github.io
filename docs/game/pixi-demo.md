@@ -1,5 +1,5 @@
 ## 日历数据
 
 <ClientOnly>
-<workcal></workcal>
+<pixi-demo></pixi-demo>
 </ClientOnly>

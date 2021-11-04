@@ -40,4 +40,6 @@ export default defineUserConfig<DefaultThemeOptions>({
             },
         ],
     ],
+    port:3000,
+
 });

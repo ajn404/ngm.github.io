@@ -4,7 +4,7 @@
                 class="swiper-container"
                 :autoplay="true"
         >
-            <SwiperSlide v-for="(i,index) in swiperSlideNums">
+            <SwiperSlide v-for="(i,index) in swiperSlideNums" :key="index">
                 <el-image :src="'https://picsum.photos/1080/480/?random='+(index)" fit="cover" style="max-width: 100vw"></el-image>
             </SwiperSlide>
         </Swiper>

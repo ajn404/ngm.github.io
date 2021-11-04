@@ -95,6 +95,10 @@ const others:any={
         },
         {
             link: '/fantastic/coding_chanlenges/p5_002',
+            text: 'self-avoiding walk'
+        },
+        {
+            link: '/fantastic/coding_chanlenges/p5_003',
             text: 'L-system'
         }
     ]

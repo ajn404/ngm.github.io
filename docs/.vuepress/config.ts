@@ -41,22 +41,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         ],
     ],
     port:3000,
-    // bundlerConfig: {
-    //     configureWebpack:{
-    //         devserver: {
-    //             host: '0.0.0.0',
-    //             proxy: {
-    //                 '/index': {
-    //                     target: 'https://91.usst.edu.cn',
-    //                     changeOrigin: true,
-    //                     pathRewrite: {
-    //                         '^/index': ''
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    //
-    // }
-
+    bundlerConfig:{
+        evergreen:true
+    }
 });

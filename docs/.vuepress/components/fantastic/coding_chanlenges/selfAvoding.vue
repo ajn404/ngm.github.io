@@ -10,16 +10,23 @@
     export default {
         name: "selfAvoding",
         data() {
-            return {}
+            return {
+                x:null
+            }
         },
         created() {
 
         },
         mounted() {
-            let judgeCanvasExist = document.getElementById("defaultCanvas0")
-            if (judgeCanvasExist === null) {
-                new P5(this.main,"self");
-            }
+            this.$nextTick(()=>{
+
+                    this.x=new P5(this.main,"self");
+            })
+
+        },
+        beforeUnmount() {
+          this.x=null;
+          console.log(this)
         },
         methods: {
             main(_p5) {
@@ -29,7 +36,6 @@
                 let cols, rows,depth;
                 let path = [];
                 let spot;
-
                 class Step {
                     constructor(dx, dy, dz) {
                         this.dx = dx;
@@ -38,7 +44,6 @@
                         this.tried = false;
                     }
                 }
-
                 function allOptions() {
                     return [
                         new Step(1, 0, 0),
@@ -49,7 +54,6 @@
                         new Step(0, 0, -1)
                     ];
                 }
-
                 class Spot {
                     constructor(i, j, k) {
                         this.i = i;
@@ -86,8 +90,6 @@
                         return undefined;
                     }
                 }
-
-
                 function make3DArray(cols, rows, depth) {
                     let arr = new Array(cols);
                     for (let i = 0; i < arr.length; i++) {
@@ -98,7 +100,6 @@
                     }
                     return arr;
                 }
-
                 p5.setup=()=> {
                     p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
                     cols = p5.floor(p5.width / spacing);
@@ -117,7 +118,7 @@
                     try{
                         spot = grid[cx][cx][cx];
                     }catch (e) {
-                        spot = grid[cx][cx][cx];
+                        location.reload()
                     }
 
                     path.push(spot);
@@ -177,50 +178,33 @@
                     if (path.length === cols * rows * depth) {
                         console.log('Solved!');
                         noLoop();
-                        // break;
                     }
                     //}
-
                      p5.stroke(255);
                      p5.strokeWeight(spacing * 0.1);
                      p5.noFill();
-
                      p5.colorMode(p5.HSB);
                     for (let i = 0; i < path.length - 1; i++) {
                         let v1 = path[i];
-                        // path[i].x += p5.random(-0.1,0.1);
-                        // path[i].y += p5.random(-0.1,0.1);
-                        // path[i].z += p5.random(-0.1,0.1);
                         let v2 = path[i + 1];
-                        // let r = p5.map(v1.i,0,cols,100, 255);
-                        // let g = p5.map(v1.j,0,rows,100, 255);
-                        // let b = p5.map(v1.k,0,depth,100, 255);
-                        // stroke(r,g,b);
                         p5.stroke((i + p5.frameCount) % 360, 100, 100);
 
                         p5.line(v1.x, v1.y, v1.z, v2.x, v2.y, v2.z);
                     }
-
-                    // beginShape();
-                    // for (let spot of path) {
-                    //   vertex(spot.x, spot.y, spot.z);
-                    // }
-                    // endShape();
-
                      p5.stroke(255);
                      p5.strokeWeight(spacing * 0.5);
                      p5.point(spot.x, spot.y, spot.z);
                 }
-
-
             }
         }
     }
 </script>
 <style scoped>
     #self{
-        max-width: 100%;
-        max-height: 80%;
-        overflow: hidden;
+        position: absolute;
+        left: 0 ;
+        width: 100vw;
+        overflow-x: hidden;
+
     }
 </style>

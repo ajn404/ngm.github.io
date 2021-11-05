@@ -5,7 +5,7 @@
       云朵不是球形的，山峦不是锥形的，海岸线不是圆形的，树皮不是光滑的，闪电也不是一条直线。
       <p dir="rtl">
           ——分形几何学之父Benoit Mandelbrot
-          </p> 
+          </p>
     </h4>
     <h4>'F'=> 'FF+[+F-F-F]-[-F+F+F]'</h4>
     <h4>指数增长，不要生成太多次，网页会崩</h4>
@@ -115,6 +115,7 @@ export default {
       };
     },
   },
+
 };
 </script>
 <style scoped lang="scss">

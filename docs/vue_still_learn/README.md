@@ -161,6 +161,13 @@ methods: {
             }
         }
 
-
-
 ```
+
+### 快速复制网页的cookie
+
+```js
+copy(document.cookie)
+//粘贴并应用
+"复制的内容".split(';').map(c=>document.cookie=c)
+```
+

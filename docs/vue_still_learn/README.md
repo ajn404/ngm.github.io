@@ -171,3 +171,9 @@ copy(document.cookie)
 "复制的内容".split(';').map(c=>document.cookie=c)
 ```
 
+### echarts的图标监听window的大小重绘
+
+```js
+window.addEventListener("resize", () => {this.chartLine.resize();});
+```
+

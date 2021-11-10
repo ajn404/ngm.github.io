@@ -1,6 +1,6 @@
 <template>
 <div>
-    pixi中的helloWorld,进控制台看看
+    换一个仓库写gsap去了
 </div>
 </template>
 

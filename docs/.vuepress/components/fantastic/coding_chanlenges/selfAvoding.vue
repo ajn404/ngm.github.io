@@ -101,7 +101,7 @@
                     return arr;
                 }
                 p5.setup=()=> {
-                    p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
+                    p5.createCanvas(500, p5.windowHeight, p5.WEBGL);
                     cols = p5.floor(p5.width / spacing);
                     rows = p5.floor(p5.height / spacing);
                     depth = cols;
@@ -118,7 +118,7 @@
                     try{
                         spot = grid[cx][cx][cx];
                     }catch (e) {
-                        location.reload()
+                        console.log(e)
                     }
 
                     path.push(spot);

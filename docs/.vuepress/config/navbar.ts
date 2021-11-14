@@ -38,24 +38,12 @@ const front_end = {
     text: "前端(琐碎)",
     children: [
         {
-            text: "vue",
+            text: "代码技巧总结",
             link: "/vue_still_learn/",
-        },
-        {
-            text: "ji技能之string",
-            link: "/vue_still_learn/js_skill/string",
-        },
-        {
-            text: "ji技能之object",
-            link: "/vue_still_learn/js_skill/object",
         },
         {
             text: "webpack摸爬滚打",
             link: "/vue_still_learn/webpack",
-        },
-        {
-            text: "es6技能之promise",
-            link: "/vue_still_learn/js_skill/promise",
         },
     ],
 };
@@ -74,15 +62,15 @@ const others:any={
     text:'探索',
     children:[
         {
-            text:'关于vim',
+            text:'vim',
             link:'/something_help_dev/vim'
         },
         {
-            text: '样式之flex布局',
+            text: 'lex布局',
             link: '/style_learn/flex'
         },
         {
-            text:'动画--steven',
+            text:'动画-m1',
             link:'/fantastic/a11'
         },
         {
@@ -97,10 +85,10 @@ const others:any={
             link: '/fantastic/coding_chanlenges/p5_002',
             text: 'L-system'
         },
-        {
-            link: '/fantastic/coding_chanlenges/p5_003',
-            text: 'self-avoiding walk'
-        }
+        // {
+        //     link: '/fantastic/coding_chanlenges/p5_003',
+        //     text: 'self-avoiding walk'
+        // }
     ]
 }
 

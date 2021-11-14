@@ -177,3 +177,59 @@ copy(document.cookie)
 window.addEventListener("resize", () => {this.chartLine.resize();});
 ```
 
+### 数组去重
+```js
+(target) =>{
+let arr = target;
+let res = [new Set(arr)]
+return res
+}
+```
+
+## 深拷贝
+``` js
+function deepClone(target) {
+    debugger
+    let result;
+    if (typeof target === 'object') {
+      if (Array.isArray(target)) {
+        result = [];
+        for (let i in target) {
+          result.push(deepClone(target[i]))
+        }
+      } else if(target===null) {
+        result = null;
+      } else if(target.constructor===RegExp){
+        result = target;
+      }else {
+        result = {};
+        for (let i in target) {
+          result[i] = deepClone(target[i]);
+        }
+      }
+    } else {
+      result = target;
+    }
+    return result;
+  }
+```
+
+### 判断字符串是否全为空
+``` js
+str.match(/^[ ]*$/)
+```
+### 判断对象是否为空
+```js
+//使用Object.keys()或者Object.getOwnPropertyNames()
+const obj = {};
+const arr = Object.keys(obj)
+console.log(arr.length>0)
+//使用JSON.stringfy()
+console.log(JSON.stringify(obj)!=='{}');
+```
+::: tip 注意
+Object.keys(), 它返回一个数组，这个数组由对象中可枚举的自有属性的名称组成。
+Object.getOwnPropertyNames() 返回一个数组,该数组对元素是obj自身拥有的枚举或不可枚举属性名称字符串。
+:::
+
+

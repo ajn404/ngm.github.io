@@ -1,5 +1,7 @@
-## 日历数据
-
+---
+sidebar: false
+sidebarDepth: 0
+---
 <ClientOnly>
 <pixi-demo></pixi-demo>
 </ClientOnly>

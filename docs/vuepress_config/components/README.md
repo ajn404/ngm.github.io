@@ -42,12 +42,12 @@ markdown内适用语法
 
 这个ClientOnly字面意义看起来像“旨在客户端”，嗯:question:
 
-##注意，在vuepress2.x，使用组件需要安装插件,这里是官方文档，
+## 注意，在vuepress2.x，使用组件需要安装插件,这里是官方文档，
 
 :arrow_down:
 
 [register-components](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html#%E5%AE%89%E8%A3%85)
 
-# 安装了插件，部署的时候遇到点问题，这就令人头疼了
+## 安装了插件，部署的时候遇到点问题，这就令人头疼了
 
 然后发现不是插件的锅，我手贱，在首页写了对 `center`的html标签，在markdown里写无可厚非，但在vuepress里写就着实不聪明哈

@@ -23,10 +23,10 @@ const config: any = {
             text: "概述",
             link: "/vuepress_config/"
         },
-        {
-            text: "插件",
-            link: "/vuepress_config/plugins"
-        },
+        // {
+        //     text: "插件",
+        //     link: "/vuepress_config/plugins"
+        // },
         {
             text: "组件",
             link: "/vuepress_config/components/"
@@ -66,7 +66,7 @@ const others:any={
             link:'/something_help_dev/vim'
         },
         {
-            text: 'lex布局',
+            text: 'flex布局',
             link: '/style_learn/flex'
         },
         {

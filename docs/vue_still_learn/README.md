@@ -163,7 +163,7 @@ methods: {
 
 ```
 
-### 快速复制网页的cookie
+## 快速复制网页的cookie
 
 ```js
 copy(document.cookie)
@@ -171,13 +171,13 @@ copy(document.cookie)
 "复制的内容".split(';').map(c=>document.cookie=c)
 ```
 
-### echarts的图标监听window的大小重绘
+## echarts的图标监听window的大小重绘
 
 ```js
 window.addEventListener("resize", () => {this.chartLine.resize();});
 ```
 
-### 数组去重
+## 数组去重
 ```js
 (target) =>{
 let arr = target;
@@ -214,11 +214,11 @@ function deepClone(target) {
   }
 ```
 
-### 判断字符串是否全为空
+## 判断字符串是否全为空
 ``` js
 str.match(/^[ ]*$/)
 ```
-### 判断对象是否为空
+## 判断对象是否为空
 ```js
 //使用Object.keys()或者Object.getOwnPropertyNames()
 const obj = {};

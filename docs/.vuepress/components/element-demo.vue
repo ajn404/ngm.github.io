@@ -1,5 +1,6 @@
 <template>
     <div class="element-demo">
+        <h2>element-plus现在还没做暗色调模式，按理说可以改一下全局作用的变量做调整</h2>
         <div class="table" style="display: flex;justify-content: center">
             <el-table
                     :data="tableDataLeft"

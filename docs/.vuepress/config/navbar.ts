@@ -89,6 +89,10 @@ const others:any={
         //     link: '/fantastic/coding_chanlenges/p5_003',
         //     text: 'self-avoiding walk'
         // }
+        {
+            link:'/alimap/README.md',
+            text:'构建知识体系'
+        }
     ]
 }
 

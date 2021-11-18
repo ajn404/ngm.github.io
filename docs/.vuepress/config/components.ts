@@ -1,21 +1,12 @@
 const {path} = require('@vuepress/utils')
 
-<<<<<<< HEAD
 const resolve = (dir)=>{
     return path.resolve(__dirname,dir)
-=======
-function resolve(dir){
-    return path.resolve(__dirname, dir)
->>>>>>> 24b6fdb378343ebfab7392dd11caa17bbaea04d4
 }
 
 export const components = {
     MyDemo: resolve('../components/draft/my-demo'),
-<<<<<<< HEAD
     workcal: resolve('../components/draft/workcal'),
-=======
-    workcal: resolve('_../components/draft/workcal'),
->>>>>>> 24b6fdb378343ebfab7392dd11caa17bbaea04d4
     Home: resolve('../components/home'),
     VueStillLearn: resolve('../components/vue3_still_learn/vue-still-learn'),
     NestedLines: resolve('../components/vue3_still_learn/nestedLines'),

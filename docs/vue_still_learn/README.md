@@ -206,7 +206,6 @@ setTimeout(async () => {
 */
 ```
 
-<<<<<<< HEAD
 ## 数组去重
 ```js
 (target) =>{
@@ -263,7 +262,6 @@ Object.getOwnPropertyNames() 返回一个数组,该数组对元素是obj自身�
 :::
 
 
-=======
 ### 检查日期是否有效
 ```js
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
@@ -288,4 +286,3 @@ const capitalize = str => str.charAt(0).toUpperCase()+str.slice(1)
 //使用
 //capitalize('heiheiheiyohei')
 ```
->>>>>>> 24b6fdb378343ebfab7392dd11caa17bbaea04d4

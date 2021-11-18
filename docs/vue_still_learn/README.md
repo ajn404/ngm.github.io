@@ -8,7 +8,7 @@ sidebarDepth : 4
 
 ## 概括
 
-每天学一点,和 vue 无关，和 vue 有关
+技术积累
 
 ## node-sass
 

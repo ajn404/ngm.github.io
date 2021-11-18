@@ -1,18 +1,22 @@
 const {path} = require('@vuepress/utils')
 
+function resolve(dir){
+    return path.resolve(__dirname, dir)
+}
+
 export const components = {
-    MyDemo: path.resolve(__dirname, '../components/draft/my-demo'),
-    workcal: path.resolve(__dirname, '../components/draft/workcal'),
-    Home: path.resolve(__dirname, '../components/home'),
-    VueStillLearn: path.resolve(__dirname, '../components/vue3_still_learn/vue-still-learn'),
-    NestedLines: path.resolve(__dirname, '../components/vue3_still_learn/nestedLines'),
-    ElementDemo: path.resolve(__dirname, '../components/element-demo'),
-    PixiDemo: path.resolve(__dirname, '../components/game/pixi-demo'),
-    ResponsiveImages: path.resolve(__dirname, '../components/responsiveImages/index'),
-    WaterfallsFlow: path.resolve(__dirname, '../components/common/components/waterfallsFlow'),
-    AEleven: path.resolve(__dirname, '../components/fantastic/a11'),
-    Charts: path.resolve(__dirname, '../components/fantastic/charts'),
-    starField: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/startField'),
-    lSystem: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/LSystem'),
-    selfAvoiding: path.resolve(__dirname, '../components/fantastic/coding_chanlenges/selfAvoding')
+    MyDemo: resolve('../components/draft/my-demo'),
+    workcal: resolve('_../components/draft/workcal'),
+    Home: resolve('../components/home'),
+    VueStillLearn: resolve('../components/vue3_still_learn/vue-still-learn'),
+    NestedLines: resolve('../components/vue3_still_learn/nestedLines'),
+    ElementDemo: resolve('../components/element-demo'),
+    PixiDemo: resolve('../components/game/pixi-demo'),
+    ResponsiveImages: resolve('../components/responsiveImages/index'),
+    WaterfallsFlow: resolve('../components/common/components/waterfallsFlow'),
+    AEleven: resolve('../components/fantastic/a11'),
+    Charts: resolve('../components/fantastic/charts'),
+    starField: resolve('../components/fantastic/coding_chanlenges/startField'),
+    lSystem: resolve('../components/fantastic/coding_chanlenges/LSystem'),
+    selfAvoiding: resolve('../components/fantastic/coding_chanlenges/selfAvoding')
 };

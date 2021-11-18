@@ -176,4 +176,57 @@ copy(document.cookie)
 ```js
 window.addEventListener("resize", () => {this.chartLine.resize();});
 ```
+### 获取浏览器Cookie的值
+```js
+const cookie = name => `;${document.cookie}`.split(`${name}=`).pop().split(';').shift();
+//使用
+//cookie('pgv_pvid');
+```
 
+### 将rgb转换成十六进制
+```js
+const rgbToHex = (r,g,b) => '#'+((1<<24) + (r<<16)+(g<<8)+b).toString(16).slice(1)
+//1<<24===1*Math.pow(2,24)
+//使用
+//rgbToHex(0,51,255)
+//toString(16)表示转换成16进制后再转换成字符串
+```
+
+### 复制到剪贴板
+```js
+ const  copyToClipboard = async text => navigator.clipboard.writeText(text);
+//使用
+//copyToClipboard('hello world')
+//Clipboard API是下一代的剪贴板操作方法，比传统的document.exeCommand()方法更强大、更合理
+//如果你把上面的代码，粘贴到开发者工具里面运行，就会报错。因为代码运行的时候，开发者工具窗口是当前页，这个页面不存在 Clipboard API 依赖的 DOM 接口。一个解决方法就是，相关代码放到setTimeout()里面延迟运行，在调用函数之前快速点击浏览器的页面窗口，将其变成当前页。
+/*
+setTimeout(async () => {
+  copyToClipboard('hello world')
+}, 2000);
+*/
+```
+
+### 检查日期是否有效
+```js
+const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
+//使用
+//isDateValid(new Date())
+//true
+//new Date()
+//Thu Nov 18 2021 21:11:16 GMT+0800 (中国标准时间)
+//格林威治的子午线向东偏移8小时
+```
+
+### 查找一年中的某一天
+```js
+const dayOfYear = date => Math.floor((date - new Date(date.getFullYear(),0,0))/1000/60/60/24)
+//dayOfYear(new Date())
+//322
+```
+
+### 大写字符串
+```js
+const capitalize = str => str.charAt(0).toUpperCase()+str.slice(1)
+//使用
+//capitalize('heiheiheiyohei')
+```

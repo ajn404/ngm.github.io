@@ -69,7 +69,7 @@ npm install
 </ClientOnly>
 vue的组件代码如下
 
-```
+```js
 mounted() {
             this.$nextTick(()=>{
                 let judgeCanvasExist = document.getElementById("defaultCanvas0")
@@ -176,14 +176,14 @@ copy(document.cookie)
 ```js
 window.addEventListener("resize", () => {this.chartLine.resize();});
 ```
-### 获取浏览器Cookie的值
+## 获取浏览器Cookie的值
 ```js
 const cookie = name => `;${document.cookie}`.split(`${name}=`).pop().split(';').shift();
 //使用
 //cookie('pgv_pvid');
 ```
 
-### 将rgb转换成十六进制
+## 将rgb转换成十六进制
 ```js
 const rgbToHex = (r,g,b) => '#'+((1<<24) + (r<<16)+(g<<8)+b).toString(16).slice(1)
 //1<<24===1*Math.pow(2,24)
@@ -192,7 +192,7 @@ const rgbToHex = (r,g,b) => '#'+((1<<24) + (r<<16)+(g<<8)+b).toString(16).slice(
 //toString(16)表示转换成16进制后再转换成字符串
 ```
 
-### 复制到剪贴板
+## 复制到剪贴板
 ```js
  const  copyToClipboard = async text => navigator.clipboard.writeText(text);
 //使用
@@ -262,7 +262,7 @@ Object.getOwnPropertyNames() 返回一个数组,该数组对元素是obj自身�
 :::
 
 
-### 检查日期是否有效
+## 检查日期是否有效
 ```js
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 //使用
@@ -273,14 +273,14 @@ const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 //格林威治的子午线向东偏移8小时
 ```
 
-### 查找一年中的某一天
+## 查找一年中的某一天
 ```js
 const dayOfYear = date => Math.floor((date - new Date(date.getFullYear(),0,0))/1000/60/60/24)
 //dayOfYear(new Date())
 //322
 ```
 
-### 大写字符串
+## 大写字符串
 ```js
 const capitalize = str => str.charAt(0).toUpperCase()+str.slice(1)
 //使用

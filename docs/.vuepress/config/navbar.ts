@@ -5,10 +5,6 @@ const home: any = {
 const menu: any = {
     text :"主流框架学习",
     children:[
-        // {
-        //     text: 'element-plus图片',
-        //     link: '/fantastic/waterfallsFlow'
-        // },
         {
             text :"element-plus",
             link: "/ep",
@@ -16,19 +12,6 @@ const menu: any = {
     ]
 }
 
-// const config: any = {
-//     text: "博客",
-//     children: [
-//         // {
-//         //     text: "插件",
-//         //     link: "/vuepress_config/plugins"
-//         // },
-//         // {
-//         //     text: "组件",
-//         //     link: "/vuepress_config/components/"
-//         // }
-//     ],
-// };
 
 const front_end = {
     text: "前端(琐碎)",

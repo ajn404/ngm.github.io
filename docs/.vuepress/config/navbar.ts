@@ -16,23 +16,19 @@ const menu: any = {
     ]
 }
 
-const config: any = {
-    text: "博客",
-    children: [
-        {
-            text: "概述",
-            link: "/vuepress_config/"
-        },
-        // {
-        //     text: "插件",
-        //     link: "/vuepress_config/plugins"
-        // },
-        {
-            text: "组件",
-            link: "/vuepress_config/components/"
-        }
-    ],
-};
+// const config: any = {
+//     text: "博客",
+//     children: [
+//         // {
+//         //     text: "插件",
+//         //     link: "/vuepress_config/plugins"
+//         // },
+//         // {
+//         //     text: "组件",
+//         //     link: "/vuepress_config/components/"
+//         // }
+//     ],
+// };
 
 const front_end = {
     text: "前端(琐碎)",
@@ -44,6 +40,10 @@ const front_end = {
         {
             text: "webpack摸爬滚打",
             link: "/vue_still_learn/webpack",
+        },
+        {
+            text: "概述",
+            link: "/vuepress_config/"
         },
     ],
 };
@@ -99,7 +99,7 @@ const others:any={
 
 export const navbarConfig = [
     home,
-    config,
+    // config,
     front_end,
     note,
     others,

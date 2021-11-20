@@ -148,6 +148,7 @@ export default {
   unmounted(){
     clearTimeout(this.time);
     // this.time=null;
+    console.log(this)
   },
   components: {
     // cssTransitionAndAnimation,

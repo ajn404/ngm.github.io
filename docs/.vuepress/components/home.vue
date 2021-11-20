@@ -34,7 +34,7 @@
 <script>
 // import {Swiper,SwiperSlide} from 'swiper/vue'
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Autoplay,EffectFade, Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay,EffectFade } from "swiper";
 import * as Typed from "typed.js";
 import GitHubCalendar from "github-calendar";
 // import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
@@ -68,7 +68,7 @@ export default {
     this.initCalender();
   },
   created() {
-    SwiperCore.use([Autoplay,EffectFade, Navigation, Pagination]);
+    SwiperCore.use([Autoplay,EffectFade]);
     this.$watch(
       "typingStop",
       (newVal) => {

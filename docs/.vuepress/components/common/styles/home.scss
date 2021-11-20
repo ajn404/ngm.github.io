@@ -31,6 +31,7 @@
   padding: 10px;
   max-width: 60vw;
   overflow: auto;
+  min-height: min-content;
 }
 
 @keyframes bouncing {
@@ -64,7 +65,3 @@
 .editor{
   margin-top: 20px;
 }
-
-// .slow-show{
-//   // transition: all 10s linear;
-// }

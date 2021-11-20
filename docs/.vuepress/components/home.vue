@@ -6,10 +6,6 @@
       <Swiper
         class="swiper-container"
         :effect="'fade'"
-        :navigation="true"
-        :pagination="{
-          clickable: true,
-        }"
         :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
@@ -32,21 +28,15 @@
   </div>
 </template>
 <script>
-// import {Swiper,SwiperSlide} from 'swiper/vue'
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Autoplay,EffectFade } from "swiper";
+import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import * as Typed from "typed.js";
 import GitHubCalendar from "github-calendar";
-// import cssTransitionAndAnimation from "./home/cssTransitionAndAnimation";
 import MdEditor from "md-editor-v3";
 import "github-calendar/dist/github-calendar-responsive.css";
 import "md-editor-v3/lib/style.css";
-
 import "swiper/css";
 import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 import "swiper/css/bundle";
 
 import "./common/styles/index.scss";
@@ -62,20 +52,15 @@ export default {
     };
   },
   mounted() {
-    //自动打字
-    this.typeThing = this.initType();
-    //github提交日历
-    this.initCalender();
+    this.$nextTick(() => {
+      //自动打字
+      this.typeThing = this.initType();
+      //github提交日历
+      this.initCalender();
+    });
   },
   created() {
-    SwiperCore.use([Autoplay,EffectFade]);
-    this.$watch(
-      "typingStop",
-      (newVal) => {
-        console.log(newVal);
-      },
-      { deep: true }
-    );
+    SwiperCore.use([Autoplay, EffectFade]);
   },
   methods: {
     initType() {
@@ -138,6 +123,9 @@ export default {
         showCursor: false,
         onComplete: (self) => {
           this.typingStop = true;
+          this.$nextTick(() => {
+            this.scrollToBottom();
+          });
         },
       });
       return homeTypedFont;
@@ -145,6 +133,21 @@ export default {
     initCalender() {
       GitHubCalendar(".calendar", "ajn404", { responsive: true });
     },
+    scrollToBottom() {
+      const height = document.body.scrollHeight;
+      this.time=setTimeout(() => {
+        window.scrollTo({
+          top: height,
+          behavior: "smooth",
+        },1000);
+      });
+      // vuw中使用setTimeout
+
+    },
+  },
+  unmounted(){
+    clearTimeout(this.time);
+    // this.time=null;
   },
   components: {
     // cssTransitionAndAnimation,

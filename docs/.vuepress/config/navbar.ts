@@ -5,12 +5,12 @@ const home: any = {
 const menu: any = {
     text :"主流框架学习",
     children:[
+        // {
+        //     text: 'element-plus图片',
+        //     link: '/fantastic/waterfallsFlow'
+        // },
         {
-            text: 'element-plus图片',
-            link: '/fantastic/waterfallsFlow'
-        },
-        {
-            text :"element-plus表单元素",
+            text :"element-plus",
             link: "/ep",
         }
     ]
@@ -53,10 +53,6 @@ const note: any = {
     link: '/reading/'
 }
 
-const game: any = {
-    text: 'pixi',
-    link: '/game/pixi-demo'
-}
 
 const others:any={
     text:'探索',
@@ -65,10 +61,10 @@ const others:any={
             text:'vim',
             link:'/something_help_dev/vim'
         },
-        {
-            text: 'flex布局',
-            link: '/style_learn/flex'
-        },
+        // {
+        //     text: 'flex布局',
+        //     link: '/style_learn/flex'
+        // },
         {
             text:'动画-m1',
             link:'/fantastic/a11'
@@ -84,6 +80,10 @@ const others:any={
         {
             link: '/fantastic/coding_chanlenges/p5_002',
             text: 'L-system'
+        },
+        {
+            text: 'pixi',
+            link: '/game/pixi-demo'
         },
         // {
         //     link: '/fantastic/coding_chanlenges/p5_003',
@@ -102,7 +102,6 @@ export const navbarConfig = [
     config,
     front_end,
     note,
-    game,
     others,
     menu,
 ]

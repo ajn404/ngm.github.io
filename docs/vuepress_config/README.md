@@ -85,7 +85,7 @@ jobs:
 ```
 ### 开始写博客
 ##### 描述：vuepress2.x+ts学习历程
-![🤺](/ngm.github.io/images/sword.png)
+![🤺](/images/sword.png)
 
 ### 安装插件
 
@@ -95,7 +95,7 @@ jobs:
 
 
 ### 插入logo
-![😀](/ngm.github.io/images/logo.png)
+![😀](/images/logo.png)
 <br>
 <strong>配置文件</strong><i>2021/10/13</i>
 ``` ts

@@ -4,6 +4,6 @@
 set -e
 
 git add -A
-git commit -m 'deploy'
+git commit -m 'deploy netlify dev'
 
 git push -f git@github.com:ajn404/ngm.github.io.git netlify_dev

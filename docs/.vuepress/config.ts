@@ -43,5 +43,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     port:3000,
     bundlerConfig:{
         evergreen:true
+    },
+    define:{
+        'process.env':{}
     }
 });

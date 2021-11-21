@@ -25,9 +25,13 @@ const front_end = {
             link: "/vue_still_learn/webpack",
         },
         {
-            text: "概述",
+            text: "博客搭建记录",
             link: "/vuepress_config/"
         },
+        {
+            link:'/alimap/README.md',
+            text:'构建知识体系'
+        }
     ],
 };
 
@@ -36,7 +40,6 @@ const note: any = {
     link: '/reading/'
 }
 
-
 const others:any={
     text:'探索',
     children:[
@@ -44,10 +47,6 @@ const others:any={
             text:'vim',
             link:'/something_help_dev/vim'
         },
-        // {
-        //     text: 'flex布局',
-        //     link: '/style_learn/flex'
-        // },
         {
             text:'动画-m1',
             link:'/fantastic/a11'
@@ -68,21 +67,12 @@ const others:any={
             text: 'pixi',
             link: '/game/pixi-demo'
         },
-        // {
-        //     link: '/fantastic/coding_chanlenges/p5_003',
-        //     text: 'self-avoiding walk'
-        // }
-        {
-            link:'/alimap/README.md',
-            text:'构建知识体系'
-        }
     ]
 }
 
 
 export const navbarConfig = [
     home,
-    // config,
     front_end,
     note,
     others,

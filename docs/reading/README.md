@@ -29,8 +29,8 @@ sidebarDepth: 0
 
 | 内容 | 地址                                                         |
 | ---- | ------------------------------------------------------------ |
-| 算法可视化，让学习算法变得形象     | https://github.com/algorithm-visualizer/algorithm-visualizer<br>https://algorithm-visualizer.org/ |
+| 算法可视化，让学习算法变得形象     | [algorithm-visualizer](https://github.com/algorithm-visualizer/algorithm-visualizer)<br>[编辑器](https://algorithm-visualizer.org/) |
 
 > CSDN|简书
 
-[vue3中使用process.enc](https://blog.csdn.net/henryhu712/article/details/117897998)
+[vue3中使用process.env](https://blog.csdn.net/henryhu712/article/details/117897998)

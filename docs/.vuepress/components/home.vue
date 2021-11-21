@@ -21,10 +21,7 @@
       </Swiper>
     </div>
 
-    <!-- <css-transition-and-animation></css-transition-and-animation> -->
-    <!-- <div class="box-box">{{text}}</div>
-        <md-editor class="editor" v-model="text"/> -->
-    <!--        <nested-lines></nested-lines>-->
+
   </div>
 </template>
 <script>

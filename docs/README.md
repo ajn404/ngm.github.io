@@ -12,4 +12,3 @@ home: true
     console.log(process.env)
 </script> -->
 </ClientOnly>
-{process.env}

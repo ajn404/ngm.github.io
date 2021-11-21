@@ -33,7 +33,7 @@ const front_end = {
     ],
 };
 const note: any = {
-    text: '读书',
+    text: '收藏陈列',
     link: '/reading/'
 };
 const others:any={
@@ -65,10 +65,15 @@ const others:any={
         },
     ]
 };
+const link:any={
+    text:'GitHub',
+    link:'https://github.com/ajn404/ngm.github.io'
+}
 export const navbarConfig = [
     home,
     front_end,
     note,
     others,
     menu,
+    link
 ];

@@ -136,6 +136,8 @@ export default {
     scrollToBottom() {
       const height = document.body.scrollHeight;
       this.time=setTimeout(() => {
+        // console.log(height)
+        // console.log(this.$refs.box.clientHeight)
         window.scrollTo({
           top: height,
           behavior: "smooth",
@@ -147,8 +149,6 @@ export default {
   },
   unmounted(){
     clearTimeout(this.time);
-    // this.time=null;
-    console.log(this)
   },
   components: {
     // cssTransitionAndAnimation,

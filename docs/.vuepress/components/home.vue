@@ -35,9 +35,7 @@ import "md-editor-v3/lib/style.css";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
-
 import "./common/styles/index.scss";
-import nestedLines from "./vue3_still_learn/nestedLines";
 
 export default {
   data() {
@@ -152,7 +150,6 @@ export default {
     MdEditor,
     Swiper,
     SwiperSlide,
-    nestedLines,
   },
 };
 </script>

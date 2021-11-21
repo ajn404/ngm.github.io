@@ -1,7 +1,7 @@
 const home: any = {
     text: "首页",
     link: "/"
-}
+};
 const menu: any = {
     text :"主流框架学习",
     children:[
@@ -10,9 +10,7 @@ const menu: any = {
             link: "/ep",
         }
     ]
-}
-
-
+};
 const front_end = {
     text: "前端(琐碎)",
     children: [
@@ -34,12 +32,10 @@ const front_end = {
         }
     ],
 };
-
 const note: any = {
     text: '读书',
     link: '/reading/'
-}
-
+};
 const others:any={
     text:'探索',
     children:[
@@ -68,13 +64,11 @@ const others:any={
             link: '/game/pixi-demo'
         },
     ]
-}
-
-
+};
 export const navbarConfig = [
     home,
     front_end,
     note,
     others,
     menu,
-]
+];

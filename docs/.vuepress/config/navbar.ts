@@ -44,7 +44,7 @@ const others:any={
             link:'/something_help_dev/vim'
         },
         {
-            text:'动画-m1',
+            text:'动画-A13',
             link:'/fantastic/a11'
         },
         {

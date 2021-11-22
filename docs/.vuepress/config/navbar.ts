@@ -65,15 +65,15 @@ const others:any={
         },
     ]
 };
-const link:any={
-    text:'GitHub',
-    link:'https://github.com/ajn404/ngm.github.io'
-}
+// const link:any={
+//     text:'GitHub',
+//     link:'https://github.com/ajn404/ngm.github.io'
+// }
 export const navbarConfig = [
     home,
     front_end,
     note,
     others,
     menu,
-    link
+    // link
 ];

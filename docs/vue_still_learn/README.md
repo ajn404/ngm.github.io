@@ -199,6 +199,7 @@ const rgbToHex = (r,g,b) => '#'+((1<<24) + (r<<16)+(g<<8)+b).toString(16).slice(
 //copyToClipboard('hello world')
 //Clipboard API是下一代的剪贴板操作方法，比传统的document.exeCommand()方法更强大、更合理
 //如果你把上面的代码，粘贴到开发者工具里面运行，就会报错。因为代码运行的时候，开发者工具窗口是当前页，这个页面不存在 Clipboard API 依赖的 DOM 接口。一个解决方法就是，相关代码放到setTimeout()里面延迟运行，在调用函数之前快速点击浏览器的页面窗口，将其变成当前页。
+//参照https://www.ruanyifeng.com/blog/2021/01/clipboard-api.html
 /*
 setTimeout(async () => {
   copyToClipboard('hello world')

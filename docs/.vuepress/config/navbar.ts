@@ -1,39 +1,16 @@
 const home: any = {
     text: "首页",
     link: "/"
-}
+};
 const menu: any = {
     text :"主流框架学习",
     children:[
         {
-            text: 'element-plus图片',
-            link: '/fantastic/waterfallsFlow'
-        },
-        {
-            text :"element-plus表单元素",
+            text :"element-plus",
             link: "/ep",
         }
     ]
-}
-
-const config: any = {
-    text: "博客",
-    children: [
-        {
-            text: "概述",
-            link: "/vuepress_config/"
-        },
-        // {
-        //     text: "插件",
-        //     link: "/vuepress_config/plugins"
-        // },
-        {
-            text: "组件",
-            link: "/vuepress_config/components/"
-        }
-    ],
 };
-
 const front_end = {
     text: "前端(琐碎)",
     children: [
@@ -45,29 +22,26 @@ const front_end = {
             text: "webpack摸爬滚打",
             link: "/vue_still_learn/webpack",
         },
+        {
+            text: "博客搭建记录",
+            link: "/vuepress_config/"
+        },
+        {
+            link:'/alimap/',
+            text:'构建知识体系'
+        }
     ],
 };
-
 const note: any = {
-    text: '读书',
+    text: '收藏陈列',
     link: '/reading/'
-}
-
-const game: any = {
-    text: 'pixi',
-    link: '/game/pixi-demo'
-}
-
+};
 const others:any={
     text:'探索',
     children:[
         {
             text:'vim',
             link:'/something_help_dev/vim'
-        },
-        {
-            text: 'flex布局',
-            link: '/style_learn/flex'
         },
         {
             text:'动画-m1',
@@ -85,24 +59,21 @@ const others:any={
             link: '/fantastic/coding_chanlenges/p5_002',
             text: 'L-system'
         },
-        // {
-        //     link: '/fantastic/coding_chanlenges/p5_003',
-        //     text: 'self-avoiding walk'
-        // }
         {
-            link:'/alimap/README.md',
-            text:'构建知识体系'
-        }
+            text: 'pixi',
+            link: '/game/pixi-demo'
+        },
     ]
-}
-
-
+};
+// const link:any={
+//     text:'GitHub',
+//     link:'https://github.com/ajn404/ngm.github.io'
+// }
 export const navbarConfig = [
     home,
-    config,
     front_end,
     note,
-    game,
     others,
     menu,
-]
+    // link
+];

@@ -122,17 +122,17 @@ export default defineComponent({
   margin-top: 20px;
   width: 100%;
 
-  ::v-deep(table) {
+  :deep(table) {
     display: table;
   }
 
-  ::v-deep(.el-button-group) {
+  :deep(.el-button-group) {
     display: flex;
     gap: 10px;
   }
 }
 
-::v-deep(tr:nth-child(2n)) {
+:deep(tr:nth-child(2n)) {
   background-color: var(--el-table-tr-background-color);
 }
 
@@ -140,7 +140,7 @@ export default defineComponent({
   margin-top: 20px;
 }
 
-::v-deep .dark .element-plus .page {
+:deep .dark .element-plus .page {
   display: none;
 }
 </style>

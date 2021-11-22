@@ -84,7 +84,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 ### 开始写博客
-##### 描述：vuepress2.x+ts学习历程
+### 描述：vuepress2.x+ts学习历程
 ![🤺](/ngm.github.io/images/sword.png)
 
 ### 安装插件
@@ -105,7 +105,7 @@ import type { DefaultThemeOptions } from "vuepress";
 export default defineUserConfig<DefaultThemeOptions>({
   title: "君子慎独",
   description: "老子婆娑",
-  base: "/ngm.github.io/",
+  base: "/",
   head: [
     [
       "link",
@@ -147,3 +147,55 @@ export default defineUserConfig<DefaultThemeOptions>({
 });
 ```
 
+
+### 组件实例
+
+my-demo.vue,我这样命名组件的文件名
+
+```vue
+<template>
+    <div>
+        <p>
+            {{data.time}}
+            {{data.name}}
+            {{data.thing}}
+        </p>
+    </div>
+</template>
+<script>
+    export default {
+        name: "my-demo",
+        data(){
+            return{
+                data:{
+                    time:'2021',
+                    name:'n-graymoon',
+                    thing:'graduate',
+                }
+            }
+        }
+    }
+</script>
+<style scoped>
+</style>
+```
+
+运行为
+
+<ClientOnly>
+<my-demo></my-demo>
+</ClientOnly>
+
+markdown内适用语法
+
+`<ClientOnly><my-demo></my-demo></ClientOnly>`
+
+### 注意，在vuepress2.x，使用组件需要安装插件,这里是官方文档，
+
+:arrow_down:
+
+[register-components](https://v2.vuepress.vuejs.org/zh/reference/plugin/register-components.html#%E5%AE%89%E8%A3%85)
+
+### 安装了插件，部署的时候遇到点问题，这就令人头疼了
+
+然后发现不是插件的锅，我手贱，在首页写了对 `center`的html标签，在markdown里写无可厚非，但在vuepress里写就着实不聪明哈

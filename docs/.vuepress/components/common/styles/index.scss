@@ -16,3 +16,8 @@ body {
 :root {
   scroll-behavior: smooth;
 }
+
+
+.dark .element-plus .page{
+  display: none;
+}

@@ -1,7 +1,7 @@
 const {path} = require('@vuepress/utils')
 
-function resolve(dir){
-    return path.resolve(__dirname, dir)
+const resolve = (dir)=>{
+    return path.resolve(__dirname,dir)
 }
 
 export const components = {

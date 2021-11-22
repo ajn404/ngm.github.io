@@ -1,6 +1,6 @@
 .box {
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   //font-size: 2em;
   //font-weight: bold;
   text-align: center;
@@ -31,6 +31,7 @@
   padding: 10px;
   max-width: 60vw;
   overflow: auto;
+  min-height: min-content;
 }
 
 @keyframes bouncing {

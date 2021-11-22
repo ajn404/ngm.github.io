@@ -6,7 +6,7 @@ function resolve(dir){
 
 export const components = {
     MyDemo: resolve('../components/draft/my-demo'),
-    workcal: resolve('_../components/draft/workcal'),
+    workcal: resolve('../components/draft/workcal'),
     Home: resolve('../components/home'),
     VueStillLearn: resolve('../components/vue3_still_learn/vue-still-learn'),
     NestedLines: resolve('../components/vue3_still_learn/nestedLines'),

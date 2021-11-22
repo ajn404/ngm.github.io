@@ -16,6 +16,7 @@
         <div class="box-box">{{text}}</div>
         <md-editor class="editor" v-model="text"/>
 <!--        <nested-lines></nested-lines>-->
+        <link-me></link-me>
     </div>
 </template>
 <script>
@@ -33,6 +34,7 @@
 
     import './common/styles/index.scss'
     import nestedLines from "./vue3_still_learn/nestedLines";
+    import linkMe from "../components/common/components/linkMe"
 
     export default {
         data() {
@@ -86,7 +88,8 @@
             MdEditor,
             Swiper,
             SwiperSlide,
-            nestedLines
+            nestedLines,
+            linkMe
         }
     }</script>
 <style lang="scss" scoped>

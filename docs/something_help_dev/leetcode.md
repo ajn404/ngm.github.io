@@ -2,3 +2,92 @@
 pageClass: leetCode
 ---
 [toc]
+## [最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
+::: tip 描述
+所求的最优值为： Max{a[i]+a[i+1]+…+a[j]},1<=i<=j<=n 例如，当（a[1],a[2],a[3],a[4],a[5],a[6]）=(-20,11,-4,13,-5,-2)时，最大子段和为20。
+:::
+### 尝试（菜鸡的错误尝试）:
+```js
+var maxSubArray = function (nums) {
+    let max = nums[0]
+    if (nums.length == 1) {
+        return max
+    }
+    let arrayMax = Function.prototype.apply.bind(Math.max, null);
+    if (!nums.find(item => item > 0)) {
+        return arrayMax(nums)
+    }
+    let temp = [],lastSum;
+    let sum = nums[0]
+    for (let i = 1; i < nums.length; i++) {
+        lastSum = sum;
+        sum += nums[i];
+        if (sum < 0) {
+            sum = nums[i];
+        }else{
+            temp.push(sum);
+        }
+    }
+    console.log(temp)
+};
+// console.log(maxSubArray([1,-1,2,4,-4,5,-1]))
+// console.log(maxSubArray([5,4,-1,7,8]))
+console.log(maxSubArray([-2,-10, 2, 10, 11, 22, -100,100, 102]))
+//leetcode submit region end(Prohibit modification and deletion)
+```
+- 该方法只能取到小范围内的最大和，一旦碰到使自己变成负数的子项便立马停止，然后重新统计，但下一个又马上让自己变成了比自己还大的集合，这就有点眼界狭隘了哈
+### 网上找的爆搜
+```js
+var maxSubArray = function (nums) {
+    if (nums.length == 1) {
+        return nums[0]
+    }
+    let sum = 0, max = nums[0];
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i; j < nums.length; j++) {
+            sum = 0;
+            for (let k = i; k <= j; k++) {
+                sum += nums[k];
+            }
+            if (sum > max) {
+                max = sum;
+            }
+        }
+    }
+    return max
+};
+```
+- 但是超时了，毕竟爆搜嘛
+### 减去一层循环
+```js
+var maxSubArray = function (nums) {
+  // console.time()
+  if(nums.length ===1){
+          return nums[0]
+      }
+      let sum = 0 , max =nums[0];
+      for(let i=0;i<nums.length;i++){
+          sum = 0;
+          for(let j=i;j<nums.length;j++){
+              sum+=nums[j];
+              if(sum>max){
+                  max =sum;
+              }
+          }
+      }
+      // console.timeEnd()
+      return max;
+};
+    
+```
+### 扫描法
+```js
+ let sum = nums[0];
+    let current = nums[0];
+    for(let i=1;i<nums.length;i++){
+        if(current<0){ current =nums[i]}
+        else current+=nums[i];
+        if(sum<current){sum = current}
+    }
+    return  sum
+```

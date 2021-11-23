@@ -12,7 +12,7 @@ const menu: any = {
         {
             text: "element-plus源码分析",
             link: "/sourceCodeAnalyze/note",
-        },
+        }
     ]
 };
 const front_end = {
@@ -33,6 +33,10 @@ const front_end = {
         {
             link: '/alimap/',
             text: '构建知识体系'
+        },
+        {
+            link: '/something_help_dev/leetcode',
+            text: '纠结的算法历史'
         }
     ],
 };

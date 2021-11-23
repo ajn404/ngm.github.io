@@ -131,14 +131,12 @@
             scrollToBottom() {
                 const height = document.body.scrollHeight;
                 this.time=setTimeout(() => {
-                    // console.log(height)
-                    // console.log(this.$refs.box.clientHeight)
                     window.scrollTo({
                         top: height,
                         behavior: "smooth",
                     },1000);
                 });
-                // vuw中使用setTimeout
+                // vue中使用setTimeout
 
             },
         },

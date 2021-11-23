@@ -96,6 +96,7 @@ var maxSubArray = function (nums) {
 ::: tip 描述
 给你一个字符串 s，由若干单词组成，单词前后用一些空格字符隔开。返回字符串中最后一个单词的长度。
 :::
+### 多行
 - 用js函数实现的垃圾
 ```js
 var lengthOfLastWord = function(s) {
@@ -106,6 +107,7 @@ var lengthOfLastWord = function(s) {
     return (res[res.length-1]).length
 };
 ```
+### 单行
 - 单行的垃圾
 ```js
 var lengthOfLastWord = function(s) {
@@ -118,7 +120,7 @@ var lengthOfLastWord = function(s) {
 > 执行耗时:72 ms,击败了48.33% 的JavaScript用户
 >
 > 内存消耗:38.1 MB,击败了11.73% 的JavaScript用户
- 			
+### 遍历
 - 下面这个解法，嗯，天才！
 ```js
 var lengthOfLastWord = function(s) {
@@ -150,3 +152,26 @@ var lengthOfLastWord = function(s) {
 >内存消耗:39.3 MB,击败了5.00% 的JavaScript用户
 
 :smile::smile::smile::smile::smile::smile::smile::smile::smile::smile:
+
+### 优秀的js函数
+- trim()方法用于删除字符串的头尾空格
+```js
+var lengthOfLastWord = function(s) {
+    let sa = s.trim();
+    sa = sa.split("").reverse().join("")
+    return sa.indexOf(" ")!==-1?sa.indexOf(" "):sa.length
+};
+```
+### 更优秀的函数
+- lastIndexOf() 返回指定字符串最后出现的位置
+```js
+var lengthOfLastWord = function(s) {
+    let sa = s.trim();
+    return sa.lastIndexOf(" ")!==-1?(sa.length-sa.lastIndexOf(" ")-1):sa.length
+};
+```
+> 解答成功:
+>
+>执行耗时:84 ms,击败了9.51% 的JavaScript用户
+>
+>内存消耗:37.7 MB,击败了73.01% 的JavaScript用户

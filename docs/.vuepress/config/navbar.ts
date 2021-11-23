@@ -3,12 +3,17 @@ const home: any = {
     link: "/"
 };
 const menu: any = {
-    text :"主流框架学习",
-    children:[
+    text: "主流框架学习",
+    children: [
         {
-            text :"element-plus",
+            text: "element-plus",
             link: "/ep",
-        }
+        },
+        // {
+        //     text: "element2源码分析",
+        //     link: "/sourceCodeAnalyze",
+        //     hidden: true
+        // },
     ]
 };
 const front_end = {
@@ -27,8 +32,8 @@ const front_end = {
             link: "/vuepress_config/"
         },
         {
-            link:'/alimap/',
-            text:'构建知识体系'
+            link: '/alimap/',
+            text: '构建知识体系'
         }
     ],
 };
@@ -36,20 +41,20 @@ const note: any = {
     text: '收藏陈列',
     link: '/reading/'
 };
-const others:any={
-    text:'探索',
-    children:[
+const others: any = {
+    text: '探索',
+    children: [
         {
-            text:'vim',
-            link:'/something_help_dev/vim'
+            text: 'vim',
+            link: '/something_help_dev/vim'
         },
         {
-            text:'动画-A13',
-            link:'/fantastic/a11'
+            text: '动画-A13',
+            link: '/fantastic/a11'
         },
         {
-            text:'图表',
-            link:'/something_help_dev/charts'
+            text: '图表',
+            link: '/something_help_dev/charts'
         },
         {
             link: '/fantastic/coding_chanlenges/p5_001',

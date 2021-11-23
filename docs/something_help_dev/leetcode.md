@@ -1,7 +1,7 @@
 ---
 pageClass: leetCode
 ---
-[toc]
+[[toc]]
 ## [最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 ::: tip 描述
 所求的最优值为： Max{a[i]+a[i+1]+…+a[j]},1<=i<=j<=n 例如，当（a[1],a[2],a[3],a[4],a[5],a[6]）=(-20,11,-4,13,-5,-2)时，最大子段和为20。
@@ -91,3 +91,62 @@ var maxSubArray = function (nums) {
     }
     return  sum
 ```
+
+## [最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+::: tip 描述
+给你一个字符串 s，由若干单词组成，单词前后用一些空格字符隔开。返回字符串中最后一个单词的长度。
+:::
+- 用js函数实现的垃圾
+```js
+var lengthOfLastWord = function(s) {
+    let res=s.split(" ")
+    res=res.filter(item=>{
+        return item!==""
+    })
+    return (res[res.length-1]).length
+};
+```
+- 单行的垃圾
+```js
+var lengthOfLastWord = function(s) {
+    return s.match(/\S+/g)[s.match(/\S+/g).length-1].length
+};
+```
+
+> 解答成功:
+>
+> 执行耗时:72 ms,击败了48.33% 的JavaScript用户
+>
+> 内存消耗:38.1 MB,击败了11.73% 的JavaScript用户
+ 			
+- 下面这个解法，嗯，天才！
+```js
+var lengthOfLastWord = function(s) {
+    let res ;
+    let arr=s.split('');
+    let tag=0;
+    let j=0;
+    for(let i = arr.length-1;i>=0;i--){
+        if(arr[i]==" "&&tag!=2){
+            tag=1;
+        }
+        if(arr[i]!=" "){
+            j++
+            console.log(j)
+            tag=2;
+        }
+        if(arr[i]==" " && tag==2){
+            res=i;
+            break;
+        }
+    }
+    return  j
+};
+```
+>解答成功:
+>
+>执行耗时:104 ms,击败了5.54% 的JavaScript用户
+>
+>内存消耗:39.3 MB,击败了5.00% 的JavaScript用户
+
+:smile::smile::smile::smile::smile::smile::smile::smile::smile::smile:

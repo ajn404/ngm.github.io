@@ -9,11 +9,10 @@ const menu: any = {
             text: "element-plus",
             link: "/ep",
         },
-        // {
-        //     text: "element2源码分析",
-        //     link: "/sourceCodeAnalyze",
-        //     hidden: true
-        // },
+        {
+            text: "element-plus源码分析",
+            link: "/sourceCodeAnalyze/note",
+        },
     ]
 };
 const front_end = {
@@ -70,15 +69,15 @@ const others: any = {
         },
     ]
 };
-// const link:any={
-//     text:'GitHub',
-//     link:'https://github.com/ajn404/ngm.github.io'
-// }
+const link:any={
+    text:'GitHub',
+    link:'https://github.com/ajn404/ngm.github.io'
+}
 export const navbarConfig = [
     home,
     front_end,
     note,
     others,
     menu,
-    // link
+    link
 ];

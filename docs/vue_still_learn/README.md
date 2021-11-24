@@ -316,3 +316,8 @@ const capitalize = str => str.charAt(0).toUpperCase()+str.slice(1)
 //capitalize('heiheiheiyohei')
 ```
 :::
+
+## (create-vue)[https://www.npmjs.com/package/create-vue/v/3.0.0-beta.6]
+```bash
+npm init vue@next
+```

@@ -41,6 +41,10 @@ const front_end = {
         {
             link:'/style_learn/style',
             text: 'css细节'
+        },
+        {
+            link:'/vue_still_learn/vuex_learn',
+            text:'vuex4.x官方文档学习'
         }
     ],
 };

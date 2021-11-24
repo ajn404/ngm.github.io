@@ -1,7 +1,6 @@
 ---
 pageClass: leetCode
 ---
-[[toc]]
 ## [最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 ::: tip 描述
 所求的最优值为： Max{a[i]+a[i+1]+…+a[j]},1<=i<=j<=n 例如，当（a[1],a[2],a[3],a[4],a[5],a[6]）=(-20,11,-4,13,-5,-2)时，最大子段和为20。
@@ -208,7 +207,7 @@ var lengthOfLastWord = function(s) {
 >
 >内存消耗:37.8 MB,击败了53.38% 的JavaScript用户
   		
-## 加1
+## [加1](https://leetcode-cn.com/problems/plus-one/)
 ::: tip 描述
 给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
 :::
@@ -242,8 +241,35 @@ var plusOne = function(digits) {
 };
 ```
 :::
+
 ::: warning 解答失败:
 测试用例:[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]<br>
 测试结果:[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,6,6,2,8]<br>
 期望结果:[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,4]<br>
 :::
+js的安全计算大概在16位，超过16位就出错了<br>
+:smile::smile::laughing::laughing::blush::blush:<br>
+:smiley::smiley::relaxed::relaxed::smirk::smirk:
+:heart_eyes::heart_eyes::kissing_heart::kissing_heart:<br>
+:kissing_closed_eyes::kissing_closed_eyes::flushed::flushed:
+:relieved::relieved::satisfied::satisfied::grin::grin::wink::wink:<br>
+:stuck_out_tongue_winking_eye::stuck_out_tongue_winking_eye:
+:stuck_out_tongue_closed_eyes::stuck_out_tongue_closed_eyes::grinning::grinning:
+## 二进制求和
+###继续尝试单行解决
+::: details 查看代码
+```js
+var addBinary = function(a, b) {
+    return (BigInt(parseInt(a,2))+BigInt(parseInt(b,2))).toString(2)
+};
+```
+:::
+> 测试用例:"10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101"
+>
+>"110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011"
+>
+>测试结果:"110111101100010011000101110110100000011101000101011000000000000000000000000000000000000000000000000"
+>
+>期望结果:"110111101100010011000101110110100000011101000101011001000011011000001100011110011010010011000000000"			
+
+- 尝试失败

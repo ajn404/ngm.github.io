@@ -37,6 +37,9 @@ const front_end = {
         {
             link: '/something_help_dev/leetcode',
             text: '纠结的算法历史'
+        },
+        {
+            link:'/style_learn/style'
         }
     ],
 };

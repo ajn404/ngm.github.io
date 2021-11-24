@@ -175,3 +175,18 @@ var lengthOfLastWord = function(s) {
 >执行耗时:84 ms,击败了9.51% 的JavaScript用户
 >
 >内存消耗:37.7 MB,击败了73.01% 的JavaScript用户
+
+### 上述变成单行
+```js
+var lengthOfLastWord = function(s) {
+    return s.trim().lastIndexOf(" ")!==-1?(s.trim().length-s.trim().lastIndexOf(" ")-1):s.trim().length
+};
+```
+- 意外的性能很好
+>解答成功:
+>
+>执行耗时:60 ms,击败了95.44% 的JavaScript用户
+>
+>内存消耗:37.8 MB,击败了53.38% 的JavaScript用户
+  		
+  		

@@ -20,6 +20,7 @@ cnpm i
 
 ## vue 过滤器
 
+::: details 查看代码
 ```js
   filters: {
     ellipsis(value) {
@@ -31,14 +32,17 @@ cnpm i
     }
   }
 ```
+:::
 
 **在 3.x 中，过滤器已移除，且不再支持。取而代之的是，我们建议用方法调用或计算属性来替换它们。**
 
 ## 主动触发 element 表单的检查
 
+::: details 查看代码
 ```js
 this.$refs.ruleForm.validateField("content");
 ```
+:::
 
 ## 使用vuepress内置组件codegroup
 <CodeGroup>
@@ -67,9 +71,10 @@ npm install
 <ClientOnly>
 <vue-still-learn></vue-still-learn>
 </ClientOnly>
-vue的组件代码如下
+ vue的组件代码如下
 
-```js
+::: details 查看代码
+```vue
 mounted() {
             this.$nextTick(()=>{
                 let judgeCanvasExist = document.getElementById("defaultCanvas0")
@@ -162,28 +167,36 @@ methods: {
         }
 
 ```
+:::
 
 ## 快速复制网页的cookie
 
+::: details 查看代码
 ```js
 copy(document.cookie)
 //粘贴并应用
 "复制的内容".split(';').map(c=>document.cookie=c)
 ```
+:::
 
 ## echarts的图标监听window的大小重绘
 
+::: details 查看代码
 ```js
 window.addEventListener("resize", () => {this.chartLine.resize();});
 ```
+:::
 ## 获取浏览器Cookie的值
+::: details 查看代码
 ```js
 const cookie = name => `;${document.cookie}`.split(`${name}=`).pop().split(';').shift();
 //使用
 //cookie('pgv_pvid');
 ```
+:::
 
 ## 将rgb转换成十六进制
+::: details 查看代码
 ```js
 const rgbToHex = (r,g,b) => '#'+((1<<24) + (r<<16)+(g<<8)+b).toString(16).slice(1)
 //1<<24===1*Math.pow(2,24)
@@ -191,8 +204,10 @@ const rgbToHex = (r,g,b) => '#'+((1<<24) + (r<<16)+(g<<8)+b).toString(16).slice(
 //rgbToHex(0,51,255)
 //toString(16)表示转换成16进制后再转换成字符串
 ```
+:::
 
 ## 复制到剪贴板
+::: details 查看代码
 ```js
  const  copyToClipboard = async text => navigator.clipboard.writeText(text);
 //使用
@@ -206,8 +221,10 @@ setTimeout(async () => {
 }, 2000);
 */
 ```
+:::
 
 ## 数组去重
+::: details 查看代码
 ```js
 (target) =>{
 let arr = target;
@@ -215,9 +232,11 @@ let res = [new Set(arr)]
 return res
 }
 ```
+:::
 
 ## 深拷贝
-``` js
+::: details 查看代码
+```js
 function deepClone(target) {
     debugger
     let result;
@@ -243,12 +262,15 @@ function deepClone(target) {
     return result;
   }
 ```
+:::
 
 ## 判断字符串是否全为空
 ``` js
 str.match(/^[ ]*$/)
 ```
+:::
 ## 判断对象是否为空
+::: details 查看代码
 ```js
 //使用Object.keys()或者Object.getOwnPropertyNames()
 const obj = {};
@@ -257,6 +279,7 @@ console.log(arr.length>0)
 //使用JSON.stringfy()
 console.log(JSON.stringify(obj)!=='{}');
 ```
+:::
 ::: tip 注意
 Object.keys(), 它返回一个数组，这个数组由对象中可枚举的自有属性的名称组成。
 Object.getOwnPropertyNames() 返回一个数组,该数组对元素是obj自身拥有的枚举或不可枚举属性名称字符串。
@@ -264,6 +287,7 @@ Object.getOwnPropertyNames() 返回一个数组,该数组对元素是obj自身�
 
 
 ## 检查日期是否有效
+::: details 查看代码
 ```js
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 //使用
@@ -273,17 +297,22 @@ const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 //Thu Nov 18 2021 21:11:16 GMT+0800 (中国标准时间)
 //格林威治的子午线向东偏移8小时
 ```
+:::
 
 ## 查找一年中的某一天
+::: details 查看代码
 ```js
 const dayOfYear = date => Math.floor((date - new Date(date.getFullYear(),0,0))/1000/60/60/24)
 //dayOfYear(new Date())
 //322
 ```
+:::
 
 ## 大写字符串
+::: details 查看代码
 ```js
 const capitalize = str => str.charAt(0).toUpperCase()+str.slice(1)
 //使用
 //capitalize('heiheiheiyohei')
 ```
+:::

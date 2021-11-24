@@ -7,6 +7,7 @@ pageClass: leetCode
 所求的最优值为： Max{a[i]+a[i+1]+…+a[j]},1<=i<=j<=n 例如，当（a[1],a[2],a[3],a[4],a[5],a[6]）=(-20,11,-4,13,-5,-2)时，最大子段和为20。
 :::
 ### 尝试（菜鸡的错误尝试）:
+::: details 查看代码
 ```js
 var maxSubArray = function (nums) {
     let max = nums[0]
@@ -35,8 +36,10 @@ var maxSubArray = function (nums) {
 console.log(maxSubArray([-2,-10, 2, 10, 11, 22, -100,100, 102]))
 //leetcode submit region end(Prohibit modification and deletion)
 ```
+:::
 - 该方法只能取到小范围内的最大和，一旦碰到使自己变成负数的子项便立马停止，然后重新统计，但下一个又马上让自己变成了比自己还大的集合，这就有点眼界狭隘了哈
 ### 网上找的爆搜
+::: details 查看代码
 ```js
 var maxSubArray = function (nums) {
     if (nums.length == 1) {
@@ -57,8 +60,10 @@ var maxSubArray = function (nums) {
     return max
 };
 ```
+:::
 - 但是超时了，毕竟爆搜嘛
 ### 减去一层循环
+::: details 查看代码
 ```js
 var maxSubArray = function (nums) {
   // console.time()
@@ -80,7 +85,9 @@ var maxSubArray = function (nums) {
 };
     
 ```
+:::
 ### 扫描法
+::: details 查看代码
 ```js
  let sum = nums[0];
     let current = nums[0];
@@ -92,12 +99,14 @@ var maxSubArray = function (nums) {
     return  sum
 ```
 
-## [最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+##
+ :::[最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
 ::: tip 描述
 给你一个字符串 s，由若干单词组成，单词前后用一些空格字符隔开。返回字符串中最后一个单词的长度。
 :::
 ### 多行
 - 用js函数实现的垃圾
+::: details 查看代码
 ```js
 var lengthOfLastWord = function(s) {
     let res=s.split(" ")
@@ -107,14 +116,16 @@ var lengthOfLastWord = function(s) {
     return (res[res.length-1]).length
 };
 ```
+:::
 ### 单行
 - 单行的垃圾
+::: details 查看代码
 ```js
 var lengthOfLastWord = function(s) {
     return s.match(/\S+/g)[s.match(/\S+/g).length-1].length
 };
 ```
-
+:::
 > 解答成功:
 >
 > 执行耗时:72 ms,击败了48.33% 的JavaScript用户
@@ -122,6 +133,7 @@ var lengthOfLastWord = function(s) {
 > 内存消耗:38.1 MB,击败了11.73% 的JavaScript用户
 ### 遍历
 - 下面这个解法，嗯，天才！
+::: details 查看代码
 ```js
 var lengthOfLastWord = function(s) {
     let res ;
@@ -145,6 +157,7 @@ var lengthOfLastWord = function(s) {
     return  j
 };
 ```
+:::
 >解答成功:
 >
 >执行耗时:104 ms,击败了5.54% 的JavaScript用户
@@ -155,6 +168,7 @@ var lengthOfLastWord = function(s) {
 
 ### 优秀的js函数
 - trim()方法用于删除字符串的头尾空格
+::: details 查看代码
 ```js
 var lengthOfLastWord = function(s) {
     let sa = s.trim();
@@ -162,14 +176,17 @@ var lengthOfLastWord = function(s) {
     return sa.indexOf(" ")!==-1?sa.indexOf(" "):sa.length
 };
 ```
+:::
 ### 更优秀的函数
 - lastIndexOf() 返回指定字符串最后出现的位置
+::: details 查看代码
 ```js
 var lengthOfLastWord = function(s) {
     let sa = s.trim();
     return sa.lastIndexOf(" ")!==-1?(sa.length-sa.lastIndexOf(" ")-1):sa.length
 };
 ```
+:::
 > 解答成功:
 >
 >执行耗时:84 ms,击败了9.51% 的JavaScript用户
@@ -177,11 +194,13 @@ var lengthOfLastWord = function(s) {
 >内存消耗:37.7 MB,击败了73.01% 的JavaScript用户
 
 ### 上述变成单行
+::: details 查看代码
 ```js
 var lengthOfLastWord = function(s) {
     return s.trim().lastIndexOf(" ")!==-1?(s.trim().length-s.trim().lastIndexOf(" ")-1):s.trim().length
 };
 ```
+:::
 - 意外的性能很好
 >解答成功:
 >
@@ -189,4 +208,42 @@ var lengthOfLastWord = function(s) {
 >
 >内存消耗:37.8 MB,击败了53.38% 的JavaScript用户
   		
-  		
+## 加1
+::: tip 描述
+给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
+:::
+
+### 单行
+::: details 查看代码
+```js
+var plusOne = function(digits) {
+    return `${BigInt(digits.toString().replace(new RegExp( ',' , "g" ),''))+BigInt(1)}`.split('')
+};
+```
+:::
+### 多行
+::: details 查看代码
+```js
+var plusOne = function(digits) {
+    let len = digits.length;
+    let res=0;
+    for(let i=0;i<len;i++){
+        let inz=len-i-1;
+        let inx=Math.pow(10,inz);
+        res+=digits[i]*inx
+    }
+    res+=1
+    let trueRes = [];
+    while (res){
+        trueRes.unshift(res%10);
+        res=parseInt(res/10);;
+    }
+    return trueRes
+};
+```
+:::
+::: warning 解答失败:
+测试用例:[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]<br>
+测试结果:[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,6,6,2,8]<br>
+期望结果:[6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,4]<br>
+:::

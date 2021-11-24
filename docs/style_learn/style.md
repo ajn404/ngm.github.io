@@ -3,7 +3,7 @@
 <ClientOnly>
 <responsive-images></responsive-images>
 </ClientOnly>
-### vertical-aligin
+### vertical-align默认baseline
 
 ```html
  <div class="box">

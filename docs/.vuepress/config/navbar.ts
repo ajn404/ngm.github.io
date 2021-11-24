@@ -39,7 +39,8 @@ const front_end = {
             text: '纠结的算法历史'
         },
         {
-            link:'/style_learn/style'
+            link:'/style_learn/style',
+            text: 'css细节'
         }
     ],
 };

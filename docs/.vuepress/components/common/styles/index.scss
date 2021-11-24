@@ -21,3 +21,10 @@ body {
 .dark .element-plus .page{
   display: none;
 }
+
+.home{
+  min-height: calc(100vh - 2rem);
+  header.hero{
+    display: none;
+  }
+}

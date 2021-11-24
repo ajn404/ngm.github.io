@@ -33,6 +33,23 @@
   resolved "https://registry.nlark.com/@element-plus/icons/download/@element-plus/icons-0.0.11.tgz#9b187c002774548b911850d17fa5fc2f9a515f57"
   integrity sha1-mxh8ACd0VIuRGFDRf6X8L5pRX1c=
 
+"@ionic/core@5.9.1", "@ionic/core@^5.9.1":
+  version "5.9.1"
+  resolved "https://registry.npmmirror.com/@ionic/core/download/@ionic/core-5.9.1.tgz#aac373e02835006bfcf40b066f31d1b6725f8286"
+  integrity sha512-/jVO0N5ESs/iPFcrFZ/JFvW2Uh0ZV1uLFT2vtbtMfCaOMZK8Bmt36ZR1cDDFTuw14vPOLz/1wI2pbQru48JpkQ==
+  dependencies:
+    "@stencil/core" "^2.4.0"
+    ionicons "^5.5.3"
+    tslib "^2.1.0"
+
+"@ionic/vue@^5.9.1":
+  version "5.9.1"
+  resolved "https://registry.npmmirror.com/@ionic/vue/download/@ionic/vue-5.9.1.tgz#e525c46d03e53bae7f3ba272c734fe040b9989d1"
+  integrity sha512-uR3apeDKnGxHyTDJGNwPs9yTqb3+TnZ/YChmyOXKEpItUNgaWh7SIa79t0hq6b6lzsCXmbmmlZkngZH/Z8CGWg==
+  dependencies:
+    "@ionic/core" "5.9.1"
+    ionicons "^5.1.2"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.nlark.com/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -243,6 +260,16 @@
   version "2.10.2"
   resolved "https://registry.npmmirror.com/@popperjs/core/download/@popperjs/core-2.10.2.tgz#0798c03351f0dea1a5a4cabddf26a55a7cbee590"
   integrity sha1-B5jAM1Hw3qGlpMq93yalWny+5ZA=
+
+"@stencil/core@^2.4.0":
+  version "2.11.0"
+  resolved "https://registry.npmmirror.com/@stencil/core/download/@stencil/core-2.11.0.tgz#8accc2791e2c34cce2d2aa8b40864dd40be4e10c"
+  integrity sha512-/IubCWhVXCguyMUp/3zGrg3c882+RJNg/zpiKfyfJL3kRCOwe+/MD8OoAXVGdd+xAohZKIi1Ik+EHFlsptsjLg==
+
+"@stencil/core@~2.10.0":
+  version "2.10.0"
+  resolved "https://registry.npmmirror.com/@stencil/core/download/@stencil/core-2.10.0.tgz#acf44b9ae6578a20f0d09bf94296e833beadc885"
+  integrity sha1-rPRLmuZXiiDw0Jv5QpboM76tyIU=
 
 "@types/body-parser@*":
   version "1.19.2"
@@ -2446,6 +2473,13 @@ internal-ip@^6.2.0:
     is-ip "^3.1.0"
     p-event "^4.2.0"
 
+ionicons@^5.1.2, ionicons@^5.5.3:
+  version "5.5.4"
+  resolved "https://registry.npmmirror.com/ionicons/download/ionicons-5.5.4.tgz#5fef0c44038a630f5bb5f9a7dc83ec158bab95b1"
+  integrity sha1-X+8MRAOKYw9btfmn3IPsFYurlbE=
+  dependencies:
+    "@stencil/core" "~2.10.0"
+
 ip-regex@^4.0.0:
   version "4.3.0"
   resolved "https://registry.nlark.com/ip-regex/download/ip-regex-4.3.0.tgz#687275ab0f57fa76978ff8f4dddc8a23d5990db5"
@@ -3905,7 +3939,7 @@ ts-debounce@^3.0.0:
   resolved "https://registry.npmmirror.com/ts-debounce/download/ts-debounce-3.0.0.tgz#9beedf59c04de3b5bef8ff28bd6885624df357be"
   integrity sha1-m+7fWcBN47W++P8ovWiFYk3zV74=
 
-tslib@^2.0.3:
+tslib@^2.0.3, tslib@^2.1.0:
   version "2.3.1"
   resolved "https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz?cache=0&sync_timestamp=1628722556410&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.1.tgz#e8a335add5ceae51aa261d32a490158ef042ef01"
   integrity sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=

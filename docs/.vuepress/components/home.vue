@@ -20,7 +20,7 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <neu></neu>
+      <!-- <neu></neu> -->
     </div>
   </div>
 </template>
@@ -37,7 +37,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
 import "./common/styles/index.scss";
-import "./home/neu.scss"
+// import "./home/neu.scss"
 
 export default {
   data() {

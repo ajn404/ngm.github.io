@@ -22,7 +22,6 @@
         </SwiperSlide>
       </Swiper>
       <div class="iframe-box">
-        <h3> <a href="https://iuri.is">https://iuri.is</a></h3>
         <iframe
           style="width: 100%"
           scrolling="yes"
@@ -32,6 +31,18 @@
         >
         </iframe>
       </div>
+        <h3> <a href="https://iuri.is">https://iuri.is</a></h3>
+      <div class="iframe-box">
+        <iframe
+          style="width: 100%"
+          scrolling="yes"
+          src="https://prashantsani.com/"
+          frameborder="no"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div>
+        <h3> <a href="https://prashantsani.com/">https://prashantsani.com/</a></h3>
     </div>
   </div>
 </template>
@@ -93,7 +104,7 @@ export default {
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
-        i += 50;
+        i += 20;
         if (i >= height) {
           clearInterval(time);
         }

@@ -21,7 +21,7 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <div class="iframe-box">
+      <!-- <div class="iframe-box">
         <iframe
           style="width: 100%"
           scrolling="yes"
@@ -30,7 +30,7 @@
           allowfullscreen="true"
         >
         </iframe>
-      </div>
+      </div> -->
         <h3> <a href="https://iuri.is">https://iuri.is</a></h3>
       <div class="iframe-box">
         <iframe
@@ -43,6 +43,8 @@
         </iframe>
       </div>
         <h3> <a href="https://prashantsani.com/">https://prashantsani.com/</a></h3>
+        <h3> <a href="https://albinotonnina.com/">https://albinotonnina.com/</a></h3>
+      
     </div>
   </div>
 </template>

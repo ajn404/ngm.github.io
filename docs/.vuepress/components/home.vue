@@ -22,12 +22,12 @@
         </SwiperSlide>
       </Swiper>
       <div class="iframe-box">
+        <h3> <a href="https://iuri.is">https://iuri.is</a></h3>
         <iframe
           style="width: 100%"
           scrolling="yes"
-          src="https://iuri.is/"
+          src="https://iuri.is"
           frameborder="no"
-          loading="lazy"
           allowfullscreen="true"
         >
         </iframe>
@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     initType() {
-      let typedString = ["大梦一场的狗粮长先生", "前已无通路 后不见归途"];
+      let typedString = ["大梦一场的 狗粮长先生", "四体不勤 五谷不分","前已无通路 后不见归途"];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度
@@ -93,7 +93,7 @@ export default {
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
-        i += 100;
+        i += 50;
         if (i >= height) {
           clearInterval(time);
         }

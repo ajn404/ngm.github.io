@@ -2,7 +2,7 @@
   <div class="box" ref="box">
     <span class="element" v-show="!typingStop"></span>
     <div v-show="typingStop" class="slow-show">
-        <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
+      <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
       <div class="calendar">ajn404</div>
       <Swiper
         class="swiper-container"
@@ -20,6 +20,8 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
+      <iframe  style="width: 100%;" scrolling="no" src="https://iuri.is/" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  </iframe>
     </div>
   </div>
 </template>
@@ -58,10 +60,7 @@ export default {
   },
   methods: {
     initType() {
-      let typedString = [
-        "大梦一场的狗粮长先生",
-        "前已无通路 后不见归途",
-      ];
+      let typedString = ["大梦一场的狗粮长先生", "前已无通路 后不见归途"];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度
@@ -84,9 +83,9 @@ export default {
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
-        i += 10;
-        if(i>=height){
-            clearInterval(time)
+        i += 100;
+        if (i >= height) {
+          clearInterval(time);
         }
       }, 20);
     },

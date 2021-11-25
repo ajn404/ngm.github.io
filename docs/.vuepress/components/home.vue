@@ -133,9 +133,22 @@ export default {
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
-        i += 20;
+        i += 10;
         if (i >= height) {
+          console.log(height)
           clearInterval(time);
+
+          setTimeout(()=>{
+            var toTop = setInterval(function(){
+            window.scrollTo(0, i);
+            i-=30;
+            if(i<0){
+              clearInterval(toTop);
+              console.log(i)
+            }
+          })
+          },1000)
+          
         }
       }, 20);
     },

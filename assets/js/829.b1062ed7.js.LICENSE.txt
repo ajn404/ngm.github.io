@@ -1,0 +1,23 @@
+/*!
+ * 
+ *   typed.js - A JavaScript Typing Animation Library
+ *   Author: Matt Boldt <me@mattboldt.com>
+ *   Version: v2.0.12
+ *   Url: https://github.com/mattboldt/typed.js
+ *   License(s): MIT
+ * 
+ */
+
+/*!
+ * days <https://github.com/jonschlinkert/days>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */
+
+/*!
+ * months <https://github.com/datetime/months>
+ *
+ * Copyright (c) 2014-2017, Jon Schlinkert.
+ * Released under the MIT License.
+ */

@@ -20,12 +20,10 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <!-- <neu></neu> -->
     </div>
   </div>
 </template>
 <script>
-import neu from './home/neu.vue'
 import { Swiper, SwiperSlide } from "swiper/vue";
 import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import * as Typed from "typed.js";
@@ -37,7 +35,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
 import "./common/styles/index.scss";
-// import "./home/neu.scss"
 
 export default {
   data() {

@@ -11,6 +11,7 @@
           delay: 2500,
           disableOnInteraction: false,
         }"
+        style="position: relative"
       >
         <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index">
           <el-image
@@ -20,8 +21,17 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <iframe  style="width: 100%;" scrolling="no" src="https://iuri.is/" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  </iframe>
+      <div class="iframe-box">
+        <iframe
+          style="width: 100%"
+          scrolling="yes"
+          src="https://iuri.is/"
+          frameborder="no"
+          loading="lazy"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div>
     </div>
   </div>
 </template>

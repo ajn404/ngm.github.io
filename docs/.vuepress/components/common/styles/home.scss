@@ -74,3 +74,12 @@
 .editor{
   margin-top: 20px;
 }
+
+.iframe-box{
+  position: relative;
+  iframe{
+    position: absolute;
+    height: 100vh;
+    left: 0;
+  }
+}

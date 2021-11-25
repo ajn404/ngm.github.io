@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="box" ref="box">
     <span class="element" v-show="!typingStop"></span>
     <div v-show="typingStop" class="slow-show">
@@ -21,30 +21,42 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <!-- <div class="iframe-box">
-        <iframe
-          style="width: 100%"
-          scrolling="yes"
-          src="https://iuri.is"
-          frameborder="no"
-          allowfullscreen="true"
-        >
-        </iframe>
-      </div> -->
-        <h3> <a href="https://iuri.is">https://iuri.is</a></h3>
+      <h3>使用wasd操作</h3>
       <div class="iframe-box">
         <iframe
           style="width: 100%"
           scrolling="yes"
-          src="https://prashantsani.com/"
+          src="https://bruno-simon.com/"
           frameborder="no"
           allowfullscreen="true"
         >
         </iframe>
+      </div >
+      <div class='nice-url'>
+        <div>优质的网页收集</div>
+        <h3><a href="https://iuri.is">https://iuri.is</a></h3>
+        <h3>
+          <a href="https://prashantsani.com/">https://prashantsani.com/</a>
+        </h3>
+        <h3>
+          <a href="https://albinotonnina.com/">https://albinotonnina.com/</a>
+        </h3>
       </div>
-        <h3> <a href="https://prashantsani.com/">https://prashantsani.com/</a></h3>
-        <h3> <a href="https://albinotonnina.com/">https://albinotonnina.com/</a></h3>
-      
+      <div class="iframe-box">
+        <iframe
+          style="width: 100%"
+          scrolling="yes"
+          src="https://algorithm-visualizer.org/backtracking/hamiltonean-cycles"
+          frameborder="no"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div >
+      <div class="nice-u">
+        <h3>工具学习类的</h3>
+        <h3><a href="https://algorithm-visualizer.org/" >https://algorithm-visualizer.org/</a></h3>
+      </div>
+
     </div>
   </div>
 </template>
@@ -83,7 +95,11 @@ export default {
   },
   methods: {
     initType() {
-      let typedString = ["大梦一场的 狗粮长先生", "四体不勤 五谷不分","前已无通路 后不见归途"];
+      let typedString = [
+        "大梦一场的 狗粮长先生",
+        "四体不勤 五谷不分",
+        "前已无通路 后不见归途",
+      ];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度
@@ -102,6 +118,17 @@ export default {
       GitHubCalendar(".calendar", "ajn404", { responsive: true });
     },
     scrollToBottom() {
+      this.$nextTick(()=>{
+         document.addEventListener('keydown',function(event){
+           if(event.keyCode===38||event.keyCode===40){
+             event.preventDefault(
+             )
+           }
+      })
+      })
+     
+
+
       const height = document.body.scrollHeight;
       let i = 10;
       var time = setInterval(function () {

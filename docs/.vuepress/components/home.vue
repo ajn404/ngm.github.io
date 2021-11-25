@@ -96,7 +96,6 @@ export default {
     MdEditor,
     Swiper,
     SwiperSlide,
-    neu
   },
 };
 </script>

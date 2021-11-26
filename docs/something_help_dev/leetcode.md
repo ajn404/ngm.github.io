@@ -249,12 +249,14 @@ var plusOne = function(digits) {
 :::
 js的安全计算大概在16位，超过16位就出错了<br>
 :smile::smile::laughing::laughing::blush::blush:<br>
+<!--
 :smiley::smiley::relaxed::relaxed::smirk::smirk:
 :heart_eyes::heart_eyes::kissing_heart::kissing_heart:<br>
 :kissing_closed_eyes::kissing_closed_eyes::flushed::flushed:
 :relieved::relieved::satisfied::satisfied::grin::grin::wink::wink:<br>
 :stuck_out_tongue_winking_eye::stuck_out_tongue_winking_eye:
 :stuck_out_tongue_closed_eyes::stuck_out_tongue_closed_eyes::grinning::grinning:
+-->
 ## 二进制求和
 ###继续尝试单行解决
 ::: details 查看代码

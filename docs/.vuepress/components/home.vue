@@ -1,8 +1,8 @@
-<template>
+  <template>
   <div class="box" ref="box">
     <span class="element" v-show="!typingStop"></span>
     <div v-show="typingStop" class="slow-show">
-        <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
+      <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
       <div class="calendar">ajn404</div>
       <Swiper
         class="swiper-container"
@@ -11,6 +11,7 @@
           delay: 2500,
           disableOnInteraction: false,
         }"
+        style="position: relative"
       >
         <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index">
           <el-image
@@ -20,12 +21,46 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <neu></neu>
+      <h3>使用wasd操作</h3>
+      <div class="iframe-box">
+        <iframe
+          style="width: 100%"
+          scrolling="yes"
+          src="https://bruno-simon.com/"
+          frameborder="no"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div >
+      <div class='nice-url'>
+        <div>优质的网页收集</div>
+        <h3><a href="https://iuri.is">https://iuri.is</a></h3>
+        <h3>
+          <a href="https://prashantsani.com/">https://prashantsani.com/</a>
+        </h3>
+        <h3>
+          <a href="https://albinotonnina.com/">https://albinotonnina.com/</a>
+        </h3>
+      </div>
+      <div class="iframe-box">
+        <iframe
+          style="width: 100%"
+          scrolling="yes"
+          src="https://algorithm-visualizer.org/backtracking/hamiltonean-cycles"
+          frameborder="no"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div >
+      <div class="nice-u">
+        <h3>工具学习类的</h3>
+        <h3><a href="https://algorithm-visualizer.org/" >https://algorithm-visualizer.org/</a></h3>
+      </div>
+
     </div>
   </div>
 </template>
 <script>
-import neu from './home/neu.vue'
 import { Swiper, SwiperSlide } from "swiper/vue";
 import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import * as Typed from "typed.js";
@@ -37,7 +72,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
 import "./common/styles/index.scss";
-import "./home/neu.scss"
 
 export default {
   data() {
@@ -62,7 +96,8 @@ export default {
   methods: {
     initType() {
       let typedString = [
-        "大梦一场的狗粮长先生",
+        "大梦一场的 狗粮长先生",
+        "四体不勤 五谷不分",
         "前已无通路 后不见归途",
       ];
       let homeTypedFont = new Typed(".element", {
@@ -83,13 +118,37 @@ export default {
       GitHubCalendar(".calendar", "ajn404", { responsive: true });
     },
     scrollToBottom() {
+      this.$nextTick(()=>{
+         document.addEventListener('keydown',function(event){
+           if(event.keyCode===38||event.keyCode===40){
+             event.preventDefault(
+             )
+           }
+      })
+      })
+     
+
+
       const height = document.body.scrollHeight;
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
         i += 10;
-        if(i>=height){
-            clearInterval(time)
+        if (i >= height) {
+          console.log(height)
+          clearInterval(time);
+
+          setTimeout(()=>{
+            var toTop = setInterval(function(){
+            window.scrollTo(0, i);
+            i-=30;
+            if(i<0){
+              clearInterval(toTop);
+              console.log(i)
+            }
+          })
+          },1000)
+          
         }
       }, 20);
     },
@@ -99,7 +158,6 @@ export default {
     MdEditor,
     Swiper,
     SwiperSlide,
-    neu
   },
 };
 </script>

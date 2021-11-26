@@ -1,10 +1,7 @@
 [[toc]]
 ## style
-<ClientOnly>
-<responsive-images></responsive-images>
-</ClientOnly>
 ### vertical-align默认baseline
-
+::: details 显示全部
 ```html
  <div class="box">
         <div class="item">和所有以梦为马的诗人一样<br></div>
@@ -17,11 +14,12 @@
 ```
 ```css
 .box{
-            height: 100px;
-        }
-        .item{
-            /* vertical-align: top; */
-            vertical-align: middle;
-            display: inline-block;
-        }
+    height: 100px;
+}
+.item{
+    /* vertical-align: top; */
+    vertical-align: middle;
+    display: inline-block;
+}
 ```
+:::

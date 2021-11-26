@@ -56,6 +56,16 @@
         <h3>工具学习类的</h3>
         <h3><a href="https://algorithm-visualizer.org/" >https://algorithm-visualizer.org/</a></h3>
       </div>
+      <div class="iframe-box">
+        <iframe
+          style="width: 100%"
+          scrolling="yes"
+          src="https://ajn404.github.io/viteV3/"
+          frameborder="no"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div>
 
     </div>
   </div>
@@ -128,16 +138,13 @@ export default {
       })
      
 
-
       const height = document.body.scrollHeight;
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
-        i += 10;
+        i += 50;
         if (i >= height) {
-          console.log(height)
           clearInterval(time);
-
           setTimeout(()=>{
             var toTop = setInterval(function(){
             window.scrollTo(0, i);
@@ -150,7 +157,7 @@ export default {
           },1000)
           
         }
-      }, 20);
+      }, 100);
     },
   },
   components: {

@@ -66,6 +66,10 @@
         >
         </iframe>
       </div>
+       <div class="nice-u">
+        <h3>gitpage学习部署的</h3>
+        <h3><a href="https://ajn404.github.io/viteV3/" >https://ajn404.github.io/viteV3/</a></h3>
+      </div>
 
     </div>
   </div>

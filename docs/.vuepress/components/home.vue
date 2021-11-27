@@ -44,7 +44,7 @@
       @click="resetSwiperAnimate"
       
       >
-      轮播动画
+      zoomIn:轮播动画
       </el-button>
       <h3>使用wasd上下左右,聚焦后键入m关闭音乐r重制场景</h3>
       <div class="iframe-box">
@@ -112,6 +112,7 @@
   </div>
 </template>
 <script>
+// 首页这里我还不是很熟悉vue3和typescript的写法
 import { Swiper, SwiperSlide } from "swiper/vue";
 import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import * as Typed from "typed.js";
@@ -124,7 +125,6 @@ import "swiper/css/effect-fade";
 import "swiper/css/bundle";
 import "./common/styles/index.scss";
 import "animate.css";
-
 export default {
   data() {
     return {
@@ -132,7 +132,7 @@ export default {
       swiperSlideNums: new Array(20),
       typeThing: "",
       typingStop: false,
-      styleAnimate:true,
+      styleAnimate:false,
     };
   },
   mounted() {
@@ -200,7 +200,7 @@ export default {
                 clearInterval(toTop);
               }
             });
-          }, 600);
+          }, 4000);
         }
       }, 50);
     },

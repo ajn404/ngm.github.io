@@ -107,3 +107,7 @@
     font-size: 1.5rem;
   }
 }
+
+.animate__animated.animate__zoomIn {
+  --animate-duration: 3s;
+}

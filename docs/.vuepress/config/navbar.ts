@@ -88,8 +88,8 @@ const link:any={
 export const navbarConfig = [
     home,
     front_end,
-    note,
     others,
     menu,
+    note,
     link
 ];

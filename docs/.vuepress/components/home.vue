@@ -21,7 +21,7 @@
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <h3>使用wasd操作</h3>
+      <h3>使用wasd上下左右,聚焦后键入m关闭音乐r重制场景</h3>
       <div class="iframe-box">
         <iframe
           style="width: 100%"
@@ -31,8 +31,8 @@
           allowfullscreen="true"
         >
         </iframe>
-      </div >
-      <div class='nice-url'>
+      </div>
+      <div class="nice-u">
         <div>优质的网页收集</div>
         <h3><a href="https://iuri.is">https://iuri.is</a></h3>
         <h3>
@@ -42,6 +42,7 @@
           <a href="https://albinotonnina.com/">https://albinotonnina.com/</a>
         </h3>
       </div>
+      <h3>算法可视化</h3>
       <div class="iframe-box">
         <iframe
           style="width: 100%"
@@ -51,11 +52,16 @@
           allowfullscreen="true"
         >
         </iframe>
-      </div >
+      </div>
       <div class="nice-u">
         <h3>工具学习类的</h3>
-        <h3><a href="https://algorithm-visualizer.org/" >https://algorithm-visualizer.org/</a></h3>
+        <h3>
+          <a href="https://algorithm-visualizer.org/"
+            >https://algorithm-visualizer.org/</a
+          >
+        </h3>
       </div>
+      <h3>学习vite vue3系列</h3>
       <div class="iframe-box">
         <iframe
           style="width: 100%"
@@ -66,11 +72,14 @@
         >
         </iframe>
       </div>
-       <div class="nice-u">
+      <div class="nice-u">
         <h3>gitpage学习部署的</h3>
-        <h3><a href="https://ajn404.github.io/viteV3/" >https://ajn404.github.io/viteV3/</a></h3>
+        <h3>
+          <a href="https://ajn404.github.io/viteV3/"
+            >https://ajn404.github.io/viteV3/</a
+          >
+        </h3>
       </div>
-
     </div>
   </div>
 </template>
@@ -132,36 +141,36 @@ export default {
       GitHubCalendar(".calendar", "ajn404", { responsive: true });
     },
     scrollToBottom() {
-      this.$nextTick(()=>{
-         document.addEventListener('keydown',function(event){
-           if(event.keyCode===38||event.keyCode===40){
-             event.preventDefault(
-             )
-           }
-      })
-      })
-     
+      // this.$nextTick(() => {
+      //   document.addEventListener("keydown", function (event) {
+      //     if (event.keyCode === 38 || event.keyCode === 40) {
+      //       event.preventDefault();
+      //     }
+      //   });
+      // });
 
       const height = document.body.scrollHeight;
       let i = 10;
       var time = setInterval(function () {
         window.scrollTo(0, i);
-        i += 50;
+        i += 10;
+        console.log(i)
         if (i >= height) {
           clearInterval(time);
-          setTimeout(()=>{
-            var toTop = setInterval(function(){
-            window.scrollTo(0, i);
-            i-=30;
-            if(i<0){
-              clearInterval(toTop);
-              console.log(i)
-            }
-          })
-          },1000)
-          
+          let j = height;
+          setTimeout(() => {
+            var toTop = setInterval(function () {
+              window.scrollTo(0, j);
+              j -= 30;
+              console.log(j)
+              if (j < 0) {
+                clearInterval(toTop);
+                console.log(j);
+              }
+            });
+          }, 1000);
         }
-      }, 100);
+      }, 50);
     },
   },
   components: {

@@ -22,6 +22,10 @@ body {
   display: none;
 }
 
+.dark .nice-u{
+  display: flex;
+}
+
 .home{
   min-height: calc(100vh - 2rem);
   header.hero{

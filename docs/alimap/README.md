@@ -94,7 +94,7 @@ Hybrid App的本质，其实是在原生的 App 中，使用 WebView 作为容�
 #### ionic
 ::: details 点击查看
 ```text
-快跑别用
+无，看着挺不错的，听说bug也蛮多的
 ``` 
 :::
 

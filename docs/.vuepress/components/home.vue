@@ -169,7 +169,6 @@ export default {
               j -= 30;
               if (j < 0) {
                 clearInterval(toTop);
-                console.log(j);
               }
             });
           }, 1000);

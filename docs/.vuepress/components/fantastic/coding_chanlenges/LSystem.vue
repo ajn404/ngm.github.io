@@ -124,7 +124,7 @@ export default {
   overflow: hidden;
   display: flex;
   place-items: center;
-  flex-direction: column;
+  flex-direction: column  ;
   
 }
 </style>

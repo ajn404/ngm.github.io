@@ -152,17 +152,21 @@ export default {
       const height = document.body.scrollHeight;
       let i = 10;
       var time = setInterval(function () {
-        window.scrollTo(0, i);
+        window.scrollTo({
+          top:i,
+          behavior:'smooth'
+        });
         i += 10;
-        console.log(i)
         if (i >= height) {
           clearInterval(time);
           let j = height;
           setTimeout(() => {
             var toTop = setInterval(function () {
-              window.scrollTo(0, j);
+              window.scrollTo({
+                top:j,
+                behavior:'smooth'
+              });
               j -= 30;
-              console.log(j)
               if (j < 0) {
                 clearInterval(toTop);
                 console.log(j);

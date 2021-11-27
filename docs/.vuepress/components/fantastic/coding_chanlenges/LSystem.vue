@@ -82,13 +82,12 @@ export default {
       }
 
       function turtle() {
-        p5.background(51);
+        p5.background(0);
         p5.resetMatrix();
-        p5.translate(p5.width / 3, p5.height);
-        p5.stroke(255, 50);
+        p5.translate(p5.width / 2, p5.height);
         for (var i = 0; i < sentence.length; i++) {
           var current = sentence.charAt(i);
-
+        p5.stroke(parseInt(255*Math.random()), 100+parseInt(155*Math.random()),100+parseInt(155*Math.random()));
           if (current == "F") {
             p5.line(0, 0, 0, -len);
             p5.translate(0, -len);
@@ -105,7 +104,7 @@ export default {
       }
 
       p5.setup = () => {
-        p5.createCanvas(p5.windowWidth - 30, p5.windowHeight - 100);
+        p5.createCanvas(600,800);
         angle = p5.radians(25);
         p5.background(51);
         p5.createP(axiom);
@@ -123,5 +122,9 @@ export default {
   max-width: 100%;
   max-height: 80%;
   overflow: hidden;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  
 }
 </style>

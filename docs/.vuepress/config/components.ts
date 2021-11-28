@@ -21,4 +21,5 @@ export const components = {
     selfAvoiding: resolve('../components/fantastic/coding_chanlenges/selfAvoding'),
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
     themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),
+    collectionEle:resolve('../components/collections/index.vue')
 };

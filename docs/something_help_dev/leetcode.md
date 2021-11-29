@@ -275,3 +275,121 @@ var addBinary = function(a, b) {
 >期望结果:"110111101100010011000101110110100000011101000101011001000011011000001100011110011010010011000000000"			
 
 - 尝试失败
+
+### 暴力解决
+::: details 查看代码
+```js
+var addBinary = function(a, b) {
+    let tarA = a.split("").reverse();
+    let tarB = b.split("").reverse();
+    let lenA = a.length;
+    let lenB = b.length;
+    let res = []
+    let tag = 0;
+    tarA=tarA.map((item)=>{
+        return parseInt(item)
+    })
+    tarB=tarB.map((item)=>{
+        return parseInt(item)
+    })
+    for(let i= 0;typeof tarA[i]==='number'||typeof tarB[i]==='number'||tag>0;i++){
+        if(typeof tarA[i]!=='number'){
+            tarA[i]=0
+        }
+        if(typeof tarB[i]!=='number'){
+            tarB[i]=0
+        }
+        let sum = tarA[i]+tarB[i]+tag;
+        if(sum>1){
+            tag=1;
+            if(sum>2){
+                sum=1
+            }
+        else{
+            sum=0
+            }
+        }else{
+            tag=0;
+        }
+        res.unshift(sum)
+    }
+    console.log(res)
+    res=res.toString()
+    while (res.indexOf(',')!=-1){
+        res=res.replace(',','')
+    }
+    return res
+};
+```
+:::
+
+### 优化
+::: details 查看代码
+```js
+var addBinary = function (a, b) {
+    let tarA = a.split("").reverse();
+    let tarB = b.split("").reverse();
+    let res = []
+    let tag = 0;
+    tarA = tarA.map((item) => {
+        return parseInt(item)
+    })
+    tarB = tarB.map((item) => {
+        return parseInt(item)
+    })
+    for (let i = 0; typeof tarA[i] === 'number' || typeof tarB[i] === 'number' || tag > 0; i++) {
+        if (typeof tarA[i] !== 'number') {
+            tarA[i] = 0
+        }
+        if (typeof tarB[i] !== 'number') {
+            tarB[i] = 0
+        }
+        let sum = tarA[i] + tarB[i] + tag;
+        if (sum > 1) {
+            tag = 1;
+            if (sum > 2) {
+                sum = 1
+            } else {
+                sum = 0
+            }
+        } else {
+            tag = 0;
+        }
+        res.unshift(sum)
+    }
+    return res.join("")
+};
+```
+:::
+### 继续优化
+::: details 查看代码
+```js
+var addBinary = function (a, b) {
+    let tarA = a.split("").reverse();
+    let tarB = b.split("").reverse();
+    let res = []
+    let tag = 0;
+    for (let i = 0; typeof tarA[i] === 'string' || typeof tarB[i] === 'string' || tag > 0; i++) {
+        if (typeof tarA[i] !== 'string') {
+            tarA[i] = 0
+        }
+        if (typeof tarB[i] !== 'string') {
+            tarB[i] = 0
+        }
+        let sum = parseInt(tarA[i]) + parseInt(tarB[i]) + tag;
+        if (sum > 1) {
+            tag = 1;
+            if (sum > 2) {
+                sum = 1
+            } else {
+                sum = 0
+            }
+        } else {
+            tag = 0;
+        }
+        res.unshift(sum)
+    }
+    return res.join("")
+};
+```
+:::

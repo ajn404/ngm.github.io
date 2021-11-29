@@ -20,6 +20,5 @@ export const components = {
     lSystem: resolve('../components/fantastic/coding_chanlenges/LSystem'),
     selfAvoiding: resolve('../components/fantastic/coding_chanlenges/selfAvoding'),
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
-    themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),
-    collectionEle:resolve('../components/collections/index.vue')
+    themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk')
 };

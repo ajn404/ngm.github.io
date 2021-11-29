@@ -3,7 +3,7 @@
     <h2>
       element-plus现在还没做暗色调模式，按理说可以改一下全局作用的变量做调整
     </h2>
-    <div class="table" style="display: flex; justify-content: center">
+    <!-- <div class="table" style="display: flex; justify-content: center">
       <el-table :data="tableDataLeft" :stripe="false" style="width: 50%">
         <el-table-column label="黑话" prop="value"></el-table-column>
         <el-table-column label="解释" prop="res"></el-table-column>
@@ -16,9 +16,9 @@
         <el-table-column label="黑话" prop="value"></el-table-column>
         <el-table-column label="解释" prop="res"></el-table-column>
       </el-table>
-    </div>
+    </div> -->
     <el-calendar class="calendar" v-model="value"></el-calendar>
-    <el-tabs
+    <!-- <el-tabs
       class="tabs"
       @edit="handleTabsEdit"
       editable
@@ -40,7 +40,7 @@
         >
         </el-input>
       </el-tab-pane>
-    </el-tabs>
+    </el-tabs> -->
   </div>
 </template>
 <script lang="ts">
@@ -143,4 +143,7 @@ export default defineComponent({
 :deep .dark .element-plus .page {
   display: none;
 }
+
+@import '~element-plus/dist/index.css';
+
 </style>

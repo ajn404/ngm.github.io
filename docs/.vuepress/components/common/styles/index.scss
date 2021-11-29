@@ -19,7 +19,7 @@ body {
 
 
 .dark .element-plus .page{
-  display: none;
+  // display: none;
 }
 
 .dark .nice-u{
@@ -32,3 +32,5 @@ body {
     display: none;
   }
 }
+
+@import '~element-plus/dist/index.css';

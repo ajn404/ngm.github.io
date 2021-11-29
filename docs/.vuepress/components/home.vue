@@ -4,6 +4,10 @@
     <div v-show="typingStop" class="slow-show">
       <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
       <div class="calendar">ajn404</div>
+      <el-button @click="scrollToBottom" style="margin-top:2em" class="elButton">
+        自动滚动无法手动终止
+        <el-icon><bottom /></el-icon>
+      </el-button>
       <Swiper
         class="swiper-container"
         :autoplay="{
@@ -11,27 +15,8 @@
           disableOnInteraction: false,
         }"
         style="position: relative"
-        v-show="styleAnimate"
       >
-        <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index" class=" animate__animated animate__zoomIn animate__infinite">
-          <el-image
-            :src="'https://picsum.photos/1080/480/?random=' + index"
-            fit="cover"
-            style="max-width: 100vw"
-            class="swiper-img"
-          ></el-image>
-        </SwiperSlide>
-      </Swiper>
-      <Swiper
-        class="swiper-container"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        v-show="!styleAnimate"
-        style="position: relative"
-      >
-        <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index">
+        <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index" class=" animate__animated animate__infinite" :class="[styleAnimate]">
           <el-image
             :src="'https://picsum.photos/1080/480/?random=' + index"
             fit="cover"
@@ -42,6 +27,14 @@
       </Swiper>
       <el-button 
       @click="resetSwiperAnimate"
+      class="elButton"
+      
+      >
+      zoomIn:轮播动画
+      </el-button>
+      <el-button 
+      @click="resetSwiperAnimate"
+      class="elButton"
       
       >
       zoomIn:轮播动画
@@ -105,6 +98,7 @@
           src="https://ajn404.github.io/gsap_ex/"
           frameborder="no"
           allowfullscreen="true"
+          lazy="true"
         >
         </iframe>
       </div>
@@ -200,13 +194,13 @@ export default {
                 clearInterval(toTop);
               }
             });
-          }, 4000);
+          }, 10000);
         }
       }, 50);
     },
 
     resetSwiperAnimate(){
-      this.styleAnimate =!this.styleAnimate
+      this.styleAnimate ='animate__bounceIn'
     }
   },
   components: {

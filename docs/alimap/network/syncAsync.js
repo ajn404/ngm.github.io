@@ -17,7 +17,7 @@ xhr.onerror = function(e){
 };
 xhr.send(null);
 
-// 创建一个标准方法来读取外部文件 test
+// 创建一个标准方法来读取外部文件
 
 function xhrSuccess(){
     this.callback.allpy(this,this.arguments)

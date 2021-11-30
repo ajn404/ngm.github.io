@@ -172,9 +172,9 @@ export default {
           this.$nextTick(() => {
             // const scrollToBottom = ref('scrollToBottom');
             // console.log(scrollToBottom)
-          if(document.querySelector('.scrollToBottom')){
-            document.querySelector('.scrollToBottom').click()
-          }
+          // if(document.querySelector('.scrollToBottom')){
+          //   document.querySelector('.scrollToBottom').click()
+          // }
           });
         },
       });

@@ -69,11 +69,11 @@ const others: any = {
         },
         {
             link: '/fantastic/coding_chanlenges/p5_001',
-            text: '星空(coding train)'
+            text: 'canvas 星空'
         },
         {
             link: '/fantastic/coding_chanlenges/p5_002',
-            text: 'L-system'
+            text: 'canvas L-system'
         },
         {
             text: 'pixi',

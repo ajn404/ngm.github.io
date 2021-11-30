@@ -97,9 +97,8 @@ var maxSubArray = function (nums) {
     }
     return  sum
 ```
-
-##
- :::[最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
+:::
+## [最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)
 ::: tip 描述
 给你一个字符串 s，由若干单词组成，单词前后用一些空格字符隔开。返回字符串中最后一个单词的长度。
 :::
@@ -257,8 +256,13 @@ js的安全计算大概在16位，超过16位就出错了<br>
 :stuck_out_tongue_winking_eye::stuck_out_tongue_winking_eye:
 :stuck_out_tongue_closed_eyes::stuck_out_tongue_closed_eyes::grinning::grinning:
 -->
-## 二进制求和
-###继续尝试单行解决
+## [二进制求和](https://leetcode-cn.com/problems/add-binary/)
+::: tip 描述
+给你两个二进制字符串，返回它们的和（用二进制表示<br>
+输入: a = "11", b = "1"<br>
+输出: "100"
+:::
+### 尝试单行
 ::: details 查看代码
 ```js
 var addBinary = function(a, b) {

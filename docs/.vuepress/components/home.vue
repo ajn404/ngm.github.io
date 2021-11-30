@@ -4,41 +4,35 @@
     <div v-show="typingStop" class="slow-show">
       <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
       <div class="calendar">ajn404</div>
-      <el-button @click="scrollToBottom" style="margin-top:2em" class="elButton">
+      <el-button
+        @click="scrollToBottom"
+        style="margin-top: 2em"
+        class="elButton scrollToBottom"
+        ref="scrollToBottom"
+      >
         自动滚动无法手动终止
         <el-icon><bottom /></el-icon>
       </el-button>
       <Swiper
         class="swiper-container"
+        :effect="'fade'"
         :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
         }"
         style="position: relative"
       >
-        <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index" class=" animate__animated animate__infinite" :class="[styleAnimate]">
+        <SwiperSlide v-for="(i, index) in swiperSlideNums" :key="index">
           <el-image
             :src="'https://picsum.photos/1080/480/?random=' + index"
             fit="cover"
             style="max-width: 100vw"
-            class="swiper-img"
           ></el-image>
         </SwiperSlide>
       </Swiper>
-      <el-button 
-      @click="resetSwiperAnimate"
-      class="elButton"
-      
-      >
-      zoomIn:轮播动画
-      </el-button>
-      <el-button 
-      @click="resetSwiperAnimate"
-      class="elButton"
-      
-      >
-      zoomIn:轮播动画
-      </el-button>
+      <!-- <el-button @click="resetSwiperAnimate" class="elButton">
+        fade切换
+      </el-button> -->
       <h3>使用wasd上下左右,聚焦后键入m关闭音乐r重制场景</h3>
       <div class="iframe-box">
         <iframe
@@ -105,10 +99,10 @@
     </div>
   </div>
 </template>
-<script>
+<script> 
 // 首页这里我还不是很熟悉vue3和typescript的写法
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Autoplay, EffectFade } from "swiper";
+import SwiperCore, { Autoplay, EffectFade} from "swiper";
 import * as Typed from "typed.js";
 import GitHubCalendar from "github-calendar";
 import MdEditor from "md-editor-v3";
@@ -119,14 +113,39 @@ import "swiper/css/effect-fade";
 import "swiper/css/bundle";
 import "./common/styles/index.scss";
 import "animate.css";
+import {ref} from 'vue'
 export default {
+  name:'home',
+
   data() {
     return {
       text: "hello editor",
       swiperSlideNums: new Array(20),
       typeThing: "",
       typingStop: false,
-      styleAnimate:false,
+      styleAnimate: "",
+      styleOptions: [
+        {
+          value: "fade",
+          label: "fade",
+        },
+        {
+          value: "cube",
+          label: "cube",
+        },
+        {
+          value: "flib",
+          label: "flib",
+        },
+        {
+          value: "cards",
+          label: "cards",
+        },
+        {
+          value: "creative",
+          label: "creative",
+        },
+      ],
     };
   },
   mounted() {
@@ -142,10 +161,7 @@ export default {
   },
   methods: {
     initType() {
-      let typedString = [
-        "四体不勤 五谷不分",
-        "文不能作词 武不能防身",
-      ];
+      let typedString = ["四体不勤 五谷不分", "文不能作词 武不能防身"];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度
@@ -154,7 +170,11 @@ export default {
         onComplete: (self) => {
           this.typingStop = true;
           this.$nextTick(() => {
-            this.scrollToBottom();
+            // const scrollToBottom = ref('scrollToBottom');
+            // console.log(scrollToBottom)
+          if(document.querySelector('.scrollToBottom')){
+            document.querySelector('.scrollToBottom').click()
+          }
           });
         },
       });
@@ -199,9 +219,9 @@ export default {
       }, 50);
     },
 
-    resetSwiperAnimate(){
-      this.styleAnimate ='animate__bounceIn'
-    }
+    resetSwiperAnimate() {
+      this.styleAnimate = "fade";
+    },
   },
   components: {
     // cssTransitionAndAnimation,

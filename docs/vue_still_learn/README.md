@@ -321,3 +321,10 @@ const capitalize = str => str.charAt(0).toUpperCase()+str.slice(1)
 ```bash
 npm init vue@next
 ```
+
+## 给所有的div一个outline样式
+::: details 查看代码
+```js
+[].forEach.call($$("div"),(a)=>{a.style.outline="5px solid #"+(~~(Math.random()*(1<<24))).toString(16)});
+```
+:::

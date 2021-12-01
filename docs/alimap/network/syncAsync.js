@@ -22,3 +22,25 @@ xhr.send(null);
 function xhrSuccess(){
     this.callback.allpy(this,this.arguments)
 }
+
+function xhrError() {
+    console.error(this.statusText)
+}
+
+function loadFile(url,callback/*,opt_arg1,opt_arg2,...*/) {
+    var xhr = new XMLHttpRequest();
+    xhr.callback = callback;
+    xhr.arguments =Array.prototype.slice.call(arguments,2)
+    xhr.onload = xhrSuccess;
+    xhr.onerror =xhrSuccess;
+    xhr.open("GET",url,true);
+    xhr.send(null)
+}
+//用法
+
+function showMessage(message) {
+    console.log(message+this.responseText)
+}
+
+loadFile("message.txt",showMessage,"New message!\n\n")
+

@@ -92,11 +92,7 @@ Hybrid App的本质，其实是在原生的 App 中，使用 WebView 作为容�
 :::
 
 #### ionic
-::: details 点击查看
-```text
-无，看着挺不错的，听说bug也蛮多的
-``` 
-:::
+
 
 ### 网络
 
@@ -108,3 +104,6 @@ Hybrid App的本质，其实是在原生的 App 中，使用 WebView 作为容�
 :::
 
 ##### 创建一个标准的方法来读取外部文件
+::: details  点击查看
+@[code{22-45} js:no-line-numbers](./network/syncAsync.js)
+:::

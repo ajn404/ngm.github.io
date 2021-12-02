@@ -264,6 +264,35 @@ function deepClone(target) {
 ```
 :::
 
+##使用Map深拷贝
+::: details 查看代码
+```js
+   function deepCloneMethod(target) {
+                const map = new Map();
+                function isObject(val) {
+                    return val != null && typeof val === 'object';
+                };
+                function clone(target) {
+                    if (isObject(target)) {
+                        let cloneTarget = Array.isArray(target) ? [] : {};
+                        if (map.get(target)) {
+                            return map.get(target)
+                        }
+                        map.set(target, cloneTarget)
+                        for (const key in target) {
+                            cloneTarget[key] = clone(target[key])
+                        }
+                        return cloneTarget;
+                    } else {
+                        return target
+                    }
+                }
+                return clone(target)
+            }
+```
+:::
+
+
 ## 判断字符串是否全为空
 ``` js
 str.match(/^[ ]*$/)

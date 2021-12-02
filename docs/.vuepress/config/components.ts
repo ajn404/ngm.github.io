@@ -22,5 +22,4 @@ export const components = {
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
     themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),
     screenRecord:resolve('../components/fantastic/screenRecord'),
-
 };

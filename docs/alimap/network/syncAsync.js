@@ -20,7 +20,7 @@ xhr.send(null);
 // 创建一个标准方法来读取外部文件
 
 function xhrSuccess(){
-    this.callback.allpy(this,this.arguments)
+    this.callback.apply(this,this.arguments)
 }
 
 function xhrError() {

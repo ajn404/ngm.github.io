@@ -20,5 +20,7 @@ export const components = {
     lSystem: resolve('../components/fantastic/coding_chanlenges/LSystem'),
     selfAvoiding: resolve('../components/fantastic/coding_chanlenges/selfAvoding'),
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
-    themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk')
+    themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),
+    screenRecord:resolve('../components/fantastic/screenRecord'),
+
 };

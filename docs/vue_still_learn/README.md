@@ -400,3 +400,22 @@ html
 <ClientOnly>
 <screen-record></screen-record>
 </ClientOnly>
+
+## 代理页面解决跨域(子页面iframe访问父页面)
+::: details 查看详情
+##### 父页面server1/index.html
+@[code{1-23} js:no-line-numbers](./static/server1/index.html)
+##### 子页面server2/index.html
+@[code{1-31} js:no-line-numbers](./static/server2/index.html)
+##### 代理页面server1/iframe.html
+@[code{1-18} js:no-line-numbers](./static/server1/iframe.html)
+:::
+::: tip 记录
+在公司二次开发ueditor的时候遇到了跨域，
+情况是当时想把ueditor的静态文件传到cdn文件目录下
+，项目访问直接在index.html或者webpack里配置引用，
+富文本可以正常显示，但是涉及到弹框的js文件会报跨域的错误，
+问题出在了cdn上的弹框内部js访问或操作当前页面中DOM导致的跨域，
+预想的解决方法：配置config中的iframeUrlMap，同是把dialog的文件拷贝在到线上目录下
+:::
+

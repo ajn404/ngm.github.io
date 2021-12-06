@@ -181,10 +181,16 @@ copy(document.cookie)
 
 ## echarts的图标监听window的大小重绘
 
+<ClientOnly>
+<echart-bar-demo></echart-bar-demo>
+</ClientOnly>
+
 ::: details 查看代码
 ```js
 window.addEventListener("resize", () => {this.chartLine.resize();});
 ```
+
+
 :::
 ## 获取浏览器Cookie的值
 ::: details 查看代码

@@ -2,7 +2,7 @@
   <div class="box" ref="box">
     <span class="element" v-show="!typingStop"></span>
     <div v-show="typingStop" class="slow-show">
-      <div class="element">大梦一场的狗粮长先生，前已无通路，后不见归途</div>
+      <div class="element">前已无通路，后不见归途</div>
       <div class="calendar">ajn404</div>
       <el-button
         @click="scrollToBottom"
@@ -10,7 +10,7 @@
         class="elButton scrollToBottom"
         ref="scrollToBottom"
       >
-        自动滚动无法手动终止
+        探索后回家
         <el-icon><bottom /></el-icon>
       </el-button>
       <Swiper
@@ -84,7 +84,7 @@
         >
         </iframe>
       </div>
-      <h3>学习react gsap系列</h3>
+      <h3>学习react gsap系列(iframe点击刷新)</h3>
       <div class="iframe-box">
         <iframe
           style="width: 100%"

@@ -22,4 +22,5 @@ export const components = {
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
     themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),
     screenRecord:resolve('../components/fantastic/screenRecord'),
+    echartBarDemo:resolve('../../vue_still_learn/static/echart_demo/index')
 };

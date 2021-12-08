@@ -14,11 +14,11 @@ export default {
       this.myChart = echarts.init(document.getElementById("main"));
       this.initChart();
     //   这里为啥报错，百思不解
-    //   window.addEventListener("resize", () => {
-    //     setTimeout(() => {
-    //       this.myChart.resize();
-    //     }, 500);
-    //   });
+      // window.addEventListener("resize", () => {
+      //   setTimeout(() => {
+      //     this.myChart.resize();
+      //   }, 500);
+      // });
     });
   },
   data() {

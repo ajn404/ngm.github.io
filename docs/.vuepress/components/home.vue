@@ -10,8 +10,7 @@
         class="elButton scrollToBottom"
         ref="scrollToBottom"
       >
-        探索后回家
-        <el-icon><bottom /></el-icon>
+        如你所见，这是个按钮
       </el-button>
       <Swiper
         class="swiper-container"
@@ -88,9 +87,7 @@
       <div class="iframe-box">
         <iframe
           style="width: 100%"
-          scrolling="yes"
           src="https://ajn404.github.io/gsap_ex/"
-          frameborder="no"
           allowfullscreen="true"
           lazy="true"
         >

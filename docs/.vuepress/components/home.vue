@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     initType() {
-      let typedString = ["四体不勤 五谷不分", "文不能作词 武不能防身"];
+      let typedString = ["没有永恒的黑暗","只有未达的黎明"];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度

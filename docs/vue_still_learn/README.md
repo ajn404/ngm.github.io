@@ -422,7 +422,7 @@ html
 ##### 代理页面server1/iframe.html
 @[code{1-18} js:no-line-numbers](./static/server1/iframe.html)
 :::
-::: tip 记录
+::: details 记录
 在公司二次开发ueditor的时候遇到了跨域，
 情况是当时想把ueditor的静态文件传到cdn文件目录下
 ，项目访问直接在index.html或者webpack里配置引用，

@@ -425,3 +425,31 @@ html
 预想的解决方法：配置config中的iframeUrlMap，同是把dialog的文件拷贝在到线上目录下
 :::
 
+## v8
+
+::: tips 如何执行JavaScript
+将源码 （进行词法分析和语法分析）转为AST（抽象语法树），然后解释器将其转为字节码， 如果该字节码-是热点代码，则编译器直接将其转为机器码（并把机器码保存下来，以备下次使用）， 若不是热点代码，则由解释器 解释执行字节码 ----------JIT 
+:::
+::: tip JIT与AOT
+JIT （Just-In-Time）--即时编译 ，边编译边运行
+AOT （ahead of time）运行前进行编译
+:::
+
+## 局域网分享代码方案
+
+<CodeGroup>
+  <CodeGroupItem title="安装">
+
+```bash:no-line-numbers
+npm install -g keppler
+```
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="使用" active>
+
+```bash:no-line-numbers
+keppler "My awesome project"
+```
+  </CodeGroupItem>
+</CodeGroup>

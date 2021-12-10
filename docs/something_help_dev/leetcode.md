@@ -397,3 +397,61 @@ var addBinary = function (a, b) {
 };
 ```
 :::
+
+
+
+
+## [无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+::: tip 描述
+给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+:::
+
+### 滑动窗口
+
+```js:no-line-numbers
+var lengthOfLongestSubstring = function(s) {
+    if(!s) return 0
+    let temp = s.split('')
+    let window = [temp[0]];
+    let max = 1;
+    for(let i=1;i<temp.length;i++){
+        window.push(temp[i]);
+        if([...new Set(window)].length===window.length){
+            if(window.length>max){
+                max = window.length;
+                console.log(window)
+            }
+        }else{
+            window.shift()
+        }
+    }
+    return max
+};
+
+```
+
+### 查找无重复子串使用filter方法
+```js
+var lengthOfLongestSubstring = function(s) {
+    if(!s) return 0
+    let temp = s
+    let window = [];
+    let max = 0;
+    function is_minest(window) {
+        return window.filter((s,i,o)=>o.indexOf(s)===i).length===window.length
+    }
+
+    for(let i=0;i<temp.length;i++){
+        window.push(temp[i]);
+        if(is_minest(window)){
+            if(window.length>max){
+                max = window.length;
+            }
+        }else{
+            window.shift();
+        }
+    }
+    return max;
+};
+
+```

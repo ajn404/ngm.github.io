@@ -431,7 +431,7 @@ var lengthOfLongestSubstring = function(s) {
 ```
 
 ### 查找无重复子串使用filter方法
-```js
+```js 
 var lengthOfLongestSubstring = function(s) {
     if(!s) return 0
     let temp = s
@@ -455,3 +455,50 @@ var lengthOfLongestSubstring = function(s) {
 };
 
 ```
+
+## [最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+
+::: tip 描述
+给你一个字符串 s，找到 s 中最长的回文子串。
+:::
+
+### 中心扩散
+::: details 查看详情
+```js:no-line-numbers
+var longestPalindrome = function(s) {
+    if(!s||s.length===1) return s;
+    let len=s.length;
+    s=s.split('')
+    let left =0;
+    let right = 0;
+    let maxLength =0 ;
+    let maxStart = 0 ;
+
+    let tempLen=1
+    for(let i=0;i<len;i++){
+        left = i-1;
+        right = i+1;
+        while (left>0&&s[left]===s[i]){
+            tempLen++;
+            left--
+        }
+        while (right<len&&s[right]===s[i]){
+            tempLen++;
+            right++
+        }
+        while (left>=0&&right<len&&s[right]===s[left]){
+            tempLen+=2;
+            left--;
+            right++;
+        }
+        if(tempLen>maxLength){
+            maxStart=left;
+            maxLength=tempLen;
+        }
+        tempLen=1
+    }
+    s=s.join('')
+    return s.slice(maxStart+1,maxStart+maxLength+1)
+};
+```
+:::

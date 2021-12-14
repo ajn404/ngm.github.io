@@ -12,6 +12,9 @@ const store = createStore(
         mutations:{
             increment(state){
                 state.count++
+            },
+            clearCount(state){
+                state.count = 0
             }
         }
     }

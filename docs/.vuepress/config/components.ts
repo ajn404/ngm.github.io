@@ -22,5 +22,7 @@ export const components = {
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
     themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),
     screenRecord:resolve('../components/fantastic/screenRecord'),
-    echartBarDemo:resolve('../../vue_still_learn/static/echart_demo/index')
+    echartBarDemo:resolve('../../vue_still_learn/static/echart_demo/index'),
+    vuexLearn:resolve('../components/vue3_still_learn/vuex_learn'),
+    clearState:resolve('../components/vue3_still_learn/clearState'),
 };

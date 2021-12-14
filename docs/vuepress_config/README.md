@@ -199,3 +199,73 @@ markdown内适用语法
 ### 安装了插件，部署的时候遇到点问题，这就令人头疼了
 
 然后发现不是插件的锅，我手贱，在首页写了对 `center`的html标签，在markdown里写无可厚非，但在vuepress里写就着实不聪明哈
+
+### 博客中使用vuex
+
+<ClientOnly><vuexLearn></vuexLearn></ClientOnly>
+
+::: details 查看详情
+代码详情
+```vue
+<template>
+    <div class="vuex-learn">
+        <el-button @click="increment" type="primary">触发mutation</el-button>
+        <span>{{count}}</span>
+    </div>
+</template>
+
+<script>
+    import {mapGetters,mapState} from 'vuex'
+    import {ElMessageBox,ElMessage} from 'element-plus'
+
+    export default {
+        name: "vuex_learn",
+
+        computed: {
+            ...mapState(['count']),
+            // count() {
+            //     return this.$store.state.count
+            // }
+        },
+
+        mounted() {
+            console.log(this.$store.state.count)
+        },
+
+        methods: {
+            increment() {
+                this.$store.commit('increment');
+                if(this.count>10){
+                    this.showMessage()
+                }
+            },
+            showMessage(){
+                ElMessageBox.alert('count的值已达到'+this.count+',请停止触发', '注意注意', {
+                    confirmButtonText: '好的',
+                    showCancelButton: true,
+                    cancelButtonText:'我偏不',
+                    callback: (action) => {
+                        let message;
+                        if(action==='cancel'){
+                            message='qq1423238345,来对线'
+                        }else{
+                            message='nice boy'
+                        }
+
+                        ElMessage({
+                            type: 'info',
+                            message: message,
+                        })
+                    },
+                })
+            }
+        }
+    }
+</script>
+```
+:::
+
+在另一个组件中置零count
+<ClientOnly><clearState></clearState></ClientOnly>
+
+

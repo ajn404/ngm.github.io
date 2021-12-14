@@ -96,7 +96,7 @@
     </div>
   </div>
 </template>
-<script> 
+<script>
 // 首页这里我还不是很熟悉vue3和typescript的写法
 import { Swiper, SwiperSlide } from "swiper/vue";
 import SwiperCore, { Autoplay, EffectFade} from "swiper";
@@ -168,7 +168,6 @@ export default {
           this.typingStop = true;
           this.$nextTick(() => {
             // const scrollToBottom = ref('scrollToBottom');
-            // console.log(scrollToBottom)
           // if(document.querySelector('.scrollToBottom')){
           //   document.querySelector('.scrollToBottom').click()
           // }

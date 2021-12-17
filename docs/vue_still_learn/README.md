@@ -492,3 +492,21 @@ it1.next(val4/2).value;
 it2.next(val4/2).value;
 // 200 300 3
 ```
+## vue slot常用
+
+::: details 查看
+### 父组件
+```vue
+<template v-slot:zt_add>
+      50/5000张
+</template>
+```
+
+### 子组件
+```vue
+<slot name="zt_add">
+</slot>
+```
+
+:::
+

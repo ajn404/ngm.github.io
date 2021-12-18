@@ -13,14 +13,14 @@
             return {
             }
         },
+
         created() {
                 let judgeCanvasExist = document.getElementById("defaultCanvas0")
                 if(judgeCanvasExist===null) {
                     new P5(this.main);
                 }
         },
-        mounted() {
-        },
+
         methods: {
             main(_p5) {
                 let p5 = _p5

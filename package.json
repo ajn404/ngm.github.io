@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.27",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.26",
+    "@vuepress/plugin-register-components": "2.0.0-beta.26",
     "animate.css": "^4.1.1",
     "faker": "^5.5.3",
     "md-editor-v3": "^1.6.3",

@@ -700,18 +700,6 @@
     vue "^3.2.3"
     vue-router "^4.0.10"
 
-"@vuepress/plugin-nprogress@^2.0.0-beta.26":
-  version "2.0.0-beta.29"
-  resolved "https://registry.npmmirror.com/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-2.0.0-beta.29.tgz#549db87198257a69635cd0439d044e51fc2a7c97"
-  integrity sha512-5eXrFSI+P8Io3lqp4KA4bhjNqIJAY1g7AulNdIyBr8ecVlv1bMAizyfSLCG8J7n9EJj3gVd2jJkI+/pQ5ttrTA==
-  dependencies:
-    "@vuepress/client" "2.0.0-beta.29"
-    "@vuepress/core" "2.0.0-beta.29"
-    "@vuepress/utils" "2.0.0-beta.28"
-    nprogress "^0.2.0"
-    vue "^3.2.24"
-    vue-router "^4.0.12"
-
 "@vuepress/plugin-palette@2.0.0-beta.26":
   version "2.0.0-beta.26"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-palette/download/@vuepress/plugin-palette-2.0.0-beta.26.tgz#01ad225c5120a0b95b0843965f7b7f72b443e8c9"

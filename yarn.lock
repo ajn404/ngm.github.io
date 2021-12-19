@@ -637,16 +637,6 @@
     ts-debounce "^3.0.0"
     vue "^3.2.3"
 
-"@vuepress/plugin-back-to-top@^2.0.0-beta.26":
-  version "2.0.0-beta.29"
-  resolved "https://registry.npmmirror.com/@vuepress/plugin-back-to-top/download/@vuepress/plugin-back-to-top-2.0.0-beta.29.tgz#35a06a313e1e80ee6f0fbf968ce3761ff158868c"
-  integrity sha512-LQvyzbUkdxSSp7xhBRp+E6grp9nR/fMaVLOcjFmMIgZHyGRZisQq52UQmXnCUIkWdGwhtmytnrWSDBCx612XiQ==
-  dependencies:
-    "@vuepress/core" "2.0.0-beta.29"
-    "@vuepress/utils" "2.0.0-beta.28"
-    ts-debounce "^4.0.0"
-    vue "^3.2.24"
-
 "@vuepress/plugin-container@2.0.0-beta.26":
   version "2.0.0-beta.26"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-container/download/@vuepress/plugin-container-2.0.0-beta.26.tgz#08cb5ecb6e80110797930ee72aa29ee8db48fa0d"
@@ -737,16 +727,16 @@
     "@vuepress/utils" "2.0.0-beta.25"
     vue "^3.2.3"
 
-"@vuepress/plugin-toc@^2.0.0-beta.26":
-  version "2.0.0-beta.29"
-  resolved "https://registry.npmmirror.com/@vuepress/plugin-toc/download/@vuepress/plugin-toc-2.0.0-beta.29.tgz#28dbaee06d1f9e2d8de24bec3731be819c9c5f3e"
-  integrity sha512-aM7XlcCXcUEoNcTTWCTk3j6URxk6V3rUmEFzWhAYTsHhhLt1/uk3GwV5gFHaCnx+xDCayxqyNzBU0TybEfErrA==
+"@vuepress/plugin-toc@2.0.0-beta.26":
+  version "2.0.0-beta.26"
+  resolved "https://registry.npmmirror.com/@vuepress/plugin-toc/download/@vuepress/plugin-toc-2.0.0-beta.26.tgz#27f4c722a3c08b6dcfd7ed9f06095c484a62f8b5"
+  integrity sha1-J/THIqPAi23P1+2fBglcSEpi+LU=
   dependencies:
-    "@vuepress/client" "2.0.0-beta.29"
-    "@vuepress/core" "2.0.0-beta.29"
-    "@vuepress/utils" "2.0.0-beta.28"
-    vue "^3.2.24"
-    vue-router "^4.0.12"
+    "@vuepress/client" "2.0.0-beta.26"
+    "@vuepress/core" "2.0.0-beta.26"
+    "@vuepress/utils" "2.0.0-beta.25"
+    vue "^3.2.3"
+    vue-router "^4.0.10"
 
 "@vuepress/shared@2.0.0-beta.25":
   version "2.0.0-beta.25"
@@ -3887,11 +3877,6 @@ ts-debounce@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmmirror.com/ts-debounce/download/ts-debounce-3.0.0.tgz#9beedf59c04de3b5bef8ff28bd6885624df357be"
   integrity sha1-m+7fWcBN47W++P8ovWiFYk3zV74=
-
-ts-debounce@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmmirror.com/ts-debounce/download/ts-debounce-4.0.0.tgz#33440ef64fab53793c3d546a8ca6ae539ec15841"
-  integrity sha512-+1iDGY6NmOGidq7i7xZGA4cm8DAa6fqdYcvO5Z6yBevH++Bdo9Qt/mN0TzHUgcCcKv1gmh9+W5dHqz8pMWbCbg==
 
 tslib@2.3.0:
   version "2.3.0"

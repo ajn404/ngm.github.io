@@ -25,4 +25,5 @@ export const components = {
     echartBarDemo:resolve('../../vue_still_learn/static/echart_demo/index.vue'),
     vuexLearn:resolve('../components/vue3_still_learn/vuex_learn.vue'),
     clearState:resolve('../components/vue3_still_learn/clearState.vue'),
+    polariod:resolve('../components/collections/css3/polariod.vue')
 };

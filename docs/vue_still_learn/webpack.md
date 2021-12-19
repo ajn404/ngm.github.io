@@ -157,7 +157,7 @@ document.body.appendChild(component())
 ```
 <strong>之后的webpack配置学习，遇到什么，就在下面总结什么</strong>
 
-### 项目中的webpack
+## 项目中的webpack
 ::: details vue.config.js
 ##### 使用CopyWebpackPlugin的
 ```js

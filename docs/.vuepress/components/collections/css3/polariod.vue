@@ -10,7 +10,7 @@
           alt="swan">
       <figcaption
           class="polaroid-card-caption">
-        swan</figcaption>
+        书名-兄弟</figcaption>
     </figure>
 
     <figure class="polaroid-card">

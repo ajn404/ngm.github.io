@@ -78,7 +78,7 @@ export default {
   }
 
   //下面两个可以写在一起，练习一下scss嘛
-  $list: ease, ease-in, ease-out, ease-in-out, linear,step-start,step-end,cubic-bezier(0,-1.5,1,1.5);
+  $list: ease, ease-in, ease-out, ease-in-out, linear,step-start,step-end,cubic-bezier(0,-1.5,1,2.5);
   @for $i from 1 through 8 {
     .item:nth-child(#{$i}) {
       background-color: rgb(random(235), random(235), random(235));

@@ -164,13 +164,19 @@
 ## transition
 ### [transition-timing-function](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-timing-function)
 ::: details 查看详情
-@[code{1-95} vue{4}:no-line-numbers](../.vuepress/components/collections/css3/transition_timing_function.vue)
+@[code{1-95} vue{}:no-line-numbers](../.vuepress/components/collections/css3/transition_timing_function.vue)
 :::
 <ClientOnly>
 <transition-timing-function></transition-timing-function>
 </ClientOnly>  
 
 ## setup cubic_bezier 
+::: tip 提示
+初次使用setup的template,很nice
+:::
+::: details 查看详情
+@[code{1-47} vue{}:no-line-numbers](../.vuepress/components/collections/css3/cubic_bezier.vue)
+:::
 <ClientOnly>
 <cubic-bezier></cubic-bezier>
 </ClientOnly>

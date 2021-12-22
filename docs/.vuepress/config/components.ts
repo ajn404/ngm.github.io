@@ -26,5 +26,6 @@ export const components = {
     vuexLearn:resolve('../components/vue3_still_learn/vuex_learn.vue'),
     clearState:resolve('../components/vue3_still_learn/clearState.vue'),
     polariod:resolve('../components/collections/css3/polariod.vue'),
-    transitionTimingFunction:resolve('../components/collections/css3/transition_timing_function')
+    transitionTimingFunction:resolve('../components/collections/css3/transition_timing_function'),
+    cubicBezier:resolve('../components/collections/css3/cubic_bezier'),
 };

@@ -25,7 +25,6 @@
 :::
 
 ## css3
-
 ### transform rotate translate
 ::: details 查看代码
 - polariod.vue
@@ -162,4 +161,11 @@
 <polariod></polariod>
 </ClientOnly>
 
-### transition
+## transition
+### [transition-timing-function](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-timing-function)
+::: details 查看详情
+@[code{1-76} vue{4}:no-line-numbers](../.vuepress/components/collections/css3/transition_timing_function.vue)
+:::
+<ClientOnly>
+<transition-timing-function></transition-timing-function>
+</ClientOnly>  

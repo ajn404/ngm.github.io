@@ -175,7 +175,7 @@
 初次使用setup的template,很nice
 :::
 ::: details 查看详情
-@[code{1-47} vue{}:no-line-numbers](../.vuepress/components/collections/css3/cubic_bezier.vue)
+@[code{1-61} vue{}:no-line-numbers](../.vuepress/components/collections/css3/cubic_bezier.vue)
 :::
 <ClientOnly>
 <cubic-bezier></cubic-bezier>

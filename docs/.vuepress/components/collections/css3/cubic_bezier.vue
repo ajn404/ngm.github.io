@@ -51,7 +51,7 @@ export default {
 };
 </script>
 
-<style scopped lang="scss">
+<style scoped lang="scss">
 .cubic_bizier {
   display: flex;
   flex-flow: column nowrap;

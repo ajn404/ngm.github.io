@@ -495,18 +495,26 @@ it2.next(val4/2).value;
 ## vue slot常用
 
 ::: details 查看
-### 父组件
+- 父组件
 ```vue
 <template v-slot:zt_add>
       50/5000张
 </template>
 ```
 
-### 子组件
+- 子组件
 ```vue
 <slot name="zt_add">
 </slot>
 ```
-
 :::
 
+## 事件冒泡与事件捕获
+
+<ClientOnly>
+<event-bubble-capture></event-bubble-capture>
+</ClientOnly>
+
+::: details 代码详情
+@[code{1-122} vue{39-80}:no-line-numbers](./components/base/event_bubble_capture.vue)
+:::

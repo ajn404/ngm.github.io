@@ -1,5 +1,5 @@
 <template>
-  <div class="event_bubble_capture">
+  <div class="event_bubble_capture" contenteditable="false">
       <p>点击触发</p>  
     <h4>
       addEventListener第三个参数默认为false，表示机制为事件冒泡，自下而上触发事件
@@ -99,9 +99,11 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     color: #fff;
     font-size: 1.2em;
     font-weight: 500;
+    cursor: pointer;
     .button-b,
     .button-d {
       width: 20px;

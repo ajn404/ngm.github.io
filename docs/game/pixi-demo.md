@@ -28,4 +28,4 @@ export default function App() {
   );
 }
 ```
-## 我的react已经`黔驴技穷`
+## react

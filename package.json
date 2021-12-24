@@ -17,6 +17,7 @@
     "animate.css": "^4.1.1",
     "faker": "^5.5.3",
     "md-editor-v3": "^1.6.3",
+    "patch-vue-directive-ssr": "^0.0.1",
     "typed.js": "^2.0.12",
     "vuepress": "2.0.0-beta.26"
   },

@@ -517,7 +517,7 @@ it2.next(val4/2).value;
 
 ## vue3自定义指令
 ::: details 查看详情
-@[code{1-103} vue{}:no-line-numbers](./components/advanced/dialog_drag.vue)
+@[code{1-104} vue{}:no-line-numbers](./components/advanced/dialog_drag.vue)
 :::
 - 上述事件...和自定义指令写在下面的组件中
 <ClientOnly>

@@ -95,6 +95,24 @@ export default {
 @import "~element-plus/dist/index.css";
 .all-box{
   border: 1px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+  &::after{
+    content: ' ';
+    display: block;
+    width: 60px;
+    height: 20px;
+    background-color: #8c939d;
+    transform: rotate(25deg) translate(-41%,181%);
+  }
+  &::before{
+    content: ' ';
+    display: block;
+    width: 60px;
+    height: 20px;
+    background-color: #8c939d;
+    transform: rotate(-25deg) translate(-115%,-181%);
+  }
 }
 .event_bubble_capture {
   display: flex;

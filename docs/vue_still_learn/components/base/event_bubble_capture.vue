@@ -111,7 +111,7 @@ export default {
     width: 60px;
     height: 20px;
     background-color: #8c939d;
-    transform: rotate(-25deg) translate(-115%,-181%);
+    transform: rotate(-25deg) translate(-50%,-181%);
   }
 }
 .event_bubble_capture {

@@ -512,7 +512,7 @@ it2.next(val4/2).value;
 ## 事件冒泡与事件捕获
 
 ::: details 代码详情
-@[code{1-122} vue{39-80}:no-line-numbers](./components/base/event_bubble_capture.vue)
+@[code{1-152} vue{39-80}:no-line-numbers](./components/base/event_bubble_capture.vue)
 :::
 
 ## vue3自定义指令

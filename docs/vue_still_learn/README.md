@@ -525,5 +525,11 @@ it2.next(val4/2).value;
 </ClientOnly>
 
 
-## 数组对象平铺后遍历处理属性结构的数据
+## 数组对象平铺后遍历处理属性结构的数据(自理的树状对象的垃圾处理方法)
 @[code{1-60} js{}:no-line-numbers](./components/base/tree.js)
+
+## 使用underscore的方法
+
+<ClientOnly>
+<underscore-ex></underscore-ex>
+</ClientOnly>

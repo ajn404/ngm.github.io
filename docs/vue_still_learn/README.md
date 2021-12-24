@@ -526,21 +526,4 @@ it2.next(val4/2).value;
 
 
 ## 数组对象平铺后遍历处理属性结构的数据
-```vue
-   hasChildren(id){
-      this.allTreeType.map(item=>{
-        if(item.id==id){
-          if(item.children)
-          this.hasChild = true
-        }
-      })
-    },
-    searchChildren(arr){
-      for(let i=0;i<arr.length;i++){
-        this.allTreeType.push(arr[i]);
-        if(arr[i].children){
-          this.searchChildren(arr[i].children)
-        }
-      }
-    },
-```
+@[code{1-60} js{}:no-line-numbers](./components/base/tree.js)

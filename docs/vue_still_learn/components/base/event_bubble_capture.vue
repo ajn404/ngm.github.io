@@ -94,7 +94,8 @@ export default {
 <style scoped lang="scss">
 @import "~element-plus/dist/index.css";
 .all-box{
-  border: 1px solid #fff;
+  border: 2px solid;
+  border-color:#666666 #00ff00 #888888 #0d84ff;
   padding: 20px;
   border-radius: 10px;
   &::after{

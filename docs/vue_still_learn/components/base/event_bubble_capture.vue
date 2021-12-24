@@ -1,27 +1,32 @@
 <template>
-  <div class="event_bubble_capture" contenteditable="false">
-      <p>点击触发</p>  
-    <h4>
-      addEventListener第三个参数默认为false，表示机制为事件冒泡，自下而上触发事件
-    </h4>
-    <div class="button-a" ref="button-a">
-      a
-      <div ref="button-b" class="button-b">b</div>
+
+  <div class="all-box">
+    <div class="event_bubble_capture" contenteditable="false">
+      <p>点击触发</p>
+      <h4>
+        addEventListener第三个参数默认为false，表示机制为事件冒泡，自下而上触发事件
+      </h4>
+      <div class="button-a" ref="button-a">
+        a
+        <div ref="button-b" class="button-b">b</div>
+      </div>
+      <p v-if="res1">输出为{{ res1.name }}</p>
+      <h4>
+        addEventListener第三个参数为true，表示机制为事件捕获，自上而下触发事件
+      </h4>
+      <div class="button-c" ref="button-c">
+        c
+        <div ref="button-d" class="button-d">d</div>
+      </div>
+      <p v-if="res2">输出为{{ res2.name }}</p>
     </div>
-    <p v-if="res1">输出为{{ res1.name }}</p>
-    <h4>
-      addEventListener第三个参数为true，表示机制为事件捕获，自上而下触发事件
-    </h4>
-    <div class="button-c" ref="button-c">
-      c
-      <div ref="button-d" class="button-d">d</div>
-    </div>
-    <p v-if="res2">输出为{{ res2.name }}</p>
+    <dialog_drag></dialog_drag>
   </div>
 </template>
 
 <script>
 import { reactive } from "vue";
+import dialog_drag from "../advanced/dialog_drag";
 export default {
   setup() {
     const res1 = reactive({ name: "" });
@@ -30,6 +35,9 @@ export default {
       res1,
       res2,
     };
+  },
+  components:{
+    dialog_drag
   },
   mounted() {
     this.defineBubble();
@@ -85,6 +93,9 @@ export default {
 
 <style scoped lang="scss">
 @import "~element-plus/dist/index.css";
+.all-box{
+  border: 1px solid #fff;
+}
 .event_bubble_capture {
   display: flex;
   flex-direction: column;
@@ -99,7 +110,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     color: #fff;
     font-size: 1.2em;
     font-weight: 500;

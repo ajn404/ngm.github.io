@@ -515,6 +515,32 @@ it2.next(val4/2).value;
 @[code{1-122} vue{39-80}:no-line-numbers](./components/base/event_bubble_capture.vue)
 :::
 
+## vue3自定义指令
+::: details 查看详情
+@[code{1-103} vue{}:no-line-numbers](./components/advanced/dialog_drag.vue)
+:::
+- 上述事件...和自定义指令写在下面的组件中
 <ClientOnly>
 <event-bubble-capture></event-bubble-capture>
 </ClientOnly>
+
+
+## 数组对象平铺后遍历处理属性结构的数据
+```vue
+   hasChildren(id){
+      this.allTreeType.map(item=>{
+        if(item.id==id){
+          if(item.children)
+          this.hasChild = true
+        }
+      })
+    },
+    searchChildren(arr){
+      for(let i=0;i<arr.length;i++){
+        this.allTreeType.push(arr[i]);
+        if(arr[i].children){
+          this.searchChildren(arr[i].children)
+        }
+      }
+    },
+```

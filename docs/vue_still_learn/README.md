@@ -526,10 +526,34 @@ it2.next(val4/2).value;
 
 
 ## 数组对象平铺后遍历处理属性结构的数据(自理的树状对象的垃圾处理方法)
+::: details 查看详情
 @[code{1-60} js{}:no-line-numbers](./components/base/tree.js)
+:::
 
-## 使用underscore的方法
+## JS type coercion
+[你真的了解‘==’么](https://eqeq.js.org/#zh)
+```js
+1=='1'
+// true
+1==='1'
+// false
+if(1){
+  console.log(5)
+}
+// 5
+if(0){
+  console.log(5)
+}
+// 
+-0 === +0
+// true
+Object.is(-0,+0)
+// false
+NaN === NaN
+// false
+object.is(NaN,NaN)
+// true
 
-<ClientOnly>
-<underscore-ex></underscore-ex>
-</ClientOnly>
+```
+
+

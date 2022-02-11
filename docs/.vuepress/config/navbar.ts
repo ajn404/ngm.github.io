@@ -53,7 +53,7 @@ const note: any = {
     link: '/reading/'
 };
 const others: any = {
-    text: '探索',
+    text: '玩',
     children: [
         {
             text: 'vim',
@@ -90,6 +90,5 @@ export const navbarConfig = [
     front_end,
     others,
     menu,
-    note,
     link
 ];

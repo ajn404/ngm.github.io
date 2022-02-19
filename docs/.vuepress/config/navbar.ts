@@ -85,10 +85,16 @@ const link:any={
     text:'GitHub',
     link:'https://github.com/ajn404/ngm.github.io'
 }
+
+const interview:any =  {
+    text:'面试总结',
+    link:'/interview/'
+}
 export const navbarConfig = [
     home,
     front_end,
     others,
     menu,
+    interview,
     link
 ];

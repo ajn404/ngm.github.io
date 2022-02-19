@@ -556,7 +556,7 @@ object.is(NaN,NaN)
 
 ```
 
-### 网页全屏/退出全屏
+## 网页全屏/退出全屏
 ```js
 const doc = document;
 const html = doc.documentElement;

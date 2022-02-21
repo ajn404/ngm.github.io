@@ -3,6 +3,14 @@
 ## css
 
 ### 1.1-CSS BFC块级格式上下文
+::: tip 创建bfc
+```txt
+1.overflow:visiable;除外的
+2.position为absolute或者fixed
+3.float:none;除外的
+4.display:inline-block/table-cell/flex/table-caption/inline-flex;
+```
+:::
 
 
 ## js

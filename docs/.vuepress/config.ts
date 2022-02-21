@@ -40,7 +40,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             },
         ],
     ],
-    port:3000,
+    port:8088,
     bundlerConfig:{
         evergreen:true
     }

@@ -180,3 +180,9 @@
 <ClientOnly>
 <cubic-bezier></cubic-bezier>
 </ClientOnly>
+
+## 多列布局练习
+
+<ClientOnly>
+<multi-column-index></multi-column-index>
+</ClientOnly>

@@ -48,6 +48,16 @@ const front_end = {
         }
     ],
 };
+const back_end = {
+    text:'后端',
+    children:[
+        {
+            text:'Java',
+            link:'/back_end_start/java'
+        }
+    ]
+}
+
 const note: any = {
     text: '收藏陈列',
     link: '/reading/'
@@ -93,6 +103,7 @@ const interview:any =  {
 export const navbarConfig = [
     home,
     front_end,
+    back_end,
     others,
     menu,
     interview,

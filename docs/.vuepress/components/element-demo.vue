@@ -17,6 +17,7 @@
         <el-table-column label="解释" prop="res"></el-table-column>
       </el-table>
     </div> -->
+    <h3>日历</h3>
     <el-calendar class="calendar" v-model="value"></el-calendar>
     <!-- <el-tabs
       class="tabs"
@@ -41,11 +42,13 @@
         </el-input>
       </el-tab-pane>
     </el-tabs> -->
+    <el-button type="primary" @click="openFullScreen">加载2秒钟</el-button>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { allegoricalList } from "./common/data/allegorical";
+import { ElLoading } from 'element-plus'
 export default defineComponent({
   data() {
     const value = ref(new Date());
@@ -82,6 +85,16 @@ export default defineComponent({
     };
   },
   methods: {
+   openFullScreen(){
+      const loading = ElLoading.service({
+        lock: true,
+        text: '加载中......',
+        background: 'rgba(0, 0, 0, 0.7)',
+      })
+      setTimeout(() => {
+        loading.close()
+      }, 2000)
+    },
     handleTabsEdit(targetName, action) {
       if (action === "add") {
         const newTabName = `${++this.tabIndex}`;
@@ -116,6 +129,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .element-demo {
   margin-top: 20px;
+
 }
 
 .calendar {

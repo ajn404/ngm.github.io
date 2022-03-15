@@ -584,3 +584,7 @@ const exitFullScreen = () => {
 export { enterFullScreen, exitFullScreen };
 
 ```
+
+<ClientOnly>
+<full-screen></full-screen>
+</ClientOnly>

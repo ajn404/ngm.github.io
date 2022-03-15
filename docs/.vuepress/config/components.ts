@@ -29,5 +29,6 @@ export const components = {
     transitionTimingFunction:resolve('../components/collections/css3/transition_timing_function'),
     cubicBezier:resolve('../components/collections/css3/cubic_bezier'),
     eventBubbleCapture:resolve('../../vue_still_learn/components/base/event_bubble_capture'),
-    underscoreEx:resolve('../../vue_still_learn/components/underscore_ex/index')
+    underscoreEx:resolve('../../vue_still_learn/components/underscore_ex/index'),
+    fullScreen:resolve('../../vue_still_learn/components/FullScreen'),
 };

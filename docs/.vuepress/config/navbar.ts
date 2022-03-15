@@ -15,7 +15,7 @@ const menu: any = {
         }
     ]
 };
-const front_end = {
+const front_end:any = {
     text: "前端(琐碎)",
     children: [
         {
@@ -48,7 +48,7 @@ const front_end = {
         }
     ],
 };
-const back_end = {
+const back_end:any = {
     text:'后端',
     children:[
         {

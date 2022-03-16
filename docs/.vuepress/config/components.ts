@@ -5,7 +5,7 @@ const resolve = (dir) => {
 }
 
 const cssColumnComponents = {
-    multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex')
+    multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex.vue')
 }
 
 

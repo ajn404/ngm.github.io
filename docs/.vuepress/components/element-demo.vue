@@ -1,8 +1,9 @@
 <template>
   <div class="element-demo">
-    <h2>
+    <el-button type="primary" @click="openFullScreen">加载2秒钟</el-button>
+    <!-- <h2>
       element-plus现在还没做暗色调模式，按理说可以改一下全局作用的变量做调整
-    </h2>
+    </h2> -->
     <!-- <div class="table" style="display: flex; justify-content: center">
       <el-table :data="tableDataLeft" :stripe="false" style="width: 50%">
         <el-table-column label="黑话" prop="value"></el-table-column>
@@ -42,7 +43,7 @@
         </el-input>
       </el-tab-pane>
     </el-tabs> -->
-    <el-button type="primary" @click="openFullScreen">加载2秒钟</el-button>
+    
   </div>
 </template>
 <script lang="ts">

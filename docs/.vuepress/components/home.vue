@@ -2,16 +2,16 @@
   <div class="box" ref="box">
     <span class="element" v-show="!typingStop"></span>
     <div v-show="typingStop" class="slow-show">
-      <div class="element">前已无通路，后不见归途</div>
+      <!-- <div class="element">前已无通路，后不见归途</div> -->
       <div class="calendar">ajn404</div>
-      <el-button
+      <!-- <el-button
         @click="scrollToBottom"
         style="margin-top: 2em"
         class="elButton scrollToBottom"
         ref="scrollToBottom"
       >
         如你所见，这是个按钮
-      </el-button>
+      </el-button> -->
       <Swiper
         class="swiper-container"
         :effect="'fade'"
@@ -32,7 +32,7 @@
       <!-- <el-button @click="resetSwiperAnimate" class="elButton">
         fade切换
       </el-button> -->
-      <h3>使用wasd上下左右,聚焦后键入m关闭音乐r重制场景</h3>
+      <!-- <h3>使用wasd上下左右,聚焦后键入m关闭音乐r重制场景</h3>
       <div class="iframe-box">
         <iframe
           style="width: 100%"
@@ -92,7 +92,7 @@
           lazy="true"
         >
         </iframe>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

@@ -4,11 +4,6 @@ const resolve = (dir) => {
     return path.resolve(__dirname, dir)
 }
 
-const cssColumnComponents = {
-    multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex.vue')
-}
-
-
 export const components = {
     MyDemo: resolve('../components/draft/my-demo'),
     workcal: resolve('../components/draft/workcal'),
@@ -36,5 +31,5 @@ export const components = {
     eventBubbleCapture:resolve('../../vue_still_learn/components/base/event_bubble_capture'),
     underscoreEx:resolve('../../vue_still_learn/components/underscore_ex/index'),
     fullScreen:resolve('../../vue_still_learn/components/FullScreen'),
-    ...cssColumnComponents
+    multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex.vue'),
 };

@@ -108,7 +108,6 @@ import "md-editor-v3/lib/style.css";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
-import "./common/styles/index.scss";
 import "animate.css";
 import {ref} from 'vue'
 export default {

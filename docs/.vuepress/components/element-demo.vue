@@ -18,8 +18,8 @@
         <el-table-column label="解释" prop="res"></el-table-column>
       </el-table>
     </div> -->
-    <h3>日历</h3>
-    <el-calendar class="calendar" v-model="value"></el-calendar>
+    <h3 class="display-in-light">日历</h3>
+    <el-calendar class="calendar display-in-light" v-model="value"></el-calendar>
     <!-- <el-tabs
       class="tabs"
       @edit="handleTabsEdit"
@@ -158,6 +158,7 @@ export default defineComponent({
 :deep .dark .element-plus .page {
   display: none;
 }
+
 
 @import '~element-plus/dist/index.css';
 

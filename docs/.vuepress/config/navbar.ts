@@ -3,10 +3,10 @@ const home: any = {
     link: "/"
 };
 const menu: any = {
-    text: "主流框架学习",
+    text: "框架学习",
     children: [
         {
-            text: "element-plus",
+            text: "element-plus陈列",
             link: "/ep",
         },
         {
@@ -19,7 +19,7 @@ const front_end:any = {
     text: "前端(琐碎)",
     children: [
         {
-            text: "代码技巧总结",
+            text: "前端代码技巧总结",
             link: "/vue_still_learn/",
         },
         {
@@ -94,6 +94,11 @@ const others: any = {
 const link:any={
     text:'GitHub',
     link:'https://github.com/ajn404/ngm.github.io'
+} 
+
+const resource:any={
+    text:'资源导航',
+    link:'/resource'
 }
 
 const interview:any =  {
@@ -107,5 +112,6 @@ export const navbarConfig = [
     others,
     menu,
     interview,
+    resource,
     link
 ];

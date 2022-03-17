@@ -3,6 +3,7 @@ import type {DefaultThemeOptions} from "vuepress";
 import {components} from "./config/components";
 import {navbarConfig} from "./config/navbar";
 
+
 export default defineUserConfig<DefaultThemeOptions>({
     title: "君子慎独",
     description: "某只前端开发的自我修养手册",

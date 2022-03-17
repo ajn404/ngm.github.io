@@ -47,7 +47,11 @@
           </button>
         </section>
         <section class="tape">
-          <audio :src="musicUrl" crossorigin="anonymous"></audio>
+          <audio 
+          :src="musicUrl" 
+          crossorigin="anonymous"
+          >
+          </audio>
           <button
             data-playing="false"
             class="tape-controls-play"
@@ -70,7 +74,7 @@ export default {
   data() {
     return {
       musicUrl:
-        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3",
+        "http://m801.music.126.net/20220317180012/164c3df6f36f9d96af7e40b4e03c26cb/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/11983356173/ed2f/6024/be41/2dc456563c5f9c9535b75ecb066c0325.mp3",
     };
   },
   methods: {
@@ -174,11 +178,22 @@ export default {
       try {
         axios({
           method: "get",
-          url: "/music/api/rand.music",
+          url: "https://api.uomg.com/api/rand.music",
+          params:{
+              format:'json',
+          },
           headers: {},
         })
           .then((res) => {
-            console.log(res);
+            if(res.status===200){
+                this.musicUrl = res.data.data.url;
+                // axios({
+                //     method:"get",
+                //     url:res.data.data.url
+                // }).then(res=>{
+                //     console.log(res)
+                // })
+            }
           })
           .catch((e) => {
             this.$message.error("出错了");
@@ -191,7 +206,7 @@ export default {
   mounted() {
     console.clear();
     this.initWebAudioApi();
-    this.queryMusic();
+    // this.queryMusic();
   },
 };
 </script>
@@ -222,10 +237,7 @@ export default {
   box-sizing: border-box;
 }
 body {
-  background-color: var(--white);
-  padding: 4vmax;
   font-family: system-ui;
-  color: var(--black);
 }
 
 #boombox {

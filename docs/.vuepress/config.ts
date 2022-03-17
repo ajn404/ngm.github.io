@@ -50,6 +50,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                     'Content-Type':'audio/mpeg; charset=UTF-8'
                   },
                 proxy:{
+                    // 
                     '/music': {
                         target: 'https://api.uomg.com',
                         changeOrigin: true,

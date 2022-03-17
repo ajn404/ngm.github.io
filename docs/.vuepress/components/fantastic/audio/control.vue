@@ -142,6 +142,7 @@ export default {
 
       // panning
       const pannerOptions = { pan: 0 };
+
       const panner = new StereoPannerNode(audioCtx, pannerOptions);
 
       const pannerControl = document.querySelector('[data-action="panner"]');
@@ -167,6 +168,10 @@ export default {
           if (this.dataset.power === "on") {
             audioCtx.suspend();
             this.dataset.power = "off";
+            clearInterval(this.time2);
+            clearInterval(this.time1);
+
+
           } else if (this.dataset.power === "off") {
             audioCtx.resume();
             this.dataset.power = "on";
@@ -246,7 +251,11 @@ export default {
       }, 2000);
     });
   },
-  watch() {},
+  watch() {
+      panval:(val)=>{
+          console.log(val)
+      }
+  },
 };
 </script>
 

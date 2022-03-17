@@ -89,6 +89,10 @@ const others: any = {
             text: 'pixi',
             link: '/game/pixi-demo'
         },
+        {
+            text: 'web audio api',
+            link: '/fantastic/audio'
+        }
     ]
 };
 const link:any={

@@ -16,3 +16,8 @@
 ### 插件
 
 - [轻量原生js库](https://vanillalist.top/)
+
+
+### api
+
+- [free api](https://www.free-api.com/)

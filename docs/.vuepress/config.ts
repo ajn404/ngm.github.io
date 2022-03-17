@@ -43,6 +43,20 @@ export default defineUserConfig<DefaultThemeOptions>({
     ],
     port:8088,
     bundlerConfig:{
-        evergreen:true
-    }
+        evergreen:true,
+        configWebpack:{
+            devServer:{
+                proxy:{
+                    '/music': {
+                        target: 'https://api.uomg.com/',
+                        changeOrigin: true,
+                        pathRewrite: {
+                          '^/music': ''
+                        }
+                      },
+                }
+            }
+        }
+    },
+    
 });

@@ -46,9 +46,12 @@ export default defineUserConfig<DefaultThemeOptions>({
         evergreen:true,
         configWebpack:{
             devServer:{
+                headers: {
+                    'Content-Type':'audio/mpeg; charset=UTF-8'
+                  },
                 proxy:{
                     '/music': {
-                        target: 'https://api.uomg.com/',
+                        target: 'https://api.uomg.com',
                         changeOrigin: true,
                         pathRewrite: {
                           '^/music': ''

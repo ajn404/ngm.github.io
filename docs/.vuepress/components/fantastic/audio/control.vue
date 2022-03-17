@@ -28,7 +28,7 @@
             list="pan-vals"
             min="-1"
             max="1"
-            value="0"
+            v-model="panval"
             step="0.01"
             data-action="panner"
           />
@@ -47,15 +47,12 @@
           </button>
         </section>
         <section class="tape">
-          <audio 
-          :src="musicUrl" 
-          crossorigin="anonymous"
-          >
-          </audio>
+          <audio :src="musicUrl" crossorigin="anonymous"></audio>
           <button
             data-playing="false"
             class="tape-controls-play"
             role="switch"
+            ref="playButton"
             aria-checked="false"
           >
             <span>Play/Pause</span>
@@ -73,12 +70,16 @@ export default {
   name: "audioControl",
   data() {
     return {
+      panval: -1,
+      tag: 0,
+      panSpeed:1,
       musicUrl:
         "http://m801.music.126.net/20220317180012/164c3df6f36f9d96af7e40b4e03c26cb/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/11983356173/ed2f/6024/be41/2dc456563c5f9c9535b75ecb066c0325.mp3",
     };
   },
   methods: {
     initWebAudioApi() {
+      let that = this;
       // instigate our audio context
 
       // for cross browser
@@ -112,6 +113,7 @@ export default {
           let state =
             this.getAttribute("aria-checked") === "true" ? true : false;
           this.setAttribute("aria-checked", state ? "false" : "true");
+          that.startEnd();
         },
         false
       );
@@ -146,6 +148,9 @@ export default {
       pannerControl.addEventListener(
         "input",
         function () {
+            console.log('hh')
+            console.log(that.panval)
+            console.log(this.value)
           panner.pan.value = this.value;
         },
         false
@@ -179,20 +184,20 @@ export default {
         axios({
           method: "get",
           url: "https://api.uomg.com/api/rand.music",
-          params:{
-              format:'json',
+          params: {
+            format: "json",
           },
           headers: {},
         })
           .then((res) => {
-            if(res.status===200){
-                this.musicUrl = res.data.data.url;
-                // axios({
-                //     method:"get",
-                //     url:res.data.data.url
-                // }).then(res=>{
-                //     console.log(res)
-                // })
+            if (res.status === 200) {
+              // this.musicUrl = res.data.data.url;
+              // axios({
+              //     method:"get",
+              //     url:res.data.data.url
+              // }).then(res=>{
+              //     console.log(res)
+              // })
             }
           })
           .catch((e) => {
@@ -202,12 +207,46 @@ export default {
         this.$message.error("出错了");
       }
     },
+
+    startEnd() {
+      let that = this;
+      clearInterval(that.time2);
+      this.time1 = setInterval(function () {
+        that.panval -= that.panSpeed;
+        that.tag += 0.001;
+        if (that.panval <= -1) {
+          that.endStatrt();
+        }
+      }, 100);
+    },
+    endStatrt() {
+      let that = this;
+      clearInterval(that.time1);
+      this.time2 = setInterval(function () {
+        that.panval += that.panSpeed;
+        that.tag += 0.001;
+        if (that.panval > 1) {
+          that.startEnd();
+        }
+      }, 100);
+    },
   },
   mounted() {
     console.clear();
     this.initWebAudioApi();
-    // this.queryMusic();
+    this.queryMusic();
+    let that = this;
+
+    this.$nextTick(function () {
+      let playButton = this.$refs.playButton;
+
+      setTimeout(function () {
+        // playButton.click();
+        // that.startEnd()
+      }, 2000);
+    });
   },
+  watch() {},
 };
 </script>
 

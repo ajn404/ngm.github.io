@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div class="box" ref="box">
     <span class="element" v-show="!typingStop"></span>
     <div v-show="typingStop" class="slow-show">
@@ -99,7 +99,7 @@
 <script>
 // 首页这里我还不是很熟悉vue3和typescript的写法
 import { Swiper, SwiperSlide } from "swiper/vue";
-import SwiperCore, { Autoplay, EffectFade} from "swiper";
+import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import * as Typed from "typed.js";
 import GitHubCalendar from "github-calendar";
 import MdEditor from "md-editor-v3";
@@ -109,9 +109,9 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/bundle";
 import "animate.css";
-import {ref} from 'vue'
+import { ref } from "vue";
 export default {
-  name:'home',
+  name: "home",
 
   data() {
     return {
@@ -144,20 +144,29 @@ export default {
       ],
     };
   },
+
   mounted() {
     this.$nextTick(() => {
       //自动打字
       this.typeThing = this.initType();
       //github提交日历
       this.initCalender();
+
+      // goole map step1
+      this.initcip();
     });
   },
   created() {
     SwiperCore.use([Autoplay, EffectFade]);
   },
   methods: {
+    initcip() {
+      console.log(returnCitySN);
+      document.cookie = returnCitySN["cip"];
+    },
+
     initType() {
-      let typedString = ["没有永恒的黑暗","只有未达的黎明"];
+      let typedString = ["没有永恒的黑暗", "只有未达的黎明"];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度
@@ -167,9 +176,9 @@ export default {
           this.typingStop = true;
           this.$nextTick(() => {
             // const scrollToBottom = ref('scrollToBottom');
-          // if(document.querySelector('.scrollToBottom')){
-          //   document.querySelector('.scrollToBottom').click()
-          // }
+            // if(document.querySelector('.scrollToBottom')){
+            //   document.querySelector('.scrollToBottom').click()
+            // }
           });
         },
       });

@@ -2,8 +2,6 @@
   <div class="element-demo">
     <h3>按钮</h3>
     <ele-buttons/>
-
-
     <h3>加载</h3>
     <el-button type="primary" @click="openFullScreen">加载2秒钟</el-button>
     <!-- <h2>

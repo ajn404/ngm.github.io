@@ -54,6 +54,10 @@ const back_end:any = {
         {
             text:'Java',
             link:'/back_end_start/java'
+        },
+        {
+            text:'Node',
+            link:'/back_end_start/node'
         }
     ]
 }

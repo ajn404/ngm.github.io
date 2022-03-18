@@ -70,11 +70,11 @@ export default {
   name: "audioControl",
   data() {
     return {
-      panval: -1,
+      panval: 0,
       tag: 0,
-      panSpeed:1,
+      panSpeed: 1,
       musicUrl:
-        "http://m801.music.126.net/20220317180012/164c3df6f36f9d96af7e40b4e03c26cb/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/11983356173/ed2f/6024/be41/2dc456563c5f9c9535b75ecb066c0325.mp3",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/858/outfoxing.mp3",
     };
   },
   methods: {
@@ -149,9 +149,6 @@ export default {
       pannerControl.addEventListener(
         "input",
         function () {
-            console.log('hh')
-            console.log(that.panval)
-            console.log(this.value)
           panner.pan.value = this.value;
         },
         false
@@ -170,8 +167,6 @@ export default {
             this.dataset.power = "off";
             clearInterval(this.time2);
             clearInterval(this.time1);
-
-
           } else if (this.dataset.power === "off") {
             audioCtx.resume();
             this.dataset.power = "on";
@@ -213,12 +208,18 @@ export default {
       }
     },
 
+    dispatchInput() {
+      const pannerControl = document.querySelector('[data-action="panner"]');
+      pannerControl.dispatchEvent(new Event("input"));
+    },
+
     startEnd() {
       let that = this;
       clearInterval(that.time2);
       this.time1 = setInterval(function () {
         that.panval -= that.panSpeed;
         that.tag += 0.001;
+        that.dispatchInput();
         if (that.panval <= -1) {
           that.endStatrt();
         }
@@ -230,6 +231,7 @@ export default {
       this.time2 = setInterval(function () {
         that.panval += that.panSpeed;
         that.tag += 0.001;
+        that.dispatchInput;
         if (that.panval > 1) {
           that.startEnd();
         }
@@ -243,7 +245,7 @@ export default {
     let that = this;
 
     this.$nextTick(function () {
-      let playButton = this.$refs.playButton;
+      let playButton = that.$refs.playButton;
 
       setTimeout(function () {
         // playButton.click();
@@ -252,9 +254,9 @@ export default {
     });
   },
   watch() {
-      panval:(val)=>{
-          console.log(val)
-      }
+    panval: (val) => {
+      // console.log(val);
+    };
   },
 };
 </script>

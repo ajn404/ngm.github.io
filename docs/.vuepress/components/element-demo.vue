@@ -1,5 +1,10 @@
 <template>
   <div class="element-demo">
+    <h3>按钮</h3>
+    <ele-buttons/>
+
+
+    <h3>加载</h3>
     <el-button type="primary" @click="openFullScreen">加载2秒钟</el-button>
     <!-- <h2>
       element-plus现在还没做暗色调模式，按理说可以改一下全局作用的变量做调整
@@ -19,7 +24,10 @@
       </el-table>
     </div> -->
     <h3 class="display-in-light">日历</h3>
-    <el-calendar class="calendar display-in-light" v-model="value"></el-calendar>
+    <el-calendar
+      class="calendar display-in-light"
+      v-model="value"
+    ></el-calendar>
     <!-- <el-tabs
       class="tabs"
       @edit="handleTabsEdit"
@@ -43,13 +51,13 @@
         </el-input>
       </el-tab-pane>
     </el-tabs> -->
-    
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { allegoricalList } from "./common/data/allegorical";
-import { ElLoading } from 'element-plus'
+import eleButtons from './elementDemo/eleButtons.vue'
+import { ElLoading } from "element-plus";
 export default defineComponent({
   data() {
     const value = ref(new Date());
@@ -86,15 +94,15 @@ export default defineComponent({
     };
   },
   methods: {
-   openFullScreen(){
+    openFullScreen() {
       const loading = ElLoading.service({
         lock: true,
-        text: '加载中......',
-        background: 'rgba(0, 0, 0, 0.7)',
-      })
+        text: "加载中......",
+        background: "rgba(0, 0, 0, 0.7)",
+      });
       setTimeout(() => {
-        loading.close()
-      }, 2000)
+        loading.close();
+      }, 2000);
     },
     handleTabsEdit(targetName, action) {
       if (action === "add") {
@@ -124,13 +132,15 @@ export default defineComponent({
       }
     },
   },
+  components:{
+    eleButtons
+  }
 });
 </script>
 
 <style lang="scss" scoped>
 .element-demo {
   margin-top: 20px;
-
 }
 
 .calendar {
@@ -159,7 +169,5 @@ export default defineComponent({
   display: none;
 }
 
-
-@import '~element-plus/dist/index.css';
-
+@import "~element-plus/dist/index.css";
 </style>

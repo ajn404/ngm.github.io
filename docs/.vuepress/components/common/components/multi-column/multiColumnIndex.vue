@@ -71,19 +71,26 @@
     <div class="training-item item_5">
       和所有以梦为马的诗人一样，我以此火得度一生的茫茫黑夜
     </div>
+
+    <glide-index></glide-index>
   </div>
 </template>
 
 <script>
+import GlideIndex from '../glideIndex.vue'
 export default {
   name:'multiColumnIndex',
   mounted(){
     
+  },
+  components:{
+    GlideIndex
   }
 };
 </script>
 
-<style lang="scss" scoped>
+
+    GlideIndex<style lang="scss" scoped>
 $border_color1: rgba(random(255), random(255), random(255), 0.5);
 $border_color2: rgba(random(255), random(255), random(255), 0.5);
 $border_color3: rgba(random(255), random(255), random(255), 0.5);

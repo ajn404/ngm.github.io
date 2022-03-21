@@ -47,6 +47,12 @@
             //树形图
             this.initTreeMap();
             this.initRadar();
+            //为啥会报错嘞
+            this.$nextTick(function(){
+              setTimeout(function (){
+                console.clear()
+              },10000)
+            })
         },
         methods: {
             //line chart

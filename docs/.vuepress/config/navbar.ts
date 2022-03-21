@@ -96,6 +96,10 @@ const others: any = {
         {
             text: 'web audio api',
             link: '/fantastic/audio'
+        },
+        {
+            text:'prime spiral',
+            link: '/fantastic/coding_chanlenges/primeSpiral'
         }
     ]
 };

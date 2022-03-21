@@ -18,6 +18,7 @@ export const components = {
     Charts: resolve('../components/fantastic/charts'),
     starField: resolve('../components/fantastic/coding_chanlenges/startField'),
     lSystem: resolve('../components/fantastic/coding_chanlenges/LSystem'),
+    primeSpiral:resolve('../components/fantastic/coding_chanlenges/primeSpiral'),
     selfAvoiding: resolve('../components/fantastic/coding_chanlenges/selfAvoding'),
     elementAnalyze: resolve('../components/sourceCodeAnalyze/index'),
     themeChalk:resolve('../components/sourceCodeAnalyze/components/themeChalk'),

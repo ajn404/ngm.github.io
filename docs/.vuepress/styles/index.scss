@@ -32,4 +32,13 @@ html.dark .display-in-light{
   display: none
 }
 
+
+
+@media screen and (max-width: 800px) {
+  .display-in-big-screen{
+    display:none!important;
+  }
+}
+
+
 @import '~element-plus/dist/index.css';

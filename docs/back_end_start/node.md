@@ -1,8 +1,14 @@
-## 《nodejs 10实战》
+---
+sidebarDepth: 10
+title: 学一学node吧
+---
 
-### http模块
 
-#### 创建http服务器和客户端
+# 《nodejs 10实战》
+
+## http模块
+
+### 创建http服务器和客户端
 > 创建简单的nodejs服务器端
 @[code{1-9} js{}](./node/index01.js)
 
@@ -37,3 +43,15 @@ http.ServerResponse是返回给客户端的信息，其常用的方法为：
 - res.writeHead(statusCode,[headers])：向请求的客户端发送响应头。
 - res.write(data,[encoding])：向请求发送内容。
 - res.end([data],[encoding])：结束请求。
+
+### 客户端向ttp服务器发送请求
+
+以上方法都是http模块在服务器端的使用，接下来看客户端的使用。向http服务器发起请求的方法有：
+- http.request(option[,callback])：option为json对象，主要字段有host、port（默认为80）、method（默认为GET）、path（请求的相对于根的路径，默认是“/”）、headers等。该方法返回一个httpClientRequest实例。
+- http.get(option[,callback])：http.request()使用HTTP请求方式GET的简便方法。
+
+@[code{1-15} js{}](./node//index04.js)
+
+> 利用http.get()方法也可以实现同样的效果
+@[code{1-13} js{}](./node/index05.js)
+

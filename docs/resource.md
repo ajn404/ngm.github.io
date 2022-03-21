@@ -9,6 +9,10 @@
 
 <img src="https://picsum.photos/200"/>
 
+- [emoji](https://github.com/ikatyang/emoji-cheat-sheet#smileys--emotion):emoji-cheat-sheet
+<br>
+:innocent:🥺:thinking:思考:musical_score:🎵
+
 ### 设计
 
 - [figma](https://www.figma.com/)：跨平台ui设计工具

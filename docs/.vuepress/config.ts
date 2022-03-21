@@ -13,9 +13,10 @@ export default defineUserConfig<DefaultThemeOptions>({
             "link",
             {
                 rel: "icon",
-                href: "/images/sword.png",
+                href: "images/favicon.ico",
             },
         ],
+
         [
             "meta",
             {
@@ -47,7 +48,9 @@ export default defineUserConfig<DefaultThemeOptions>({
                 components: components,
             },
         ],
+    
     ],
+    host:'0.0.0.0',
     port:8088,
     bundlerConfig:{
         evergreen:true,

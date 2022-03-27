@@ -67,7 +67,7 @@ const note: any = {
     link: '/reading/'
 };
 const others: any = {
-    text: '玩',
+    text: '创意编程',
     children: [
         {
             text: 'vim',

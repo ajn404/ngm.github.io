@@ -16,20 +16,6 @@ export default defineUserConfig<DefaultThemeOptions>({
                 href: "images/favicon.ico",
             },
         ],
-
-        [
-            "meta",
-            {
-                name:'baidu-site-verification',
-                content:'code-Uv8ovRPETm'
-            }
-        ],
-        [
-            "script",
-            {
-                src:'http://pv.sohu.com/cityjson?ie=utf-8'
-            }
-        ],
   
     ],
     themeConfig: {

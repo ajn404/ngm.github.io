@@ -12,7 +12,7 @@
       >
         如你所见，这是个按钮
       </el-button> -->
-      <Swiper
+      <!-- <Swiper
         class="swiper-container"
         :effect="'fade'"
         :autoplay="{
@@ -28,7 +28,7 @@
             style="max-width: 100vw"
           ></el-image>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> -->
       <!-- <el-button @click="resetSwiperAnimate" class="elButton">
         fade切换
       </el-button> -->
@@ -93,15 +93,15 @@
         >
         </iframe>
       </div> -->
-      <audio data-key="65" src="sounds/clap.wav"></audio>
-      <audio data-key="83" src="sounds/hihat.wav"></audio>
-      <audio data-key="68" src="sounds/kick.wav"></audio>
-      <audio data-key="70" src="sounds/openhat.wav"></audio>
-      <audio data-key="71" src="sounds/boom.wav"></audio>
-      <audio data-key="72" src="sounds/ride.wav"></audio>
-      <audio data-key="74" src="sounds/snare.wav"></audio>
-      <audio data-key="75" src="sounds/tom.wav"></audio>
-      <audio data-key="76" src="sounds/tink.wav"></audio>
+<!--      <audio data-key="65" src="sounds/clap.wav"></audio>-->
+<!--      <audio data-key="83" src="sounds/hihat.wav"></audio>-->
+<!--      <audio data-key="68" src="sounds/kick.wav"></audio>-->
+<!--      <audio data-key="70" src="sounds/openhat.wav"></audio>-->
+<!--      <audio data-key="71" src="sounds/boom.wav"></audio>-->
+<!--      <audio data-key="72" src="sounds/ride.wav"></audio>-->
+<!--      <audio data-key="74" src="sounds/snare.wav"></audio>-->
+<!--      <audio data-key="75" src="sounds/tom.wav"></audio>-->
+<!--      <audio data-key="76" src="sounds/tink.wav"></audio>-->
     </div>
   </div>
 </template>
@@ -162,8 +162,8 @@ export default {
       this.initCalender();
 
       // goole map step1
-      this.initcip();
-      this.initSound();
+      // this.initcip();
+      // this.initSound();
     });
   },
   created() {

@@ -30,10 +30,7 @@ const front_end:any = {
             text: "博客搭建记录",
             link: "/vuepress_config/"
         },
-        {
-            link: '/alimap/',
-            text: '构建知识体系'
-        },
+        
         {
             link: '/something_help_dev/leetcode',
             text: '纠结的算法历史'
@@ -117,13 +114,29 @@ const interview:any =  {
     text:'面试总结',
     link:'/interview/'
 }
+
+const systemFrontEnd:any = {
+        text:'前端(系统)',
+        children:[
+            {
+                text:'vue3-完整入门',
+                link:'/vue_still_learn/vue3'
+            },
+            {
+                link: '/alimap/',
+                text: '构建知识体系'
+            },
+        ]
+}
+
 export const navbarConfig = [
     home,
     front_end,
+    systemFrontEnd,
     back_end,
     others,
     menu,
     interview,
     resource,
-    link
+    link,
 ];

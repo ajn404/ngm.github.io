@@ -97,6 +97,10 @@ const others: any = {
         {
             text:'prime spiral',
             link: '/fantastic/coding_chanlenges/primeSpiral'
+        },
+        {
+            text:'海子的诗',
+            link: '/fantastic/singpoem/huozai'
         }
     ]
 };

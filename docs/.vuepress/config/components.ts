@@ -34,4 +34,5 @@ export const components = {
     fullScreen:resolve('../../vue_still_learn/components/FullScreen'),
     multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex.vue'),
     audioControl:resolve('../components/fantastic/audio/control.vue'),
+    huozai:resolve('../components/collections/singapoem/huozai/index.vue'),
 };

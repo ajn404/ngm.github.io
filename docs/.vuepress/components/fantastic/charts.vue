@@ -29,11 +29,13 @@
 
         <h3>radar(雷达图)</h3>
         <div ref="radar"></div>
+        <luo-xuan></luo-xuan>
     </div>
 </template>
 
 <script>
     import ApexCharts from 'apexcharts'
+    import LuoXuan from './luoXuan.vue'
 
     export default {
         name: "charts",
@@ -228,6 +230,9 @@
             }
 
 
+        },
+        components:{
+            LuoXuan
         }
     }
 </script>

@@ -7,7 +7,7 @@
 </el-container>
 </template>
 <script>
-    import {getPisc} from '../utils/service'
+    import {getPisc,getSaoHua} from '../utils/service'
     import {ref} from 'vue'
     export  default {
         name:'waterfallsFlow',

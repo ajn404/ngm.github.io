@@ -19,3 +19,13 @@ export const getPisc = ()=>{
                 method:'Get'
         })
 }
+
+export const getSaoHua = () =>{
+        return axios.create({
+        timeout: 50000,
+        baseURL:'https://api.oick.cn',
+        })({
+                method:'get',
+                url:'/dutang/api.php'
+        })
+}

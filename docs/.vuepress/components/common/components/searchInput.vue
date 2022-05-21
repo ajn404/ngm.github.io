@@ -7,6 +7,7 @@
 
 <script>
 import SearchIcon from "vue-ionicons/dist/ios-search.vue";
+    import {getSaoHua} from '../utils/service'
 export default {
   name: "SearchInput",
   data(){
@@ -14,12 +15,19 @@ export default {
           className:[]
       }
   },
+  mounted() {
+            
+    
+  },
   components: {
     SearchIcon,
   },
   methods: {
       click(){
-          this.$message("智障竟是我自己");
+        getSaoHua().then(res=>{
+              this.$message.success(res.data);
+            })
+          
           if(!this.className.length)
           this.className.push('clicked')
       }

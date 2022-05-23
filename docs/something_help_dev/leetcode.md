@@ -129,6 +129,7 @@ var lengthOfLastWord = function(s) {
 > 执行耗时:72 ms,击败了48.33% 的JavaScript用户
 >
 > 内存消耗:38.1 MB,击败了11.73% 的JavaScript用户
+
 ### 遍历
 - 下面这个解法，嗯，天才！
 ::: details 查看代码
@@ -175,6 +176,7 @@ var lengthOfLastWord = function(s) {
 };
 ```
 :::
+
 ### 更优秀的函数
 - lastIndexOf() 返回指定字符串最后出现的位置
 ::: details 查看代码
@@ -502,3 +504,7 @@ var longestPalindrome = function(s) {
 };
 ```
 :::
+
+<ClientOnly>
+<stack></stack>
+</ClientOnly>

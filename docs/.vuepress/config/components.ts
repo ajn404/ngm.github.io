@@ -4,6 +4,15 @@ const resolve = (dir) => {
     return path.resolve(__dirname, dir)
 }
 
+const leetCodeKeys=[
+    'Stack'
+]
+
+const leetCodeComponents={};
+for(let i=0;i<leetCodeKeys.length;i++){
+    leetCodeComponents[leetCodeKeys[i]]=resolve(`../../something_help_dev/leetcode/${leetCodeKeys[i]}.vue`)
+}
+
 export const components = {
     MyDemo: resolve('../components/draft/my-demo'),
     workcal: resolve('../components/draft/workcal'),
@@ -35,4 +44,5 @@ export const components = {
     multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex.vue'),
     audioControl:resolve('../components/fantastic/audio/control.vue'),
     huozai:resolve('../components/collections/singapoem/huozai/index.vue'),
+    ...leetCodeComponents
 };

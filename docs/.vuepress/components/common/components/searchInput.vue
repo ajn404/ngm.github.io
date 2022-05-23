@@ -1,36 +1,32 @@
 <template>
   <div class="searchBox" :class="className">
-    <input type="text"  placeholder="关注智障儿童"  @input="click"/>
+    <input type="text" placeholder="关注智障儿童" @input="click" />
     <search-icon class="search-icon"></search-icon>
   </div>
 </template>
 
 <script>
 import SearchIcon from "vue-ionicons/dist/ios-search.vue";
-    import {getSaoHua} from '../utils/service'
+import { getSaoHua } from "../utils/service";
 export default {
   name: "SearchInput",
-  data(){
-      return{
-          className:[]
-      }
+  data() {
+    return {
+      className: [],
+    };
   },
-  mounted() {
-            
-    
-  },
+  mounted() {},
   components: {
     SearchIcon,
   },
   methods: {
-      click(){
-        getSaoHua().then(res=>{
-              this.$message.success(res.data);
-            })
-          
-          if(!this.className.length)
-          this.className.push('clicked')
-      }
+    click() {
+      getSaoHua().then((res) => {
+        this.$message.success(res.data);
+      });
+
+      if (!this.className.length) this.className.push("clicked");
+    },
   },
 };
 </script>
@@ -53,7 +49,9 @@ export default {
   width: 65px;
   height: 50px;
   margin: 0 !important;
-  &:hover,&:focus,&.clicked {
+  &:hover,
+  &:focus,
+  &.clicked {
     width: 400px;
 
     input::placeholder {

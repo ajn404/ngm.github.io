@@ -99,7 +99,7 @@ const others: any = {
             link: '/fantastic/coding_chanlenges/primeSpiral'
         },
         {
-            text:'海子的诗',
+            text:'詩歌',
             link: '/fantastic/singpoem/huozai'
         }
     ]

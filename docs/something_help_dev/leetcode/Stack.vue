@@ -1,7 +1,7 @@
 // 剑指offer003 用两个栈实现队列
 <template>
-  <div v-html="hh">
-
+  <div class="stack">
+      <canvas id="stack_canvas" width="500" height="500"></canvas>
   </div>
 </template>
 <script lang="ts">
@@ -37,10 +37,10 @@ export default defineComponent({
         for(let i=10;i>0;i--){
             obj.appendTail(i);
         }
-        console.log(obj)
+        console.log(obj);
         var head = obj.deleteHead();
         console.log(head);
-        console.log(obj)
+        console.log(obj);
         
     },
 })
@@ -48,5 +48,8 @@ export default defineComponent({
 
 
 <style>
+#stack_canvas{
+    background-color: #000;
+}
 
 </style>

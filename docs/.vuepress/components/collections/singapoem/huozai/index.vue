@@ -129,7 +129,7 @@
           flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: calc(80vh - 3.6rem);
+        /*height: calc(80vh - 3.6rem);*/
         gap: 20px;
         .element {
             font-size: 2em;

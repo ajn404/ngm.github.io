@@ -1,7 +1,12 @@
 <template>
+  <div>
   <div class="searchBox" :class="className">
     <input type="text" placeholder="关注智障儿童" @input="click" />
     <search-icon class="search-icon"></search-icon>
+  </div>
+  <div class="text">
+    <p v-for="(i,index) in textArr" :key="index">{{i}}</p>
+  </div>
   </div>
 </template>
 
@@ -13,6 +18,7 @@ export default {
   data() {
     return {
       className: [],
+      textArr:[]
     };
   },
   mounted() {},
@@ -23,6 +29,8 @@ export default {
     click() {
       getSaoHua().then((res) => {
         this.$message.success(res.data);
+        this.textArr.push(res.data)
+
       });
 
       if (!this.className.length) this.className.push("clicked");
@@ -98,4 +106,16 @@ export default {
     font-size: 1.5em;
   }
 }
+
+  .text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    position: relative;
+    p{
+      line-height: 1;
+      margin: 0;
+    }
+  }
 </style>

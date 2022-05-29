@@ -26,8 +26,8 @@
                 let angleV = 0;
                 let angleA = 0.00001;
 
-                let cWidth =  p5.windowWidth-30;
-                let cHeight = p5.windowHeight-100
+                let cWidth =  p5.windowWidth/2;
+                let cHeight = p5.windowHeight/2;
 
 
                 p5.setup=()=> {
@@ -56,6 +56,10 @@
     }
 </script>
 <style scoped>
+    .box{
+        min-width: 100%;
+        max-width: 100%;
+    }
     #angular-motion{
         max-width: 100%;
         max-height: 80%;

@@ -78,8 +78,24 @@ const front_end:any = {
             text: "element-plus源码分析",
             link: "/sourceCodeAnalyze/note",
         },
+        {
+            text: '原神日记',
+            link: '/game/genshine'
+        },
     ],
 };
+
+const p5:any={
+    text:'p5',
+    children:[
+        {
+            text:'reference',
+            link: '/fantastic/p5_reference/anglesRotation'
+        },
+    ]
+}
+
+
 const back_end:any = {
     text:'后端',
     children:[
@@ -120,5 +136,6 @@ export const navbarConfig = [
     front_end,
     systemFrontEnd,
     back_end,
+    p5,
     link,
 ];

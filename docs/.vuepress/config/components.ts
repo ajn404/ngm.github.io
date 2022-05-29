@@ -13,7 +13,7 @@ for(let i=0;i<leetCodeKeys.length;i++){
 }
 
 
-const p5_reference = ['angelsRotation'];
+const p5_reference = ['angelsRotation','angularMotion'];
 const p5_referenceComponents={};
 for(let i=0;i<p5_reference.length;i++){
     p5_referenceComponents[p5_reference[i]]=resolve(`../../fantastic/components/${p5_reference[i]}.vue`)

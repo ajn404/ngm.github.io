@@ -1,20 +1,3 @@
-const home: any = {
-    text: "首页",
-    link: "/"
-};
-const menu: any = {
-    text: "框架学习",
-    children: [
-        {
-            text: "element-plus陈列",
-            link: "/ep",
-        },
-        {
-            text: "element-plus源码分析",
-            link: "/sourceCodeAnalyze/note",
-        }
-    ]
-};
 const front_end:any = {
     text: "前端(琐碎)",
     children: [
@@ -42,30 +25,7 @@ const front_end:any = {
         {
             link:'/vue_still_learn/vuex_learn',
             text:'vuex4.x官方文档学习'
-        }
-    ],
-};
-const back_end:any = {
-    text:'后端',
-    children:[
-        {
-            text:'Java',
-            link:'/back_end_start/java'
         },
-        {
-            text:'Node',
-            link:'/back_end_start/node'
-        }
-    ]
-}
-
-const note: any = {
-    text: '收藏陈列',
-    link: '/reading/'
-};
-const others: any = {
-    text: '创意编程',
-    children: [
         {
             text: 'vim',
             link: '/something_help_dev/vim'
@@ -101,23 +61,46 @@ const others: any = {
         {
             text:'詩歌',
             link: '/fantastic/singpoem/huozai'
-        }
-    ]
+        },
+        {
+            text:'面试总结',
+            link:'/interview/'
+        },
+        {
+            text:'资源导航',
+            link:'/resource'
+        },
+        {
+            text: "element-plus陈列",
+            link: "/ep",
+        },
+        {
+            text: "element-plus源码分析",
+            link: "/sourceCodeAnalyze/note",
+        },
+    ],
 };
+const back_end:any = {
+    text:'后端',
+    children:[
+        {
+            text:'Java',
+            link:'/back_end_start/java'
+        },
+        {
+            text:'Node',
+            link:'/back_end_start/node'
+        },
+    ]
+}
+
 const link:any={
     text:'GitHub',
     link:'https://github.com/ajn404/ngm.github.io'
 } 
 
-const resource:any={
-    text:'资源导航',
-    link:'/resource'
-}
 
-const interview:any =  {
-    text:'面试总结',
-    link:'/interview/'
-}
+
 
 const systemFrontEnd:any = {
         text:'前端(系统)',
@@ -134,13 +117,8 @@ const systemFrontEnd:any = {
 }
 
 export const navbarConfig = [
-    home,
     front_end,
     systemFrontEnd,
     back_end,
-    others,
-    menu,
-    interview,
-    resource,
     link,
 ];

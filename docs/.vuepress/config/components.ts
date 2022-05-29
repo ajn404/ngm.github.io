@@ -6,12 +6,19 @@ const resolve = (dir) => {
 
 const leetCodeKeys=[
     'Stack'
-]
-
+];
 const leetCodeComponents={};
 for(let i=0;i<leetCodeKeys.length;i++){
     leetCodeComponents[leetCodeKeys[i]]=resolve(`../../something_help_dev/leetcode/${leetCodeKeys[i]}.vue`)
 }
+
+
+const p5_reference = ['angelsRotation'];
+const p5_referenceComponents={};
+for(let i=0;i<p5_reference.length;i++){
+    p5_referenceComponents[p5_reference[i]]=resolve(`../../fantastic/components/${p5_reference[i]}.vue`)
+}
+
 
 export const components = {
     MyDemo: resolve('../components/draft/my-demo'),
@@ -44,5 +51,6 @@ export const components = {
     multiColumnIndex:resolve('../components/common/components/multi-column/multiColumnIndex.vue'),
     audioControl:resolve('../components/fantastic/audio/control.vue'),
     huozai:resolve('../components/collections/singapoem/huozai/index.vue'),
-    ...leetCodeComponents
+    ...leetCodeComponents,
+    ...p5_referenceComponents
 };

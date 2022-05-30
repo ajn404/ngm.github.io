@@ -16,10 +16,7 @@
 
         },
         mounted() {
-            let judgeCanvasExist = document.getElementById("defaultCanvas0")
-            if (judgeCanvasExist === null) {
                 new P5(this.main,"star");
-            }
         },
         methods: {
             main(_p5) {

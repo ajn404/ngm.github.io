@@ -1,7 +1,5 @@
 ---
-title: a11
-sidebar: false
-sidebarDepth: 0
+title: p5 接口
 ---
 
 
@@ -125,3 +123,10 @@ sidebarDepth: 0
 @[code vue:no-line-numbers](../components/triangle.vue)
 
 
+## 极坐标 polar coordinates
+
+<ClientOnly>
+<polar-coordinates></polar-coordinates>
+</CLientOnly>
+
+@[code vue:no-line-numbers](../components/polarCoordinates.vue)

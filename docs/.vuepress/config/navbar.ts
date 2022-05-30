@@ -90,7 +90,7 @@ const p5:any={
     children:[
         {
             text:'reference',
-            link: '/fantastic/p5_reference/anglesRotation'
+            link: '/fantastic/p5_reference/reference'
         },
     ]
 }

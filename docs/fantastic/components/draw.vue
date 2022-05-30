@@ -38,8 +38,11 @@
                     if (yPos < 0) {
                         yPos = p5.height;
                     }
-                    p5.line(0, yPos, p5.width, yPos);
-
+                    p5.strokeWeight(4);
+                    if(yPos%10<5){
+                        p5.stroke(yPos%256,256-yPos%256,p5.random(0,255))
+                        p5.line(0, yPos, p5.width, yPos);
+                    }
 
                 }
             }

@@ -1,5 +1,7 @@
 ---
+title: 原神日记
 sidebar: false
+sidebarDepth: 0
 ---
 
 ## 原神日记

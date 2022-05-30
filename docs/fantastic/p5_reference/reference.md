@@ -116,4 +116,12 @@ sidebarDepth: 0
 <describe></describe>
 </ClientOnly>
 
+## triangle function
+
+<ClientOnly>
+<triangle></triangle>
+</ClientOnly>
+
+@[code vue:no-line-numbers](../components/triangle.vue)
+
 

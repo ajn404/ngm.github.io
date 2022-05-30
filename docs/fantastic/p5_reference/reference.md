@@ -80,4 +80,40 @@ sidebarDepth: 0
 <draw></draw>
 </ClientOnly>
 
+```js
+            main(_p5) {
+                let p5 = _p5;
+
+                let yPos= 0
+                p5.setup=()=> {
+                    p5.createCanvas((p5.windowWidth-30)/4, (p5.windowHeight-100)/2);
+
+                    p5.frameRate(60);
+
+                }
+
+                p5.draw=()=> {
+                    p5.background(204);
+                    yPos = yPos - 1;
+                    if (yPos < 0) {
+                        yPos = p5.height;
+                    }
+                    p5.strokeWeight(4);
+                    if(yPos%10<5){
+                        p5.stroke(yPos%256,256-yPos%256,p5.random(0,255))
+                        p5.line(0, yPos, p5.width, yPos);
+                    }
+
+                }
+            }
+
+```
+
+
+## describe function
+
+<ClientOnly>
+<describe></describe>
+</ClientOnly>
+
 

@@ -1,15 +1,11 @@
----
-title: 原神日记
-sidebar: false
-sidebarDepth: 0
----
+
 
 ## 原神日记
 
 ### 2022/5/29
 :::  tip 今日神里
 [神里家族大小姐](https://images8.alphacoders.com/115/thumb-1920-1159268.jpg)
-<el-image src="https://images8.alphacoders.com/115/thumb-1920-1159268.jpg"></el-image>
+<image src="https://images8.alphacoders.com/115/thumb-1920-1159268.jpg"></image>
    
 |    角色 |生命| 攻击力 | 暴击  |  爆伤  |  元素充能  | 天赋|
 | ---- | ----  |  ---- | ---- | ---- |    ----|----|
@@ -24,7 +20,7 @@ sidebarDepth: 0
 ### 2022/5/30
 :::  tip 今日魈
 [魈君](https://images3.alphacoders.com/112/thumb-1920-1126757.jpg)
-<el-image src="https://images3.alphacoders.com/112/thumb-1920-1126757.jpg"></el-image>
+<image src="https://images3.alphacoders.com/112/thumb-1920-1126757.jpg"></image>
    
 |    角色 |生命| 攻击力 | 暴击  |  爆伤  |  元素充能  | 天赋|武器 |
 | ---- | ----  |  ---- | ---- | ---- |    ----|----|----|
@@ -32,6 +28,4 @@ sidebarDepth: 0
     
 - <b>:ghost:魈，听召，前来守护</b>  
 - <b>个人而言，目前算是小毕业(2+2)吧，等抽到和噗鸢，再歪一歪新圣遗物</b>  
-
-
 :::

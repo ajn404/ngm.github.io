@@ -17,6 +17,8 @@
 
         },
         mounted() {
+    document.getElementById('draw').innerHTML = ''
+
                 new P5(this.main,"draw");
 
         },

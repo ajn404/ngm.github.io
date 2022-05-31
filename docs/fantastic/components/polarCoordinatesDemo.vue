@@ -1,22 +1,6 @@
 <template>
   <div class="box">
     <div id="polar-coordinates-demo"></div>
-    <p>半径减小的幅度</p>
-    <el-input-number
-      v-model="deleteNumber"
-      placeholder="请输入减小的幅度"
-      width="200"
-      :step="0.01"
-    ></el-input-number>
-    <p>旋转的速度</p>
-    <el-input-number
-      v-model="rotateSpeed"
-      placeholder="请输入旋转的速度"
-      width="200"
-      :step="0.01"
-    ></el-input-number>
-    <p>选择颜色</p>
-    <el-color-picker v-model="color1" />
   </div>
 </template>
 <script>
@@ -27,7 +11,8 @@ export default {
     return {
       deleteNumber: 0.03,
       rotateSpeed: 1,
-      color1:'#abcde1'
+      color1:'#abcde1',
+      value:0.01,
 
     };
   },
@@ -42,32 +27,39 @@ export default {
   methods: {
     main(_p5) {
       let p5 = _p5;
-      let angle = p5.PI / 4;
       let r = 150;
-      let width = p5.windowWidth - 30;
-      let height = p5.windowHeight - 100;
+
+      let TWO_PI = p5.PI * 2;
+
+
       p5.setup = () => {
         p5.createCanvas(400, 400);
-        // p5.frameRate(60);
       };
+
       p5.draw = () => {
-        p5.background(0, 10);
-        // p5.stroke(255);
-        // p5.strokeWeight(4);
-        // p5.noFill();
-        // p5.circle(0, 0, r * 2);
+        let increment = p5.map(p5.mouseX,0,400,p5.PI,0.1)
         p5.translate(200, 200);
-        // 定义点
-        p5.strokeWeight(32);
-        p5.stroke(this.color1);
-        let x = r * p5.cos(angle);
-        let y = r * p5.sin(angle);
-        p5.point(x, y);
-        r -= this.deleteNumber;
-        if (r < 32) {
-          r = 150;
+
+        p5.background(0);
+        p5.stroke(255);
+        p5.strokeWeight(4);
+        p5.noFill();
+        p5.beginShape();
+
+        if(increment<0){
+          increment=-increment
         }
-        angle += (p5.PI / 10) * this.rotateSpeed;
+
+        for(let i=0;i<TWO_PI;i+=increment){
+          let x=r*p5.cos(i);
+          let y=r*p5.sin(i);
+          p5.vertex(x,y)
+        }
+
+        p5.endShape(p5.CLOSE);
+
+
+
       };
     },
   },

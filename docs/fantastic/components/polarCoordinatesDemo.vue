@@ -37,10 +37,10 @@ export default {
       };
 
       p5.draw = () => {
-        let increment = p5.map(p5.mouseX,0,400,p5.PI,0.1)
+        let increment = p5.map(p5.mouseX,0,400,p5.PI,0.01)
         p5.translate(200, 200);
 
-        p5.background(0);
+        p5.background(0,10);
         p5.stroke(255);
         p5.strokeWeight(4);
         p5.noFill();

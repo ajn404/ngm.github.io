@@ -1,16 +1,22 @@
 <template>
   <div class="box">
     <div id="polar-coordinates"></div>
-    <el-input
+    <p>半径减小的幅度</p>
+    <el-input-number
       v-model="deleteNumber"
       placeholder="请输入减小的幅度"
       width="200"
-    ></el-input>
-    <el-input
+      :step="0.01"
+    ></el-input-number>
+    <p>旋转的速度</p>
+    <el-input-number
       v-model="rotateSpeed"
       placeholder="请输入旋转的速度"
       width="200"
-    ></el-input>
+      :step="0.01"
+    ></el-input-number>
+    <p>选择颜色</p>
+    <el-color-picker v-model="color1" />
   </div>
 </template>
 <script>
@@ -18,11 +24,21 @@
 import P5 from "../../.vuepress/resource/p5";
 
 export default {
+
   data() {
     return {
       deleteNumber: 0.03,
       rotateSpeed: 1,
+      color1:'#abcde1'
+
     };
+  },
+  watch:{
+      deleteNumber(value){
+          console.log(typeof value)
+      }
+  },
+  setup(){
   },
   created() {},
   mounted() {
@@ -49,7 +65,7 @@ export default {
         p5.translate(200, 200);
         // 定义点
         p5.strokeWeight(32);
-        p5.stroke(255, 238, 33);
+        p5.stroke(this.color1);
         let x = r * p5.cos(angle);
         let y = r * p5.sin(angle);
         p5.point(x, y);

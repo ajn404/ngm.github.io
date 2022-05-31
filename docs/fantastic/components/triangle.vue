@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div id="xxx"></div>
+    <div id="triangle"></div>
   </div>
 </template>
 <script>
@@ -13,7 +13,8 @@ export default {
   },
   created() {},
   mounted() {
-    new P5(this.main, "xxx");
+    document.getElementById('triangle').innerHTML = ''
+    new P5(this.main, "triangle");
   },
   // "谢尔宾斯基"(笑)
   methods: {
@@ -149,7 +150,7 @@ export default {
 };
 </script>
 <style scoped>
-#xxx {
+#triangle {
   max-width: 100%;
   /* max-height: 80%; */
   overflow: hidden;

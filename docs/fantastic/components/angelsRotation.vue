@@ -16,6 +16,7 @@
 
         },
         mounted() {
+    document.getElementById('star').innerHTML = ''
                 new P5(this.main,"star");
         },
         methods: {

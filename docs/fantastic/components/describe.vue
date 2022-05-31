@@ -18,6 +18,8 @@
 
         },
         mounted() {
+    document.getElementById('describe').innerHTML = ''
+
                 new P5(this.main,"describe");
         },
         methods: {

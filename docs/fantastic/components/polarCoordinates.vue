@@ -42,6 +42,7 @@ export default {
   },
   created() {},
   mounted() {
+      document.getElementById('polar-coordinates').innerHTML = ''
     new P5(this.main, "polar-coordinates");
   },
   // 极坐标

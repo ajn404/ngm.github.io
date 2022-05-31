@@ -15,6 +15,7 @@
 
         },
         mounted() {
+    document.getElementById('angular-motion').innerHTML = ''
                 new P5( this.main , "angular-motion");
         },
         methods: {

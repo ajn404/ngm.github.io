@@ -19,7 +19,9 @@ const p5_reference = [
     'draw',
     'describe',
     'triangle',
-    'polarCoordinates'];
+    'polarCoordinates',
+    'polarCoordinatesDemo'
+];
 const p5_referenceComponents={};
 for(let i=0;i<p5_reference.length;i++){
     p5_referenceComponents[p5_reference[i]]=resolve(`../../fantastic/components/${p5_reference[i]}.vue`)

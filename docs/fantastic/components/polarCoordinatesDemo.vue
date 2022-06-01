@@ -37,6 +37,8 @@ export default {
       };
 
       p5.draw = () => {
+
+        // console.log(document.getElementById('polar-coordinates-demo').getBoundingClientRect().top,window.innerHeight)
         let increment = p5.map(p5.mouseX,0,400,p5.PI,0.01)
         p5.translate(200, 200);
 

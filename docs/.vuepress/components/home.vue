@@ -1,6 +1,6 @@
 <template>
   <div class="box" ref="box">
-    <span class="element" v-show="!typingStop"></span>
+    <span class="element"></span>
     <div v-show="typingStop" class="slow-show">
       <!-- <div class="element">前已无通路，后不见归途</div> -->
       <div class="calendar">ajn404</div>
@@ -93,15 +93,46 @@
         >
         </iframe>
       </div> -->
-<!--      <audio data-key="65" src="sounds/clap.wav"></audio>-->
-<!--      <audio data-key="83" src="sounds/hihat.wav"></audio>-->
-<!--      <audio data-key="68" src="sounds/kick.wav"></audio>-->
-<!--      <audio data-key="70" src="sounds/openhat.wav"></audio>-->
-<!--      <audio data-key="71" src="sounds/boom.wav"></audio>-->
-<!--      <audio data-key="72" src="sounds/ride.wav"></audio>-->
-<!--      <audio data-key="74" src="sounds/snare.wav"></audio>-->
-<!--      <audio data-key="75" src="sounds/tom.wav"></audio>-->
-<!--      <audio data-key="76" src="sounds/tink.wav"></audio>-->
+      <!--      <audio data-key="65" src="sounds/clap.wav"></audio>-->
+      <!--      <audio data-key="83" src="sounds/hihat.wav"></audio>-->
+      <!--      <audio data-key="68" src="sounds/kick.wav"></audio>-->
+      <!--      <audio data-key="70" src="sounds/openhat.wav"></audio>-->
+      <!--      <audio data-key="71" src="sounds/boom.wav"></audio>-->
+      <!--      <audio data-key="72" src="sounds/ride.wav"></audio>-->
+      <!--      <audio data-key="74" src="sounds/snare.wav"></audio>-->
+      <!--      <audio data-key="75" src="sounds/tom.wav"></audio>-->
+      <!--      <audio data-key="76" src="sounds/tink.wav"></audio>-->
+    </div>
+
+    <div class="art1">
+      <div class="face-1"></div>
+      <div class="face-2"></div>
+      <div class="face-3"></div>
+      <div class="face-4"></div>
+      <div class="face-5"></div>
+      <div class="face-6"></div>
+      <div class="face-7"></div>
+      <div class="face-8"></div>
+      <div class="face-9"></div>
+      <div class="face-10"></div>
+
+      <div class="hair-1"></div>
+      <div class="hair-2"></div>
+      <div class="hair-3"></div>
+      <div class="hair-4"></div>
+
+      <div class="eye-left-1"></div>
+      <div class="eye-left-2"></div>
+      <div class="eye-left-3"></div>
+      <div class="eye-left-4"></div>
+
+      <div class="eye-right-1"></div>
+      <div class="eye-right-2"></div>
+      <div class="eye-right-3"></div>
+      <div class="eye-right-4"></div>
+      <div class="eye-right-5"></div>
+      <div class="eye-right-6"></div>
+      <div class="eye-right-7"></div>
     </div>
   </div>
 </template>
@@ -127,7 +158,7 @@ export default {
       text: "hello editor",
       swiperSlideNums: new Array(20),
       typeThing: "",
-      typingStop: false,
+      typingStop: true,
       styleAnimate: "",
       styleOptions: [
         {
@@ -170,9 +201,8 @@ export default {
     SwiperCore.use([Autoplay, EffectFade]);
   },
   methods: {
-
-    initSound(){
-      window.addEventListener('keydown', playSound);
+    initSound() {
+      window.addEventListener("keydown", playSound);
       function playSound(e) {
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         if (!audio) return;
@@ -186,20 +216,14 @@ export default {
     },
 
     initType() {
-      let typedString = ["没有永恒的黑暗", "只有未达的黎明"];
+      let typedString = ["coding blog"];
       let homeTypedFont = new Typed(".element", {
         strings: typedString,
         typeSpeed: 400, //打字速度
         backSpeed: 10, //回退速度
         showCursor: false,
         onComplete: (self) => {
-          this.typingStop = true;
-          this.$nextTick(() => {
-            // const scrollToBottom = ref('scrollToBottom');
-            // if(document.querySelector('.scrollToBottom')){
-            //   document.querySelector('.scrollToBottom').click()
-            // }
-          });
+          this.$nextTick(() => {});
         },
       });
       return homeTypedFont;
@@ -208,14 +232,6 @@ export default {
       GitHubCalendar(".calendar", "ajn404", { responsive: true });
     },
     scrollToBottom() {
-      // this.$nextTick(() => {
-      //   document.addEventListener("keydown", function (event) {
-      //     if (event.keyCode === 38 || event.keyCode === 40) {
-      //       event.preventDefault();
-      //     }
-      //   });
-      // });
-
       const height = document.body.scrollHeight;
       let i = 100;
       var time = setInterval(function () {

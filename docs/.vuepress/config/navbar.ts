@@ -86,10 +86,10 @@ const front_end:any = {
 };
 
 const p5:any={
-    text:'p5',
+    text:'拓展',
     children:[
         {
-            text:'reference',
+            text:'p5-reference',
             link: '/fantastic/p5_reference/reference'
         },
     ]

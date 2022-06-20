@@ -92,6 +92,10 @@ const p5:any={
             text:'p5-reference',
             link: '/fantastic/p5_reference/reference'
         },
+        {
+            text:'d3-part-svg',
+            link: '/fantastic/d3/svg/part'
+        },
     ]
 }
 

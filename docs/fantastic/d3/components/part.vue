@@ -346,6 +346,16 @@
       </g>
     </svg>
     <span>开个玩笑😊</span>
+
+    <span>path指令</span>
+    <span> </span>
+    <svg>
+      <path stroke="#768594" fill="#ffffff" d="M0 0 L100 0 Q0 0 0 100 Z">
+      </path>
+      <text font-size="1em" stroke="black" fill="#000" stroke-width="1" x="50" y="50">M0 0 L100 0 Q0 0 0 100 Z</text>
+    </svg>
+    
+
   </div>
 
 </template>

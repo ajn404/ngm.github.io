@@ -38,6 +38,18 @@ for(let i=0;i<d3_reference.length;i++){
 }
 
 
+const d3_reference = [
+    'part'
+];
+const d3_referenceComponents={};
+for(let i=0;i<d3_reference.length;i++){
+    d3_referenceComponents[d3_reference[i]]=resolve(`../../fantastic/d3/components/${d3_reference[i]}.vue`)
+}
+
+
+
+
+
 export const components = {
     MyDemo: resolve('../components/draft/my-demo'),
     workcal: resolve('../components/draft/workcal'),
@@ -70,5 +82,6 @@ export const components = {
     audioControl:resolve('../components/fantastic/audio/control.vue'),
     huozai:resolve('../components/collections/singapoem/huozai/index.vue'),
     ...leetCodeComponents,
-    ...p5_referenceComponents
+    ...p5_referenceComponents,
+    ...d3_referenceComponents
 };

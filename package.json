@@ -30,6 +30,7 @@
     "@vuepress/plugin-toc": "2.0.0-beta.26",
     "apexcharts": "^3.29.0",
     "axios": "0.24.0",
+    "d3": "^7.4.4",
     "echarts": "^5.2.2",
     "element-plus": "^1.1.0-beta.24",
     "github-calendar": "^2.2.7",

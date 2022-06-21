@@ -131,7 +131,7 @@ title: p5 接口
 
 @[code vue:no-line-numbers](../components/polarCoordinates.vue)
 
-### 延伸
+### 延伸（发动鼠标）
 
 <ClientOnly>
 <polar-coordinates-demo></polar-coordinates-demo>

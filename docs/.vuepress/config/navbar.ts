@@ -92,6 +92,18 @@ const p5:any={
             text:'p5-reference',
             link: '/fantastic/p5_reference/reference'
         },
+        {
+            text:'slide puzzle',
+            link: '/fantastic/p5_reference/slidePuzzle'
+        },
+        {
+            text:'poor demo1',
+            link: '/fantastic/p5_reference/poorDemo1'
+        },
+        {
+            text:'d3-part-svg',
+            link: '/fantastic/d3/svg/part'
+        },
     ]
 }
 

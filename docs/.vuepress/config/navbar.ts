@@ -104,6 +104,10 @@ const p5:any={
             text:'d3-part-svg',
             link: '/fantastic/d3/svg/part'
         },
+        {
+            text:'d3-svg-demo',
+            link: '/fantastic/d3/svg/poorSvgDemo'
+        },
     ]
 }
 

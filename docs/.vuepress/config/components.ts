@@ -30,16 +30,8 @@ for(let i=0;i<p5_reference.length;i++){
 }
 
 const d3_reference = [
-    'part'
-];
-const d3_referenceComponents={};
-for(let i=0;i<d3_reference.length;i++){
-    d3_referenceComponents[d3_reference[i]]=resolve(`../../fantastic/d3/components/${d3_reference[i]}.vue`)
-}
-
-
-const d3_reference = [
-    'part'
+    'part',
+    'poorSvgDemo'
 ];
 const d3_referenceComponents={};
 for(let i=0;i<d3_reference.length;i++){

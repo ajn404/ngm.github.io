@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvue_book=self.webpackChunkvue_book||[]).push([[3823],{83823:(e,n,o)=>{o.r(n),o.d(n,{default:()=>c});var u=o(66252),r=o(59050);console.log(r.ZP);const s={name:"index"},c=(0,o(83744).Z)(s,[["render",function(e,n,o,r,s,c){return(0,u.wg)(),(0,u.iD)("div")}]])}}]);

@@ -113,7 +113,7 @@ const p5:any={
 
 
 const back_end:any = {
-    text:'后端',
+    text:'非前端',
     children:[
         {
             text:'Java',
@@ -122,6 +122,10 @@ const back_end:any = {
         {
             text:'Node',
             link:'/back_end_start/node'
+        },
+        {
+            text:'rust',
+            link:'/back_end_start/rust'
         },
     ]
 }
